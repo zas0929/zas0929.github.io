@@ -12,5 +12,5 @@ $red: #cc0000;
 .some {
   color: $green;
   text-decoration: underline;
-  border: solid 2px #cc0000;
+  border: solid 2px $test;
 }
