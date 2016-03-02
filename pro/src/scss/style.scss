@@ -1,0 +1,13 @@
+$red: #cc0000;
+$green: #00cc00;
+$blue: #0000cc;
+.some {
+  color: $red;
+  border: solid 1px $blue;
+  border-radius: 15px;
+  display: inline;
+
+  span {
+    color: $green;
+ }
+}
