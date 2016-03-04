@@ -2,13 +2,10 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
 
-gulp.task('default', ['sass', 'watch']);
-
-
-
-//new
-
-
+// Default task to be run with `gulp`
+gulp.task('default', ['sass', 'browser-sync'], function () {
+    gulp.watch("src/scss/*.scss", ['sass']);
+});
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
@@ -27,7 +24,4 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({stream:true}));
 });
 
-// Default task to be run with `gulp`
-gulp.task('default', ['sass', 'browser-sync'], function () {
-    gulp.watch("src/scss/*.scss", ['sass']);
-});
+

@@ -1,0 +1,19 @@
+.some {
+  color: #cc0000;
+  border: solid 1px #cc0000;
+  border-radius: 1px;
+  display: inline;
+  transition: 0.2s; }
+  .some .some:hover {
+    background: #ccc;
+    transition: 0.5s; }
+  .some span {
+    color: #0000cc;
+    font-size: 20px; }
+
+* {
+  background: #ccc; }
+
+.some {
+  background: #ddd;
+  color: #cc0000; }

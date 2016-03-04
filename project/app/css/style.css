@@ -1,7 +1,8 @@
 .some {
   color: #cc0000;
-  border: solid 1px #0000cc;
-  border-radius: 15px;
+  border: solid 1px #00cc00;
+  border-radius: 10px;
   display: inline; }
   .some span {
-    color: #00cc00; }
+    color: #0000cc;
+    font-size: 35px; }

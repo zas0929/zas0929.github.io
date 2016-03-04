@@ -1,0 +1,23 @@
+$red: #cc0000;
+$green: #00cc00;
+$blue: #0000cc;
+$textSize: 20px;
+.some {
+  color: $blue;
+  border: solid 1px $red;
+  border-radius: 1px;
+  display: inline;
+  transition: 0.2s;
+
+.some:hover {
+  background: #ccc;
+  transition: 0.5s;
+}
+  span {
+    color: $blue;
+    font-size: $textSize;
+ }
+}
+* {
+  background: #ccc;
+}
