@@ -1,14 +1,14 @@
 .some {
   color: #cc0000;
   border: solid 1px #cc0000;
-  border-radius: 1px;
+  border-radius: 10px;
   display: inline;
   transition: 0.2s; }
   .some .some:hover {
     background: #ccc;
     transition: 0.5s; }
   .some span {
-    color: #0000cc;
+    color: #cc0000;
     font-size: 20px; }
 
 * {

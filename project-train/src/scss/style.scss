@@ -5,7 +5,7 @@ $textSize: 20px;
 .some {
   color: $red;
   border: solid 1px $red;
-  border-radius: 1px;
+  border-radius: 10px;
   display: inline;
   transition: 0.2s;
 
@@ -14,7 +14,7 @@ $textSize: 20px;
   transition: 0.5s;
 }
   span {
-    color: $blue;
+    color: $red;
     font-size: $textSize;
  }
 }

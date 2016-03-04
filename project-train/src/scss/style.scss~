@@ -3,7 +3,7 @@ $green: #00cc00;
 $blue: #0000cc;
 $textSize: 20px;
 .some {
-  color: $blue;
+  color: $red;
   border: solid 1px $red;
   border-radius: 1px;
   display: inline;
