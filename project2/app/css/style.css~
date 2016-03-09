@@ -1,0 +1,9 @@
+.some {
+  color: #cc0000;
+  border: solid 1px #0000cc;
+  border-radius: 15px;
+  display: inline;
+  transition: 0.5s; }
+  .some span {
+    color: #cc0000;
+    font-size: 30px; }
