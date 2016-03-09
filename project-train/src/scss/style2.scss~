@@ -1,4 +1,0 @@
-.some {
-  background: #ddd;
-  color: $red;
-}
