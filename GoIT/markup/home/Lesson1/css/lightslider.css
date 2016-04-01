@@ -1,0 +1,1189 @@
+/** /!!! core css Should not edit !!!/**/
+
+.lSSlideOuter {
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.lightSlider:before, .lightSlider:after {
+    content: " ";
+    display: table;
+}
+.lightSlider {
+    overflow: hidden;
+}
+.lSSlideWrapper {
+    max-width: 100%;
+    min-height: 450px;
+    overflow: hidden;
+    position: relative;
+    top: 35px;
+}
+.lSSlideWrapper > .lightSlider:after {
+    clear: both;
+}
+.lSSlideWrapper .lSSlide {
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    -webkit-transition: all 1s;
+    -webkit-transition-property: -webkit-transform,height;
+    -moz-transition-property: -moz-transform,height;
+    transition-property: transform,height;
+    -webkit-transition-duration: inherit !important;
+    transition-duration: inherit !important;
+    -webkit-transition-timing-function: inherit !important;
+    transition-timing-function: inherit !important;
+}
+.lSSlideWrapper .lSFade {
+    position: relative;
+}
+.lSSlideWrapper .lSFade > * {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    margin-right: 0;
+    width: 100%;
+}
+.lSSlideWrapper.usingCss .lSFade > * {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transition-duration: inherit !important;
+    transition-duration: inherit !important;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-timing-function: inherit !important;
+    transition-timing-function: inherit !important;
+}
+.lSSlideWrapper .lSFade > *.active {
+    z-index: 10;
+}
+.lSSlideWrapper.usingCss .lSFade > *.active {
+    opacity: 1;
+}
+/** /!!! End of core css Should not edit !!!/**/
+
+/* Pager */
+.lSSlideOuter .lSPager.lSpg {
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: center;
+}
+.lSSlideOuter .lSPager.lSpg > li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 44px 0 0;
+}
+.lSSlideOuter .lSPager.lSpg > li a {
+    background-color: #fff;
+    border: 2px solid #b0de58;
+    border-radius: 30px;
+    display: inline-block;
+    height: 55px;
+    position: relative;
+    text-indent: -999em;
+    transition: all 0.5s linear 0s;
+    width: 152px;
+    z-index: 99;
+}
+
+.demo .item .lSSlideOuter .lSPager.lSpg li a {
+    color: #fff;
+    position: relative;
+    text-indent: 0;
+}
+ .lSSlideOuter .lSPager.lSpg > li.active a {
+    background-color: #f7941d;
+    border: 2px solid #f7941d;
+    color: #f7941d!important;
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li  {
+    position: relative;
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li.active:first-child a:before {
+    content:"Саженцы";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#fff;
+    width:100px;
+    height: 20px;
+
+
+}
+
+
+.demo .item .lSSlideOuter .lSPager.lSpg li:first-child a:before {
+    content:"Саженцы";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#020401;
+    width:100px;
+    height: 20px;
+    transition:0.2s;
+
+
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li.active a::after {
+    background: rgba(0, 0, 0, 0) url("../images/arrow-active.png") no-repeat scroll 0 0;
+    content: " ";
+    height: 10px;
+    position: absolute;
+    right: -45px;
+    top: 23px;
+    width: 45px;
+    transition:0.2s;
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li a::after {
+    background: rgba(0, 0, 0, 0) url("../images/arrow.png") no-repeat scroll 0 0;
+    content: " ";
+    height: 10px;
+    position: absolute;
+    right: -45px;
+    top: 23px;
+    width: 45px;
+    transition:0.2s;
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(2) a:before {
+    content:"1-2 год";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#fff;
+    width:100px;
+    height: 20px;
+
+
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(2) a:before {
+    content:"1-2 год";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#020401;
+    width:100px;
+    height: 20px;
+    transition:0.2s;
+
+
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(3) a:before {
+    content:"3-5 год";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#fff;
+    width:100px;
+    height: 20px;
+
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(3) a:before {
+    content:"3-5 год";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#020401;
+    width:100px;
+    height: 20px;
+
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(4) a:before {
+    content:"6-8 год";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#020401;
+    width:100px;
+    height: 20px;
+    transition:0.2s;
+
+
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(4) a:before {
+    content:"6-8 год";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#fff;
+    width:100px;
+    height: 20px;
+    transition:0.2s;
+
+
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(5) a:before {
+    content:"9-10 год";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#fff;
+    width:100px;
+    height: 20px;
+    transition:0.2s;
+
+
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(5) a:before {
+    content:"9-10 год";
+    position: absolute;
+    left:28px;
+    top:15px;
+    font: bold 16px 'open_sansbold',sans-serif;
+    color:#020401;
+    width:100px;
+    height: 20px;
+    transition:0.2s;
+
+
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li.active:last-child a::after {
+    background: rgba(0, 0, 0, 0) url("../images/arrow-active.png") no-repeat scroll 0 0;
+    content: " ";
+    height: 10px;
+    position: absolute;
+    right: -45px;
+    top: 24px;
+    width: 45px;
+    display: none;
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li:last-child a::after {
+    background: rgba(0, 0, 0, 0) url("../images/arrow.png") no-repeat scroll 0 0;
+    content: " ";
+    height: 10px;
+    position: absolute;
+    right: -45px;
+    top: 24px;
+    width: 45px;
+    display: none;
+}
+.demo .item .lSSlideOuter .lSPager.lSpg li:last-child {
+    padding-right: 0;
+}
+
+.lSSlideOuter .media {
+    opacity: 0.8;
+}
+.lSSlideOuter .media.active {
+    opacity: 1;
+}
+/* End of pager */
+
+/** Gallery */
+.lSSlideOuter .lSPager.lSGallery {
+    list-style: none outside none;
+    padding-left: 0;
+    margin: 0;
+    overflow: hidden;
+    transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate3d(0px, 0px, 0px);
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.lSSlideOuter .lSPager.lSGallery li {
+    overflow: hidden;
+    -webkit-transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+    transition: border-radius 0.12s linear 0s 0.35s linear 0s;
+}
+.lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover {
+    border-radius: 5px;
+}
+.lSSlideOuter .lSPager.lSGallery img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.lSSlideOuter .lSPager.lSGallery:before, .lSSlideOuter .lSPager.lSGallery:after {
+    content: " ";
+    display: table;
+}
+.lSSlideOuter .lSPager.lSGallery:after {
+    clear: both;
+}
+/* End of Gallery*/
+
+/* slider actions */
+.lSAction > a {
+    width: 55px;
+    display: block;
+    top: 48%;
+    height: 55px;
+    background-image: url('../images/left-right.png');
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    margin-top: -16px;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.35s linear 0s;
+    transition: opacity 0.35s linear 0s;
+}
+.lSAction > a:hover {
+    opacity: 1;
+}
+.lSAction > .lSPrev {
+    background-position: 0 0;
+    left: 10px;
+}
+.lSAction > .lSNext {
+    background-position: -53px 0;
+    right: 10px;
+}
+.lSAction > a.disabled {
+    pointer-events: none;
+}
+.cS-hidden {
+    height: 1px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+}
+
+
+/* vertical */
+.lSSlideOuter.vertical {
+    position: relative;
+}
+.lSSlideOuter.vertical.noPager {
+    padding-right: 0px !important;
+}
+.lSSlideOuter.vertical .lSGallery {
+    position: absolute !important;
+    right: 0;
+    top: 0;
+}
+.lSSlideOuter.vertical .lightSlider > * {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* vertical controlls */
+.lSSlideOuter.vertical .lSAction > a {
+    left: 50%;
+    margin-left: -14px;
+    margin-top: 0;
+}
+.lSSlideOuter.vertical .lSAction > .lSNext {
+    background-position: 31px -31px;
+    bottom: 10px;
+    top: auto;
+}
+.lSSlideOuter.vertical .lSAction > .lSPrev {
+    background-position: 0 -31px;
+    bottom: auto;
+    top: 10px;
+}
+/* vertical */
+
+
+/* Rtl */
+.lSSlideOuter.lSrtl {
+    direction: rtl;
+}
+.lSSlideOuter .lightSlider, .lSSlideOuter .lSPager {
+    padding-left: 0;
+    list-style: none outside none;
+}
+.lSSlideOuter.lSrtl .lightSlider, .lSSlideOuter.lSrtl .lSPager {
+    padding-right: 0;
+}
+.lSSlideOuter .lightSlider > *,  .lSSlideOuter .lSGallery li {
+    float: left;
+}
+.lSSlideOuter.lSrtl .lightSlider > *,  .lSSlideOuter.lSrtl .lSGallery li {
+    float: right !important;
+}
+/* Rtl */
+
+@-webkit-keyframes rightEnd {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -15px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+@keyframes rightEnd {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -15px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+@-webkit-keyframes topEnd {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -15px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+@keyframes topEnd {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -15px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+@-webkit-keyframes leftEnd {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 15px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+@keyframes leftEnd {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 15px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+@-webkit-keyframes bottomEnd {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: -15px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes bottomEnd {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: -15px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+.lSSlideOuter .rightEnd {
+    -webkit-animation: rightEnd 0.3s;
+    animation: rightEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter .leftEnd {
+    -webkit-animation: leftEnd 0.3s;
+    animation: leftEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter.vertical .rightEnd {
+    -webkit-animation: topEnd 0.3s;
+    animation: topEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter.vertical .leftEnd {
+    -webkit-animation: bottomEnd 0.3s;
+    animation: bottomEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter.lSrtl .rightEnd {
+    -webkit-animation: leftEnd 0.3s;
+    animation: leftEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter.lSrtl .leftEnd {
+    -webkit-animation: rightEnd 0.3s;
+    animation: rightEnd 0.3s;
+    position: relative;
+}
+/*/  GRab cursor */
+.lightSlider.lsGrab > * {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.lightSlider.lsGrabbing > * {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: grabbing;
+}
+/********* re ****************/
+.lSSlideOuter .lSPager.lSpg {
+    left: 0;
+    margin: 10px 0 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
+.lSSlideOuter  {
+    position: relative;
+}
+/*********** slider 2 *************/
+
+.comments .lSSlideOuter .lSPager.lSpg > li.active a {
+    background-color: #7eb80e;
+    border: 2px solid #7eb80e;
+    color: #7eb80e !important;
+}
+.comments .lSSlideOuter .lSPager.lSpg > li a {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    position: relative;
+    text-indent: -999em!important;
+    transition: all 0.5s linear 0s;
+    width: 8px;
+    z-index: 99;
+}
+.comments .lSSlideOuter .lSPager.lSpg > li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 5px 0 0;
+}
+.comments .lSSlideOuter .lSPager.lSpg {
+    left: 0;
+    margin: 10px 0 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: -50px;
+}
+.comments .content-slider h3 {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.comments .content-slider p {
+    text-align: left;
+}
+.comments .lSAction > .lSNext {
+    background-position: -53px 0;
+    right: 10px;
+}
+.comments .lSAction > a {
+    background-image: url("../images/left-right-bottom.png");
+    cursor: pointer;
+    display: block;
+    height: 80px;
+    margin-top: -16px;
+    opacity: 0.5;
+    position: absolute;
+    top: 48%;
+    transition: opacity 0.35s linear 0s;
+    width: 80px;
+    z-index: 9999;
+}
+.comments .lSAction > .lSNext {
+    background-position: -88px -4px;
+    right: 10px;
+}
+.comments .lSAction > .lSPrev {
+    background-position: -2px -4px;
+    left: 10px;
+}
+.comments .demo {
+    margin: 0 auto;
+    width: 1220px;
+}
+#content-slider2 {
+    padding-top: 0!important;
+    height: 440px!important;
+}
+#content-slider2 li {
+    margin: 0 144px!important;
+    width: 942px!important;
+}
+.comments .lSAction > a {
+
+    top: 35%;
+
+}
+.comments .lSAction > a {
+    opacity: 1;
+}
+/******************** responsive ***************/
+@media (max-width: 1280px) {
+   /*
+    .comments .demo {
+        margin: 0 auto;
+        width: 1100px;
+    }
+    */
+    .comments .demo {
+        margin: 0 auto;
+        width: 1000px;
+    }
+    #content-slider2 li {
+        margin: 0 84px!important;
+        width: 841px!important;
+    }
+}
+@media (max-width: 1120px) {
+
+}
+@media (max-width: 1024px) {
+    .lSSlideOuter .lSPager.lSpg > li {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 42px 0 0;
+    }
+    .lSSlideOuter .lSPager.lSpg > li a {
+        background-color: #fff;
+        border: 2px solid #b0de58;
+        border-radius: 30px;
+        display: inline-block;
+        height: 55px;
+        position: relative;
+        text-indent: -999em;
+        transition: all 0.5s linear 0s;
+        width: 130px;
+        z-index: 99;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:first-child a:before {
+        left:15px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:first-child a:before {
+        left:15px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(2) a:before {
+        left:15px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(2) a:before {
+        left:15px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(3) a:before {
+        left:15px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(3) a:before {
+        left:15px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(4) a:before {
+        left:15px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(4) a:before {
+        left:15px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(5) a:before {
+        left:15px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(5) a:before {
+        left:15px;
+    }
+    .comments .demo {
+        margin: 0 auto;
+        width: 836px;
+    }
+    .slider-border {
+        margin: 1px -25px 0 -4px;
+        width: 733px;
+    }
+    #content-slider2 li {
+        margin: 0 53px!important;
+        width: 740px!important;
+    }
+    .comments-slide img {
+        max-width: 190px;
+        margin-left: 43px;
+    }
+    .comm-text {
+        max-width: 404px;
+        margin: 11px 51px 0 13px;
+    }
+    .form-bottom {
+        max-width: 825px;
+        margin: 0 auto;
+    }
+    .form-up div {
+        width: 424px;
+        margin-right: 0;
+    }
+    .form-down textarea {
+        width: 745px;
+    }
+    .form-up {
+        padding-top: 0;
+    }
+    .form-up div p {
+        font: bold 20px 'open_sansbold', sans-serif;
+        margin-bottom: 3px;
+
+    }
+    .form-down p {
+        font: bold 20px 'open_sansbold', sans-serif;
+        margin-left: 20px;
+    }
+    .form-down textarea {
+        width: 338px;
+        margin: 0 auto;
+    }
+    .form-down {
+        padding-top: 6px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .form-down {
+        padding-top: 6px;
+        max-width: 425px;
+        margin: 0 auto;
+    }
+    .form-up div input {
+        height: 55px;
+    }
+    .send-message {
+        height: 55px;
+    }
+    .run-image + img {
+        max-width: 836px;
+        margin: 0 auto 50px;
+        display: block;
+    }
+    .slide-item p.first-year.other-slides {
+        width: 663px;
+        margin: -10px 0 0 0;
+    }
+}
+@media (max-width: 860px) {
+    .lSSlideOuter .lSPager.lSpg > li a {
+        width: 107px;
+    }
+    .demo {
+        width: 740px;
+        margin: 30px auto;
+    }
+    #content-slider li {
+        margin: 0 84px!important;
+        width: 578px!important;
+    }
+    .cost-now {
+        width: 154px;
+        margin-right: 10px;
+    }
+    .first-year {
+        margin-right: 10px;
+        width: 163px;
+    }
+    .slide-item p {
+        width: 181px;
+    }
+    .slide-item p.first-year.other-slides {
+        width: 581px;
+        margin: -30px 0 0 0;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:first-child a:before {
+        left:4px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:first-child a:before {
+        left:4px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(2) a:before {
+        left:4px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(2) a:before {
+        left:4px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(3) a:before {
+        left:4px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(3) a:before {
+        left:4px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(4) a:before {
+        left:4px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(4) a:before {
+        left:4px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li.active:nth-child(5) a:before {
+        left:4px;
+    }
+    .demo .item .lSSlideOuter .lSPager.lSpg li:nth-child(5) a:before {
+        left:4px;
+    }
+    .variants-item:nth-child(2n) {
+        margin-right: 0;
+    }
+    .variants-block {
+        max-width: 514px;
+        margin: 40px auto;
+    }
+
+    .comments .demo {
+        margin: 0 auto;
+        width: 753px;
+    }
+    #content-slider2 li {
+        margin: 0 53px!important;
+        width: 656px!important;
+    }
+    .slider-border {
+        margin: 1px -25px 0 -4px;
+        width: 650px;
+    }
+    .comm-text {
+        max-width: 330px;
+        margin: 0px 51px 0 13px;
+    }
+    .run-image + img {
+        max-width: 750px;
+        margin: 0 auto 50px;
+        display: block;
+    }
+
+}
+@media (max-width: 768px) {
+    .lSSlideOuter .lSPager.lSpg > li {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 42px 15px 0;
+    }
+    .demo {
+        width: 450px;
+        margin: 30px auto;
+    }
+    #content-slider {
+        height: 596px !important;
+    }
+    #content-slider li {
+        margin: 0 40px!important;
+        width: 380px!important;
+    }
+    .slide-item p {
+        width: 185px;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .slide-item img {
+        max-width: 450px;
+        margin-left: -39px;
+    }
+    .slider-icon-item {
+        margin-right: 10px;
+    }
+    .slider-icon-item:nth-child(2n) {
+        margin-right: 0;
+    }
+    .variants-item {
+        margin-right: 0;
+        margin-bottom: 36px;
+    }
+
+
+    .comments .demo {
+        margin: 0 auto;
+        width: 450px;
+    }
+    #content-slider2 li {
+        margin: 0px 43px!important;
+        width: 373px!important;
+    }
+    .slider-border {
+        margin: 0px -134px 0 9px;
+        width: 352px;
+        height: 530px;
+    }
+    #content-slider2 {
+        padding-top: 0!important;
+        height: 630px!important;
+    }
+    .comments-slide img {
+        max-width: 190px;
+        margin-left: 9px;
+    }
+    .comm-text {
+        max-width: 378px;
+        margin: 0px 20px 0 39px;
+    }
+    .comments .content-slider h3 {
+        max-width: 264px;
+        margin-left: 7px;
+    }
+    .comments .lSAction > .lSNext {
+        background-position: -88px -4px;
+        right: 4px;
+    }
+    .run-image + img {
+        max-width: 467px;
+        margin: 0 auto 50px;
+        display: block;
+    }
+    .footer-info {
+        display: block;
+        margin-left: 20px;
+    }
+    .copy {
+        display: block;
+    }
+    .left-footer {
+        padding-top: 3px;
+    }
+    .right-footer {
+        padding-top: 39px;
+    }
+    .slide-item p {
+        width: 185px;
+        margin-top: 70px;
+        text-align: center;
+    }
+    .slide-item p.first-year {
+        margin-top: 15px;
+        margin-bottom: -47px;
+    }
+    .slide-item p.first-year.other-slides {
+        width: 329px;
+        margin: 43px 0 0 0;
+    }
+}
+@media (max-width: 480px) {
+    .demo {
+        margin: 30px auto;
+        width: 300px;
+    }
+    #content-slider li {
+        margin: 0 40px !important;
+        width: 231px !important;
+    }
+    .slide-item p {
+        margin-top: 200px;
+    }
+    #content-slider {
+        height: 800px !important;
+    }
+    .slide-item p.first-year {
+        margin-bottom: -238px;
+        margin-top: 50px;
+    }
+    .slide-item img {
+        margin-left: -32px;
+        max-width: 280px;
+    }
+    .variants-content h2 {
+        font: 100 30px "open_sanslight",sans-serif;
+        padding: 56px 0 0;
+    }
+    .kalug-state h3 {
+        font: 22px "open_sansregular",sans-serif;
+    }
+    .kalug-state form {
+        max-width: 304px;
+    }
+
+    .agropark h2 {
+        font: 30px "droid_serifregular";
+    }
+    .history-map {
+        margin-top: 158px;
+    }
+    .table-block {
+        max-width: 305px;
+    }
+    .history-item {
+        margin-bottom: 10px;
+    }
+    table {
+        margin-bottom: 15px;
+        width: 306px;
+    }
+    td {
+        font-size: 12px;
+    }
+    .see h2 {
+        font: 30px "droid_serifregular";
+    }
+    .see h3 {
+        font: 22px "open_sansregular",sans-serif;
+    }
+
+    .see form {
+        max-width: 304px;
+    }
+    .place h2 {
+        font: 30px "droid_serifregular";
+    }
+    .neighbourhood h2 {
+        font: 100 30px "open_sanslight",sans-serif;
+    }
+    .neighbourhood-item:nth-child(2n+1) {
+        margin-right: 0;
+    }
+    .run-image + img {
+        display: block;
+        margin: 0 auto 50px;
+        max-width: 310px;
+    }
+    .get h2 {
+        font: 30px "droid_serifregular";
+    }
+    .get-item {
+        max-width: 310px;
+    }
+    .comments h2 {
+        color: #020401;
+        font: 30px "droid_serifregular";
+        padding: 41px 0 6px;
+        text-align: center;
+    }
+
+
+    .comments .demo {
+        margin: 0 auto;
+        width: 300px;
+    }
+    .slider-border {
+        margin: 0 -132px 0 3px;
+        width: 212px;
+        height: 580px;
+    }
+    #content-slider2 li {
+        margin: 0 44px !important;
+        width: 217px !important;
+    }
+    .comments .lSAction > .lSPrev {
+        background-position: -2px -4px;
+        left: 4px;
+    }
+    .comm-text h3 {
+        color: #7eb80e;
+        font: 100 22px "open_sanslight",sans-serif;
+    }
+    .comm-text p {
+        color: #727272;
+        font: 12px "open_sansregular",sans-serif;
+    }
+    .comments .demo .lSSlideWrapper {
+        min-height: 680px;
+    }
+    .comments-slide img {
+        margin-left: 0;
+    }
+    .form-up div {
+        margin-right: 0;
+        width: 310px;
+    }
+    .form-up div input {
+        width: 230px;
+    }
+    .form-down {
+        margin: 0 auto;
+        max-width: 310px;
+        padding-top: 6px;
+    }
+    .form-down textarea {
+        margin: 0 auto;
+        width: 230px;
+    }
+    .send-message {
+        width: 306px;
+    }
+    .table-wrapper {
+        display: inline-block;
+        margin-right: 0;
+        width: 310px;
+    }
+    .offer-item {
+        max-width: 310px;
+    }
+    .offer-item img {
+        max-width: 310px;
+    }
+    .footer-logo a img {
+        max-width: 130px;
+    }
+    .footer-info {
+        margin-left: 0;
+    }
+    .copy a {
+        color: #55c4e8;
+        display: inline-block;
+        font: 12px "open_sanslight",sans-serif;
+        margin-left: 15px;
+    }
+    .right-footer {
+        padding-top: 33px;
+    }
+    .place div:nth-child(2) {
+        margin: 0 auto;
+        width: 300px;
+    }
+    .place div {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+    }
+    .place h3 + p.long-text {
+        width: 200px;
+    }
+    .place h3 + p {
+        font: 12px "open_sansregular",sans-serif;
+        width: 100px;
+        margin-bottom: 15px;
+    }
+    .slide-item p.first-year.other-slides {
+        width: 174px;
+        margin: 239px 0 64px 0;
+        font-size: 14px;
+    }
+}
