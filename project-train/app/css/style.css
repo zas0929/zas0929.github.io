@@ -1,15 +1,11 @@
 .some {
   color: #cc0000;
-  border: solid 1px #cc0000;
-  border-radius: 10px;
-  display: inline;
-  transition: 0.2s; }
-  .some .some:hover {
-    background: #ccc;
-    transition: 0.5s; }
+  border: solid 2px #00cc00;
+  border-radius: 5px;
+  display: inline; }
   .some span {
-    color: #cc0000;
-    font-size: 20px; }
+    color: #0000cc;
+    font-size: 31px; }
 
-* {
-  background: #ccc; }
+body {
+  background: #666; }

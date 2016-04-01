@@ -1,23 +1,18 @@
 $red: #cc0000;
 $green: #00cc00;
 $blue: #0000cc;
-$textSize: 20px;
+$textSize: 30px;
 .some {
   color: $red;
-  border: solid 1px $red;
-  border-radius: 10px;
+  border: solid 2px $green;
+  border-radius: 5px;
   display: inline;
-  transition: 0.2s;
 
-.some:hover {
-  background: #ccc;
-  transition: 0.5s;
-}
   span {
-    color: $red;
-    font-size: $textSize;
+    color: $blue;
+    font-size: $textSize + 1;
  }
 }
-* {
-  background: #ccc;
+body {
+  background: #666;
 }

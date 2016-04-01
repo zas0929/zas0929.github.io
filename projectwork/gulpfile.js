@@ -14,7 +14,9 @@ gulp.task('browser-sync', function() {
             baseDir: "./"
         }
     });
+
 });
+
 
 // Sass task, will run when any SCSS files change & BrowserSync will auto-update browsers
 gulp.task('sass', function () {
