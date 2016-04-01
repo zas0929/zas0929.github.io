@@ -1,0 +1,16 @@
+$test: #ccc;
+$green: #00cc00;
+$red: #cc0000;
+
+.testing {
+  width: percentage(4/7);
+  background: $test;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.some {
+  color: $green;
+  text-decoration: underline;
+  border: solid 2px #0000cc;
+}
