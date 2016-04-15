@@ -1,11 +1,11 @@
 /*
  * Third party
  */
-//= ../../bower_components/jquery/dist/jquery.js - подключение зависимостей
+//= ../../bower_components/jquery/dist/jquery.js
 
 
 /*
  * Custom
  */
-//= partials/app.js - подключение собственных скриптов
-alert("Hello!");
+//=partials/app.js
+
