@@ -5,7 +5,7 @@ var concat = require('gulp-concat');
 
 
 // Default task to be run with `gulp`
-gulp.task('default', ['sass', 'styles', 'browser-sync'], function () {
+gulp.task('default', ['sass', 'browser-sync'], function () {
     gulp.watch("src/scss/*.scss", ['sass']);
 });
 
@@ -17,11 +17,11 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({stream:true}));
 });
 //concat
-gulp.task('styles', function() {
-  return gulp.src('app/css/*.css')
-    .pipe(concat('all.css'))
-    .pipe(gulp.dest('app/dist'));
-});
+//gulp.task('styles', function() {
+ // return gulp.src('app/css/*.css')
+ //   .pipe(concat('all.css'))
+ //   .pipe(gulp.dest('app/dist'));
+//});
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
     browserSync.init(null, {

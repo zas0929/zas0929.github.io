@@ -4,7 +4,7 @@ $blue: #0000cc;
 $textSize: 30px;
 .some {
   color: $red;
-  border: solid 2px $green;
+  border: solid 2px $red;
   border-radius: 5px;
   display: inline;
 
@@ -14,5 +14,5 @@ $textSize: 30px;
  }
 }
 body {
-  background: #666;
+  background: #fff;
 }

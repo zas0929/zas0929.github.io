@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="app/css/style.css" rel="stylesheet">
+    <link href="app/css/style2.css" rel="stylesheet">
+</head>
+<body>
+ <h1 class="some">Hello!<span> dudes</span></h1>
+
+<object id="my-svg" type="image/svg+xml" data="http://trade4.r-dev.pp.ua/img/logo-blue.svg"></object>
+
+<script>
+  new Vivus('my-svg', {duration: 200}, myCallback);
+</script>
+<script>
+new Vivus('my-svg-id', {
+    type: 'delayed',
+    duration: 200,
+    animTimingFunction: Vivus.EASE
+}, myCallback);
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 .some {
-  color: #cc0000;
-  border: solid 2px #00cc00;
+  color: #0000cc;
+  border: solid 2px #cc0000;
   border-radius: 5px;
   display: inline; }
   .some span {
@@ -8,7 +8,7 @@
     font-size: 31px; }
 
 body {
-  background: #666; }
+  background: #fff; }
 
 .some {
   background: #ccc; }

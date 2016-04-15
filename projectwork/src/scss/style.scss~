@@ -9,7 +9,7 @@ $textSize: 30px;
   display: inline;
 
   span {
-    color: $green;
+    color: $blue;
     font-size: $textSize + 5;
  }
 }

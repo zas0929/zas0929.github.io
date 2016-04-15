@@ -1,0 +1,15 @@
+$red: #cc0000;
+$green: #00cc00;
+$blue: #0000cc;
+$textSize: 30px;
+.some {
+  color: $red;
+  border: solid 2px $green;
+  border-radius: 12px;
+  display: inline;
+
+  span {
+    color: $green;
+    font-size: $textSize + 5;
+ }
+}
