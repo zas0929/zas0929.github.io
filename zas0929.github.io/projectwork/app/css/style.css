@@ -1,0 +1,8 @@
+.some {
+  color: #cc0000;
+  border: solid 1px #00cc00;
+  border-radius: 12px;
+  display: inline; }
+  .some span {
+    color: #00cc00;
+    font-size: 35px; }

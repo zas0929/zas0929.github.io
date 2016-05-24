@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <title>Dolina</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="fonts/stylesheet.css"/>
+    <link rel="stylesheet" href="css/jquery.fancybox.css"/>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet"  href="css/lightslider.css"/>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script src="js/maskedinput.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#content-slider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+            $("#content-slider2").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                speed:500,
+                auto:true,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }
+            });
+
+            $("input.phone").mask("+7 (999) 999-9999");
+            $("input.phone-form").mask("+7 (999) 999-9999");
+
+            $('form.ajax_form').on('submit', function (e) {
+                var isOk = true;
+                var form = this;
+
+                $(form).find('input,textarea').each(function () {
+                    var localOk = true;
+                    switch ($(this).attr('name')) {
+                        case 'phone':
+                            localOk = ($(this).val().length == 17);
+                            break;
+                        case 'name':
+                            localOk = ($(this).val().length > 2 && $(this).val().length < 26);
+                            break;
+                        case 'email':
+                            var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+                            localOk = pattern.test($(this).val());
+                            break;
+                        default:
+                    }
+                    isOk = isOk && localOk;
+                    if (localOk) {
+                        $(this).removeClass('error');
+                    } else {
+                        $(this).addClass('error');
+                    }
+                });
+                if (isOk) {
+                    //ajax отправка
+                    var url = $(form).attr('action');
+                    $(form).blur();
+                    $.post(url, $(form).serializeArray(), function(data){
+                        if (data=='1') {
+                            $(form).trigger('reset');
+                            $.fancybox({
+                                'content': $('#popup_finish')
+                            });
+                        } else {
+                            $.fancybox({
+                                'content': $('#popup_finish_error')
+                            });
+                        }
+                    });
+                }
+                e.preventDefault();
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-content">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="#"><img src="images/logo.png" alt="logo"/></a>
+                    </div>
+                    <div class="phone-call">
+                        <p>+7(495) 255-29-20</p>
+                        <a href="#">заказать звонок</a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="header-bottom">
+                    <h1>Как заработать <br/>
+                        <span>9 800 000 <del>Р</del> за 10 лет,</span> <br/>купив сейчас 1 Га земли?
+                    </h1>
+                    <p>Покупка земли с саженцами в агропарке «Долина мечты» Калужской
+                        области позволит получать более 30% годовых прибыли
+                        и реализовать ваши идеи.
+                    </p>
+
+                    <form action="send.php" method="POST" class="ajax_form">
+                        <input type="hidden" name="action" value="a1" />
+                        <input type="text" name="phone" class="phone" placeholder="Укажите телефон для связи"/>
+                        <input type="submit" name="button" class="get-button" value="получить консультацию"/>
+                    </form>
+
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <section class="live-now-wrapper">
+                <div class="live-now">
+                    <h2>В каких условиях мы живем сейчас?</h2>
+                    <div class="live-now-blocks">
+                        <div class="live-now-item">
+                            <img src="images/live-now1.png" alt=""/>
+                            <div class="text-live">
+                                <h3>Нестабильность рубля</h3>
+                                <p>Инфляция в России за 2014 год
+                                    составила Х%. За 10 лет рубль
+                                    обесценился на Y%</p>
+                            </div>
+                        </div>
+                        <div class="live-now-item">
+                            <img src="images/live-now2.png" alt=""/>
+                            <div class="text-live">
+                                <h3>Сложности с владением имуществом за рубежом</h3>
+                                <p>В 2015 году был принят закон по
+                                    которому отдельным категориям лиц
+                                    необходимо декларировать любое
+                                    недвижимое имуществоза пределами
+                                    РФ</p>
+                            </div>
+                        </div>
+                        <div class="live-now-item">
+                            <img src="images/live-now3.png" alt=""/>
+                            <div class="text-live">
+                                <h3>Суета города</h3>
+                                <p>Часовые пробки, очереди и суматоха -
+                                    ежедневная жизнь любого мегаполиса</p>
+                            </div>
+                        </div>
+                        <div class="live-now-item">
+                            <img src="images/live-now4.png" alt=""/>
+                            <div class="text-live">
+                                <h3>Отзыв лицензии у банков</h3>
+                                <p>За 2 года ЦБ отозвал лицензии у Х банков</p>
+                            </div>
+                        </div>
+                        <div class="live-now-item">
+                            <img src="images/live-now5.png" alt=""/>
+                            <div class="text-live">
+                                <h3>Невкусные продукты и ГМО</h3>
+                                <p>Вы обратили внимание, что продукты с прилавков становятся безвкусными?</p>
+                            </div>
+                        </div>
+                        <div class="live-now-item">
+                            <img src="images/live-now6.png" alt=""/>
+                            <div class="text-live">
+                                <h3>Отсутствие интересных инвестиционных проектов</h3>
+                                <p>Вы обратили внимание, что продукты с прилавков становятся какими-то безвкусными?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="ground-wrapper">
+                <div class="ground">
+                    <h2>Земля может дать вам многое</h2>
+                    <div class="ground-block">
+                        <div class="ground-item">
+                            <img src="images/ground1.png" alt=""/>
+                            <h3>Получать доход <br/> от 30% в год</h3>
+                            <p>Это выше депозита 14.5% (самый высокий депозит на 27 июля 2015 по данным сайта banki.ru)</p>
+                        </div>
+                        <div class="ground-item">
+                            <img src="images/ground2.png" alt=""/>
+                            <h3>Тихая гавань</h3>
+                            <p>Место, где вы можете насладится природой. Провести время с семьей или выспатся в тишине</p>
+                        </div>
+                        <div class="ground-item">
+                            <img src="images/ground3.png" alt=""/>
+                            <h3>Собственность, которую <br/> можно передать детям</h3>
+                            <p>В будущем вы сможете передать детям актив, который будет только расти в цене</p>
+                        </div>
+                        <div class="ground-item">
+                            <img src="images/ground4.png" alt=""/>
+                            <h3>Вкусные фрукты  <br/> и овощи</h3>
+                            <p>Снова почувствовать вкус натуральных овощей и фруктов</p>
+                        </div>
+                        <div class="ground-item">
+                            <img src="images/ground5.png" alt=""/>
+                            <h3>Построить прибыльный <br/> бизнес</h3>
+                            <p>Реализовать ваши идеи в области агротуризма и фермерского хозяйства</p>
+                        </div>
+                        <div class="ground-item">
+                            <img src="images/ground6.png" alt=""/>
+                            <h3>Вклад в развитие страны</h3>
+                            <p>Облагораживая землю и создавая свое фермерское хозяйство вы вносите свой вклад в развитие страны</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="offer-wrapper">
+                <div class="offer">
+                    <h2>Наше предложение</h2>
+                    <div class="offer-blocks">
+                        <div class="offer-item">
+                            <img src="images/offer1.jpg" alt=""/>
+                            <h3 class="price light-green">1 200 000 <del>Р.</del></h3>
+                            <p>Участок земли <br/> 1 Га</p>
+                        </div>
+                        <div class="offer-item">
+                            <img src="images/offer2.jpg" alt=""/>
+                            <h3 class="price blue">1 700 000 <del>Р.</del></h3>
+                            <p>Участок земли 1 Га c 1 000 саженцев яблонь</p>
+                        </div>
+                        <div class="offer-item">
+                            <img src="images/offer3.jpg" alt=""/>
+                            <h3 class="price green">1 400 000 <del>Р.</del></h3>
+                            <p>Участок земли 1 Га c 3 000 саженцев сосен</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="leave-phone-wrapper">
+                    <div class="leave-phone">
+                        <div class="leave-phone-text">Оставьте ваш телефон и мы подробнее расскажем о нашем предложении</div>
+                        <form action="send.php" method="POST" class="ajax_form">
+                            <input type="hidden" name="action" value="a1" />
+                            <input type="text" name="phone" class="phone" placeholder="Укажите телефон для связи"/>
+                            <input type="submit" name="button" class="get-button" value="получить консультацию"/>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+            <section class="earn-money">
+                <h2>Как заработать на своей земле</h2>
+                <h3>Бизнес основан на естественном росте растений в природе.
+                    За счет роста стоимости саженцев, активы бизнеса увеличиваются
+                    ежегодно более чем в 2 раза.</h3>
+                <p>Такие активы не изнашиваются, морально не устаревают, при этом достаточно быстро растут в цене независимо от кризиса
+                    и экономической ситуации в стране и мире. Учитывая целостность проекта и большое количество фермерских хозяйств с разнообразными видами выращиваемых в них деревьев, агропарк, в скором времени превратится в красивейший дендрарий, настоящий город фермеров. Фермерские землевладения в Долине мечты будут постоянно расти в цене вместе с естественным ростом деревьев и создаваемой инфраструктурой в агропарке. Создав в агропарке свое фермерское поместье, Вы обеспечите продовольственную и финансовую безопасность своей семьи, а также внесете существенный вклад в развитие страны в целом!</p>
+            </section>
+            <section class="earn-slider">
+                <div class="demo">
+                    <div class="item">
+                        <ul id="content-slider" class="content-slider">
+                            <li>
+                                <div class="slide-item">
+                                    <p class="cost-now">
+                                        Стоимость 1 Га земли с саженцами сосен <br/>
+                                        <span>- 1 400 000 <del>Р</del></span>
+                                    </p>
+                                    <p class="first-year">
+                                        В первый год производится <br/> посадка саженцев <br/> в питомнике
+                                    </p>
+                                    <p class="cost-later">
+                                        Стоимость <br/> этой земли через 5 лет <br/>
+                                        <span>- 14 000 000 <del>Р</del> или <br/> 30% годовых</span>
+
+                                    </p>
+                                    <img src="images/trees.jpg" alt=""/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-item">
+
+                                    <p class="first-year other-slides">
+                                        В течение первых двух лет освоения питомника происходит укоренение и естественное развитие саженцев. Требуется 3-4 раза в год скосить сорняки и взрыхлить почву вокруг саженцев.
+                                        К концу второго года высота саженцев достигнет около 0,5 метров, стоимость возрастет до 50 рублей за штуку (опт).
+                                    </p>
+                                    <img src="images/trees.jpg" alt=""/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-item">
+                                    <p class="first-year other-slides">
+                                        Начиная с третьего года необходимо прореживание саженцев в целях обеспечения пространства для роста наиболее удачных растений. Выкапываемые при прореживании саженцы реализуются, принося владельцу ежегодный доход, подсаживаются новые молодые саженцы.
+                                    </p>
+                                    <img src="images/trees.jpg" alt=""/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-item">
+
+                                    <p class="first-year other-slides">
+                                        Для формирования корневой системы необходимо провести подрезку корневой системы (1 раз в 2-3 года). Требуется 2-3 раза в год скосить сорняки и взрыхлить почву вокруг саженцев.
+                                        К концу пятого года высота саженцев достигнет около 1,6 метров, стоимость возрастет до 900 рублей за штуку (опт).
+                                        В этот период владелец организует КФХ для реализации саженцев.
+                                    </p>
+
+                                    <img src="images/trees.jpg" alt=""/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="slide-item">
+
+                                    <p class="first-year other-slides">
+                                        В этот период остается не более 2 тысяч растений, посаженных в первый год в питомнике. Уже начинают подрастать подсаженные позже растения.
+                                        Для формирования корневой системы необходимо провести подрезку корневой системы (1 раз в 2-3 года). К концу десятого года высота растения достигают в высоту около 5 метров, стоимость растения возрастет до 9 тыс. рублей за штуку (опт).
+                                    </p>
+
+                                    <img src="images/trees.jpg" alt=""/>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="slider-icons">
+                    <div class="slider-icon-item">
+                        <img src="images/slide-icon1.jpg" alt=""/>
+                        <p>Выращиваются по Российским технологиям с применением новейшей импортной техники и оборудования
+                        </p>
+                    </div>
+                    <div class="slider-icon-item">
+                        <img src="images/slide-icon2.jpg" alt=""/>
+                        <p>Саженцы адаптированы <br/>
+                            к российскому <br/>
+                            климату</p>
+                    </div>
+                    <div class="slider-icon-item">
+                        <img src="images/slide-icon3.jpg" alt=""/>
+                        <p>Под присмотром ведущих питомниководов России и зарубежья.
+
+                        </p>
+                    </div>
+                    <div class="slider-icon-item">
+                        <img src="images/slide-icon4.jpg" alt=""/>
+                        <p> Заботы по уходу за саженцами берет на себя сервисная компания, которая обладает всеми необходимыми знаниями и технологиями и гарантирует рост саженцев.
+
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="variants">
+                <div class="variants-content">
+                    <h2>Другие варианты использования</h2>
+                    <div class="variants-block">
+                        <div class="variants-item orange-block">
+                            <div class="variants-item-content">
+                                <img src="images/house1.jpg" alt=""/>
+                                <h3>ЗАГОРОДНОЕ ПОМЕСТЬЕ</h3>
+                            </div>
+                        </div>
+                        <div class="variants-item light-green-block">
+                            <div class="variants-item-content">
+                                <img src="images/house2.jpg" alt=""/>
+                                <h3>ФЕРМА</h3>
+                                <p>Растениеводство, животноводство, птицеводство и др.</p>
+                            </div>
+                        </div>
+                        <div class="variants-item blue-block">
+                            <div class="variants-item-content">
+                                <img src="images/house3.jpg" alt=""/>
+                                <h3>АГРОТУРИЗМ</h3>
+                                <p>База отдыха или ивент площадка</p>
+                            </div>
+                        </div>
+                        <div class="variants-item green-block">
+                            <div class="variants-item-content">
+                                <img src="images/house4.jpg" alt=""/>
+                                <h3>КОТТЕДЖНЫЙ ПОСЕЛОК</h3>
+                                <p>При изменении целевого назначения</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="kalug-state">
+                <p>Калужская область динамично развивается. Строятся логистические и технопарки, например “Росва”, “Ворсино”, “Фрейт вилладж калуга” и другие. Свободных участков в Калужской области становиться все меньше и их цена постоянно растет. </p>
+                <h3>Позвоните нам по телефону +7 459 100-20-20
+                    и наши менеджеры подробнее расскажут вам,
+                    почему покупка земли в агропарке «Долина мечты»
+                    это удачная инвестиция.</h3>
+                <form action="send.php" method="POST" class="ajax_form">
+                    <input type="hidden" name="action" value="a1" />
+                    <input type="text" name="phone" class="phone" placeholder="Укажите телефон для связи"/>
+                    <input type="submit" name="button" class="get-button" value="получить консультацию"/>
+                </form>
+            </section>
+            <section class="agropark">
+                <h2>Агропарк "Долина мечты"</h2>
+                <div class="table-block">
+                    <div class="history-map">
+                        <div class="history-item">
+                            <div class="circle green-circle"></div>
+                            <p>Участки на продажу с высаженными на них саженцами</p>
+                        </div>
+                        <div class="history-item">
+                            <div class="circle sea-circle"></div>
+                            <p>Участки на продажу без посадок</p>
+                        </div>
+                        <div class="history-item">
+                            <div class="circle orange-circle"></div>
+                            <p>Проданные участки</p>
+                        </div>
+                        <div class="history-item">
+                            <div class="circle blue-circle"></div>
+                            <p>Проектируемые пруды с возможностью строительства за свой счет собственниками участков</p>
+                        </div>
+                        <div class="history-item">
+                            <div class="circle light-blue-circle"></div>
+                            <p>Запланированные пруды для обязательного строительства</p>
+                        </div>
+
+                    </div>
+                    <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>НОМЕР</th><th>ПЛОЩАДЬ, ГА,</th><th>ЦЕНА 1ГА,</th><th>СТОИМОСТЬ</th>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>1</b></td><td class="light-table" >1,85</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>2 000 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-sea">
+                            <td><b>2</b></td><td class="light-table" >0,6</td><td class="light-table" >1 700 000 <del>Р</del></td><td><b>1 700 790 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-sea">
+                            <td><b>3</b></td><td class="light-table" >1,4</td><td class="light-table" >1 500 000 <del>Р</del></td><td><b>1 800 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>4</b></td><td class="light-table" >1,89</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>600 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>5</b></td><td class="light-table" >1,26</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>2 300 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-pink">
+                            <td><b>6</b></td><td class="light-table" >1,85</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>1 700 790 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-pink">
+                            <td><b>7</b></td><td class="light-table" >0,6</td><td class="light-table" >1 700 000 <del>Р</del></td><td><b>1 800 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-pink">
+                            <td><b>8</b></td><td class="light-table" >1,4</td><td class="light-table" >1 500 000 <del>Р</del></td><td><b>600 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-sea">
+                            <td><b>9</b></td><td class="light-table" >1,89</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>900 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-sea">
+                            <td><b>10</b></td><td class="light-table" >1,26</td><td class="light-table" >1 700 000 <del>Р</del></td><td><b>2 300 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>11</b></td><td class="light-table" >1,85</td><td class="light-table" >1 500 000 <del>Р</del></td><td><b>1 700 790 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>12</b></td><td class="light-table" >0,6</td><td class="light-table" >1 800 000 <del>Р</del></td><td><b>1 800 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>13</b></td><td class="light-table" >1,4</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>600 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>14</b></td><td class="light-table" >1,89</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>1 700 790 <del>Р</del></b></td>
+                        </tr>
+
+                    </table>
+                    </div>
+                    <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>НОМЕР</th><th>ПЛОЩАДЬ, ГА,</th><th>ЦЕНА 1ГА,</th><th>СТОИМОСТЬ</th>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>1</b></td><td class="light-table" >1,85</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>2 000 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-sea">
+                            <td><b>2</b></td><td class="light-table" >0,6</td><td class="light-table" >1 700 000 <del>Р</del></td><td><b>1 700 790 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-sea">
+                            <td><b>3</b></td><td class="light-table" >1,4</td><td class="light-table" >1 500 000 <del>Р</del></td><td><b>1 800 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>4</b></td><td class="light-table" >1,89</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>600 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>5</b></td><td class="light-table" >1,26</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>2 300 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-pink">
+                            <td><b>6</b></td><td class="light-table" >1,85</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>1 700 790 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-pink">
+                            <td><b>7</b></td><td class="light-table" >0,6</td><td class="light-table" >1 700 000 <del>Р</del></td><td><b>1 800 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-pink">
+                            <td><b>8</b></td><td class="light-table" >1,4</td><td class="light-table" >1 500 000 <del>Р</del></td><td><b>600 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-sea">
+                            <td><b>9</b></td><td class="light-table" >1,89</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>900 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-sea">
+                            <td><b>10</b></td><td class="light-table" >1,26</td><td class="light-table" >1 700 000 <del>Р</del></td><td><b>2 300 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>11</b></td><td class="light-table" >1,85</td><td class="light-table" >1 500 000 <del>Р</del></td><td><b>1 700 790 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>12</b></td><td class="light-table" >0,6</td><td class="light-table" >1 800 000 <del>Р</del></td><td><b>1 800 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>13</b></td><td class="light-table" >1,4</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>600 000 <del>Р</del></b></td>
+                        </tr>
+                        <tr class="row-light-green">
+                            <td><b>14</b></td><td class="light-table" >1,89</td><td class="light-table" >1 000 000 <del>Р</del></td><td><b>1 700 790 <del>Р</del></b></td>
+                        </tr>
+
+                    </table>
+                    </div>
+                </div>
+            </section>
+            <section class="see-wrapper">
+                <div class="see">
+                    <h2>Хотите увидеть все сами?</h2>
+                    <h3>Оставьте ваш телефон и мы пригласим вас на просмотр</h3>
+                    <form action="send.php" method="POST" class="ajax_form">
+                        <input type="hidden" name="action" value="a1" />
+                        <input type="text" name="phone" class="phone" placeholder="Укажите телефон для связи"/>
+                        <input type="submit" name="button" class="get-button" value="отправить заявку"/>
+                    </form>
+                </div>
+            </section>
+            <section class="map">
+                <div class="top-map">
+                    <div class="place">
+                        <h2>Расположение</h2>
+                        <div>
+                            <h3>110</h3><p>км <br/> от МКАД</p>
+                        </div>
+                        <div>
+                            <h3>30</h3> <p>км <br/> от границ <br/> новой Москвы</p>
+                        </div>
+                        <div>
+                            <h3>40</h3><p class="long-text">км от станции метро Название <span>(которое откроется в 2020 году по планам развития Новой Москвы)</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </section>
+            <section class="neighbourhood-wrapper">
+                <div class="neighbourhood">
+                    <h2>Рядом находятся</h2>
+                    <div class="neighbourhood-block">
+                        <div class="neighbourhood-item">
+                            <img src="images/near6.jpg" alt=""/>
+                            <h3>5 км</h3>
+                            <p class="text-border">магазин и торговый центр в пос. Восход</p>
+                            <p class="text-bottom">Можно купить все необходимое</p>
+                        </div>
+                        <div class="neighbourhood-item">
+                            <img src="images/near1.jpg" alt=""/>
+                            <h3>30 км</h3>
+                            <p class="text-border">Парк птиц <br/>"Воробьи"</p>
+                            <p class="text-bottom">Здесь можно увидеть 2000 птиц со всего мира и редких зверей</p>
+                        </div>
+                        <div class="neighbourhood-item">
+                            <img src="images/near2.jpg" alt=""/>
+                            <h3>50 км</h3>
+                            <p class="text-border">парк музей <br/> "Этномир"</p>
+                            <p class="text-bottom">самый большой этнографический парк-музей России</p>
+                        </div>
+                        <div class="neighbourhood-item">
+                            <img src="images/near3.jpg" alt=""/>
+                            <h3>5 км</h3>
+                            <p class="text-border">река <br/> Протва</p>
+                            <p class="text-bottom">Чистая река с отличной рыбалкой. Можно поймать щуку</p>
+                        </div>
+                        <div class="neighbourhood-item">
+                            <img src="images/near4.jpg" alt=""/>
+                            <h3>10 км</h3>
+                            <p class="text-border">Музейный комплекс маршала Жукова</p>
+                            <p class="text-bottom">В городе Жукове</p>
+                        </div>
+                        <div class="neighbourhood-item">
+                            <img src="images/near5.jpg" alt=""/>
+                            <h3>5 км</h3>
+                            <p class="text-border">детский сад <br/> и школа</p>
+                            <p class="text-bottom">пос. Восход</p>
+                        </div>
+                    </div>
+                    <h4>В 1812 году</h4>
+                    <p class="run-image">Через село Тарутино по Калужскому тракту, который проходит по землям Агропарка, отступал Наполеон</p>
+                    <img src="images/run-bg.jpg" alt=""/>
+                </div>
+            </section>
+            <section class="get">
+                <h2>Как получить</h2>
+                <div class="get-block">
+                    <div class="get-item">
+                        <img src="images/get1.jpg" alt=""/>
+                        <h3>Звонок и консультация</h3>
+                        <p>Просто позвоните нам по телефону +7 495 100-20-20.
+                            Мы ответим на все ваши вопросы, расскажем об
+                            агропарке и подберем вариант специально под вас.
+                            Пригласим посмотреть ваши будущие владения</p>
+                    </div>
+                    <div class="get-item">
+                        <img src="images/get2.jpg" alt=""/>
+                        <h3>Оформление бумаг</h3>
+                        <p>Регистрация происходит в г. Жукове. Оформить все
+                            можно с помощью наших юристов или самостоятельно.
+                            Вся процедура займет около 3-х месяцев. После вы
+                            получаете свидетельство о собственности. В процессе
+                            регистрации дополнительно вам ездить никуда не
+                            придется</p>
+                    </div>
+                    <div class="get-item">
+                        <img src="images/get3.jpg" alt=""/>
+                        <h3>Вы полноправный владелец</h3>
+                        <p>Поздравляем! Вы получили <a href="#">свидетельство
+                            государственного образца</a>  и стали владельцем актива, цена которого с каждым годом растет</p>
+                    </div>
+                </div>
+            </section>
+            <section class="comments-wrapper">
+                <div class="comments">
+                    <h2>Отзывы</h2>
+                    <div class="demo">
+
+                            <div class="item">
+                                <ul id="content-slider2" class="content-slider">
+                                    <li>
+                                        <div class="slider-border">
+                                            <div class="comments-slide">
+                                                <img src="images/comments1.png" alt=""/>
+                                                <div class="comm-text">
+                                                    <h3>Петр Мамонов</h3>
+                                                    <hr/>
+                                                    <p>Регистрация происходит в г. Жукове. Оформить все  можно с помощью наших юристов или самостоятельно. Вся процедура займет около 3-х месяцев. После вы получаете свидетельство о собственности. В процессе регистрации дополнительно вам ездить никуда не придется.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="slider-border">
+                                            <div class="comments-slide">
+                                                <img src="images/comments1.png" alt=""/>
+                                                <div class="comm-text">
+                                                    <h3>Петр Мамонов</h3>
+                                                    <hr/>
+                                                    <p>Регистрация происходит в г. Жукове. Оформить все  можно с помощью наших юристов или самостоятельно. Вся процедура займет около 3-х месяцев. После вы получаете свидетельство о собственности. В процессе регистрации дополнительно вам ездить никуда не придется.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="form-bottom-wrapper">
+                <div class="form-bottom">
+                    <form action="send.php" method="POST" class="ajax_form">
+                        <input type="hidden" name="action" value="a2" />
+                        <div class="form-up">
+                            <div>
+                                <p>Имя</p>
+                                <input type="text" name="name" class="name-form"/>
+                            </div>
+                            <div>
+                                <p>Email</p>
+                                <input type="text" name="email" class="email-form"/>
+                            </div>
+                            <div>
+                                <p>Телефон</p>
+                                <input type="text" name="phone" class="phone-form" placeholder=""/>
+                            </div>
+                        </div>
+                        <div class="form-down">
+                            <p>Сообщение</p>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            <input type="submit" name="send" class="send-message" value="ОТПРАВИТЬ" />
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <footer>
+                <div class="footer-content">
+                    <div class="left-footer">
+                        <div class="footer-logo">
+                            <a href="#"><img src="images/footer-logo.png" alt=""/></a>
+                        </div>
+                        <div class="footer-info">
+                            <p>+7(495)255-29-20</p>
+                            <a href="mailto:info@dolina.ru">info@dolina.ru</a>
+                        </div>
+                    </div>
+                    <div class="right-footer">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#" class="soc-fac"></a></li>
+                                <li><a href="#" class="soc-tube"></a></li>
+                                <li><a href="#" class="soc-goog"></a></li>
+                            </ul>
+                        </div>
+                        <div class="copy">
+                            <a href="#">Проектирование <br/> и дизайн лендингов</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+
+        </div>
+    </div>
+    <div style="display: none;">
+        <div id="popup_finish" class="popup_finish pop">
+            Письмо успешно отправлено.<p>Наш специалист свяжется с вами в ближайшее время.</p><p>Спасибо.</p>
+            <a href="javascript:;" onclick="$.fancybox.close();">ОК</a>
+        </div>
+        <div id="popup_finish_error" class="popup_finish pop">
+           Письмо не было отправлено.<p>Проверьте правильность заполнения формы и попробуйте ещё раз.</p><p>Спасибо.</p>
+            <a href="javascript:;" onclick="$.fancybox.close();">ОК</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap,
+                myPlacemark;
+
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [54.55, 36.45],
+                zoom: 8
+            });
+
+            myPlacemark = new ymaps.Placemark([54.55, 36.45], {
+
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+        /*
+        var myPlacemark = new ymaps.Placemark([55.12, 37.86], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'Dolina/images/mark.png',
+            iconImageSize: [90, 100],
+            iconImageOffset: [-3, -42]
+        });
+        */
+
+    </script>
+</body>
+</html>

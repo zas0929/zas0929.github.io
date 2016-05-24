@@ -1,0 +1,11 @@
+.some {
+  color: #cc0000;
+  border: solid 2px #cc0000;
+  border-radius: 5px;
+  display: inline; }
+  .some span {
+    color: #0000cc;
+    font-size: 31px; }
+
+body {
+  background: #fff; }

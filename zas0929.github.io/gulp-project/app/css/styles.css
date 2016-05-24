@@ -1,0 +1,11 @@
+.testing {
+  width: 57.14286%;
+  background: #ccc;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px; }
+
+.some {
+  color: #00cc00;
+  text-decoration: underline;
+  border: solid 2px #ccc; }
