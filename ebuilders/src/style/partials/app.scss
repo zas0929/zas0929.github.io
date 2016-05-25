@@ -177,10 +177,12 @@ $arial:  'Arial', sans-serif;
   top: 54%;
   transition: 0.2s;
   transform: scale(1);
-  background-image: none;
 
 }
 .bx-wrapper .bx-controls-direction a:hover {
   transform: scale(1.1);
   transition: 0.2s
+}
+.bx-wrapper .bx-prev {
+  background-image: none;
 }
