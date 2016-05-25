@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "normalize.css": "*",
-    "jquery": "2.*"
+    "jquery": "2.*",
+    "bxslider-4": "^4.2.5"
   }
 }
