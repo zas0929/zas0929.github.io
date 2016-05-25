@@ -66,3 +66,23 @@
 .bx-wrapper {
     background: none;
 }
+
+
+
+.bx-wrapper {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    box-shadow: none;
+    left: 15px;
+    margin: 199px auto 60px;
+    max-width: 150px !important;
+    padding: 0;
+    top: -3px;
+}
+.bx-viewport {
+    height: 228px!important;
+    width: 101%!important;
+}
+.bx-viewport li {
+    width: 152px!important;
+}
