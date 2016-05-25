@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
-    uncss = require('gulp-uncss'),
+    //uncss = require('gulp-uncss'),
     plumber = require('gulp-plumber'),
     reload = browserSync.reload;
 
@@ -85,9 +85,9 @@ gulp.task('style:build', function () {
 	.pipe(plumber()) // plumber
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
-	.pipe(uncss({
-            html: ['build/index.html', 'posts/**/*.html', 'http://example.com']
-        }))           //Удаляем лишний css
+	//.pipe(uncss({
+     //       html: ['build/index.html', 'posts/**/*.html', 'http://example.com']
+     //   }))           //Удаляем лишний css
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
 	

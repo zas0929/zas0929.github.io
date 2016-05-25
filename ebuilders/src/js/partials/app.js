@@ -4,7 +4,12 @@ $(document).ready(function() {
         $bannerTitle = $('.banner__title'),
         $bannerTitleText = $('.banner__title-text'),
         $bannerPrice = $('.banner__price'),
-        $bannerPriceText = $('.banner__price-text');
+        $bannerPriceText = $('.banner__price-text'),
+        $btn = $('.banner__btn'),
+        $bannerBg = $('.banner__bg'),
+        $bannerImg = $('.banner__img'),
+        $bannerSlider = $('.banner__slider');
+
 
 
 
@@ -24,13 +29,22 @@ $(document).ready(function() {
         TweenLite.fromTo($bannerPrice, 0.2, {scale: 0, x: 0, y: 0, opacity: 1}, {scale: 1, x:'+=110px', y:'+=56px', onComplete: bannerPriceText});
     }
     function bannerPriceText() {
-        TweenLite.to($bannerPriceText, 0.2, {opacity: 1, onComplete: sliderRun});
+        TweenLite.to($bannerPriceText, 0.2, {opacity: 1, onComplete: btnRun});
     }
+    function btnRun() {
+        TweenLite.fromTo($btn, 0.4, {scale: 2, opacity: 0}, {scale: 1, opacity: 1, delay: 1, y: '+=100px', onComplete: bgRun});
+    }
+    function bgRun() {
+        TweenLite.to($bannerImg, 0.2, {opacity: 0, delay: 1.5, onComplete: sliderRun});
 
-function sliderRun() {
-    $('.banner__img').fadeOut(200);
-    $('.banner__slider').bxSlider();
-}
+    }
+    function sliderRun() {
+        TweenLite.to($bannerBg, 0.75, {opacity: 1});
+        TweenLite.to($bannerSlider, 0.75, {opacity: 1});
+        $bannerSlider.bxSlider({
+            speed: 750
+        });
+    }
 
 
 });
