@@ -42,9 +42,17 @@ $(document).ready(function() {
         TweenLite.to($bannerBg, 0.75, {opacity: 1});
         TweenLite.to($bannerSlider, 0.75, {opacity: 1});
         $bannerSlider.bxSlider({
-            speed: 750
+            speed: 750,
+            pager: false
         });
     }
 
+
+    $banner.hover(function() {
+        TweenLite.to($btn, 0.5, {opacity: 1} );
+    },
+        function() {
+            TweenLite.to($btn, 0.5, {opacity: 0.5});
+        });
 
 });

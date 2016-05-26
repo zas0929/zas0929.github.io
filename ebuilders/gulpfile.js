@@ -5,46 +5,40 @@ var gulp = require('gulp'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
     cssmin = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
-    //uncss = require('gulp-uncss'),
     plumber = require('gulp-plumber'),
     reload = browserSync.reload;
 
 
-//Пропишем все нужные нам пути
 var path = {
-    build: { //Тут мы укажем куда складывать готовые после сборки файлы
+    build: {
         html: 'build/',
         js: 'build/js/',
         css: 'build/css/',
-        img: 'build/img/',
-        fonts: 'build/fonts/'
+        img: 'build/img/'
     },
-    src: { //Пути откуда брать исходники
-        html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
+    src: {
+        html: 'src/*.html',
+        js: 'src/js/main.js',
         style: 'src/style/main.scss',
-        img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-        fonts: 'src/fonts/**/*.*'
+        img: 'src/img/**/*.*'
     },
-    watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+    watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
-        img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        img: 'src/img/**/*.*'
     },
     clean: './build'
 };
 
 
-//Создадим переменную с настройками нашего dev сервера:
+//Server settings
 
 var config = {
     server: {
@@ -53,83 +47,68 @@ var config = {
     tunnel: true,
     host: 'localhost',
     port: 9000,
-    logPrefix: "Frontend_Devil"
+    logPrefix: "Lisovskiy_Dev"
 };
 
 
-//Напишем таск для сборки html:
+//Task for HTML
 
 gulp.task('html:build', function () {
-    gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(rigger()) //Прогоним через rigger
-        .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
-        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
-});
-
-//Таск по сборке скриптов будет выглядеть так:
-
-gulp.task('js:build', function () {
-    gulp.src(path.src.js) //Найдем наш main файл
-        .pipe(rigger()) //Прогоним через rigger
-        .pipe(sourcemaps.init()) //Инициализируем sourcemap
-        .pipe(uglify()) //Сожмем наш js
-        .pipe(sourcemaps.write()) //Пропишем карты
-        .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
-        .pipe(reload({stream: true})); //И перезагрузим сервер
-});
-
-//Напишем задачу для сборки нашего SCSS:
-
-gulp.task('style:build', function () {
-    gulp.src(path.src.style) //Выберем наш main.scss
-	.pipe(plumber()) // plumber
-        .pipe(sourcemaps.init()) //То же самое что и с js
-        .pipe(sass()) //Скомпилируем
-	//.pipe(uncss({
-     //       html: ['build/index.html', 'posts/**/*.html', 'http://example.com']
-     //   }))           //Удаляем лишний css
-        .pipe(prefixer()) //Добавим вендорные префиксы
-        .pipe(cssmin()) //Сожмем
-	
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.css)) //И в build
+    gulp.src(path.src.html)
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
 
-//Таск по картинкам будет выглядеть так:
+//Task for JS
+
+gulp.task('js:build', function () {
+    gulp.src(path.src.js)
+        .pipe(rigger())
+        .pipe(uglify())
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream: true}));
+});
+
+//Task for Scss
+
+gulp.task('style:build', function () {
+    gulp.src(path.src.style)
+	.pipe(plumber())
+        .pipe(sass())
+        .pipe(prefixer())
+        .pipe(cssmin())
+
+        .pipe(gulp.dest(path.build.css))
+        .pipe(reload({stream: true}));
+});
+
+//minimize imgs
 
 gulp.task('image:build', function () {
-    gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(imagemin({ //Сожмем их
+    gulp.src(path.src.img)
+        .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.build.img)) //И бросим в build
+        .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });
 
-// Скопируем шрифты
-gulp.task('fonts:build', function() {
-    gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
-});
 
-//определим таск с именем «build», который будет запускать все что мы накодили:
+
+//build task
 
 gulp.task('build', [
     'html:build',
     'js:build',
     'style:build',
-    'fonts:build',
     'image:build'
 ]);
 
-//Изменения файлов
-
-//Чтобы не лазить все время в консоль давайте попросим gulp каждый раз при изменении какого то файла запускать нужную задачу.
-// Для этого напишет такой таск:
+//watch
 
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
@@ -144,22 +123,19 @@ gulp.task('watch', function(){
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');
     });
-    watch([path.watch.fonts], function(event, cb) {
-        gulp.start('fonts:build');
-    });
 });
 
-//Создать веб сервер
+//create server
 gulp.task('webserver', function () {
     browserSync(config);
 });
 
-//Удаление папки build
+//remove build
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-//Запуск gulp
+//run gulp
 gulp.task('default', ['build', 'webserver', 'watch']);
 
 
