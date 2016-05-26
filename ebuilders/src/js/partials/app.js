@@ -42,9 +42,17 @@ $(document).ready(function() {
         TweenLite.to($bannerBg, 0.75, {opacity: 1});
         TweenLite.to($bannerSlider, 0.75, {opacity: 1});
         $bannerSlider.bxSlider({
-            speed: 750
+            speed: 750,
+            pager: false
         });
     }
 
+    ////TweenLite.to( $btn , 2 , { backgroundImage: "linear-gradient(to bottom, rgba(245,145,15,1) 0%, rgba(255,85,0,1) 100%)" } )
+    //$banner.mouseover(function() {
+    //    TweenLite.set($btn, 0.5, { backgroundColor: '#cc0000'});
+    //});
+    //    $banner.mouseout(function() {
+    //        TweenLite.set($btn, 0.5, { backgroundImage: "linear-gradient(to bottom, rgba(245,145,15,1) 0%, rgba(255,85,0,1) 100%)"  });
+    //    });
 
 });
