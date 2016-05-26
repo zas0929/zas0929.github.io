@@ -66,7 +66,6 @@ $arial:  'Arial', sans-serif;
   opacity: 0;
   transition: 0.5s background;
   z-index: 15;
-
   background: rgba(245,145,15,1);
   background: -moz-linear-gradient(top, rgba(245,145,15,1) 0%, rgba(255,85,0,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(245,145,15,1)), color-stop(100%, rgba(255,85,0,1)));
@@ -99,7 +98,7 @@ $arial:  'Arial', sans-serif;
 }
 
 
-/********* new styles **********/
+/********* slider styles **********/
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
   top: 50%;
@@ -131,9 +130,7 @@ $arial:  'Arial', sans-serif;
 .bx-wrapper .bx-viewport {
   box-shadow: none;
 }
-//.bx-pager.bx-default-pager {
-//  display: none !important;
-//}
+
 .bx-wrapper .bx-controls-direction a.bx-prev {
   left: -37px;
   width: 0;
