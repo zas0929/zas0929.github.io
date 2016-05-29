@@ -140,8 +140,28 @@ $(document).ready(function() {
         }
         //console.log(colors.right);
     }
+    // loading xml
+    function loadData() {
+        var xhr = new XMLHttpRequest();
 
-    
+        xhr.open('GET', 'data.xml', false);
+        xhr.send();
+
+        if (xhr.status != 200) {
+            // обработать ошибку
+            alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+        } else {
+            // вывести результат
+            var a = xhr.responseText;
+            var regPrice = /\<\!\[cdata\[.*\]\]\>/gmi;
+            var b = a.match(regPrice);
+            var Price = b[0].substring(9, b[0].length-3);
+            var More = b[1].substring(9, b[1].length-10);
+            $('.banner__price-text').text(Price);
+            $('.banner__btn').text(More);
+        }
+    }
+    loadData();
 
 });
 
