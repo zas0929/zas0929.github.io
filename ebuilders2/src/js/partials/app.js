@@ -1,3 +1,4 @@
+//slider
 (function($) {
     var $sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
         $imgs = $sliderUL.find('img'),
@@ -41,10 +42,6 @@
 
 })(jQuery);
 $(document).ready(function() {
-
-
-
-
     var $bannerImg = $('.banner__img'),
         $banner = $('.banner'),
         $bannerTitle = $('.banner__title'),
@@ -56,8 +53,6 @@ $(document).ready(function() {
         $bannerImg = $('.banner__img'),
         $bannerSlider = $('.slider'),
         $sliderNav = $('#slider-nav');
-
-
 
 
     TweenLite.fromTo($banner, 0.2, {opacity:0}, {opacity:1, onComplete: bannerImg});
@@ -148,10 +143,10 @@ $(document).ready(function() {
         xhr.send();
 
         if (xhr.status != 200) {
-            // обработать ошибку
+            //error
             alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
         } else {
-            // вывести результат
+            // result
             var a = xhr.responseText;
             var regPrice = /\<\!\[cdata\[.*\]\]\>/gmi;
             var b = a.match(regPrice);
