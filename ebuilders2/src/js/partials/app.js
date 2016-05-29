@@ -41,6 +41,10 @@
 
 })(jQuery);
 $(document).ready(function() {
+
+
+
+
     var $bannerImg = $('.banner__img'),
         $banner = $('.banner'),
         $bannerTitle = $('.banner__title'),
@@ -136,8 +140,11 @@ $(document).ready(function() {
         }
         //console.log(colors.right);
     }
+
+    
+
 });
-//slider
+
 
 
 
