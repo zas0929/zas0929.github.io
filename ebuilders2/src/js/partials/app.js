@@ -1,47 +1,48 @@
-//slider
-(function($) {
-    var $sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
-        $imgs = $sliderUL.find('img'),
-        $imgWidth = $imgs[0].width,
-        $imgsLen = $imgs.length,
-        $current = 1,
-        $totalImgsWidth = $imgsLen * $imgWidth;
 
-    $('#slider-nav').show().find('a').on('click', function(e) {
-        e.preventDefault();
-        var $direction = $(this).data('dir'),
-            $loc = $imgWidth;
-
-
-        ( $direction === 'next' ) ? ++$current : --$current;
-
-        if ( $current === 0 ) {
-            $current = $imgsLen;
-            $loc = $totalImgsWidth - $imgWidth;
-            $direction = 'next';
-        } else if ( $current - 1 === $imgsLen ) {
-            $current = 1;
-            $loc = 0;
-        }
-
-        transition($sliderUL, $loc, $direction);
-    });
-
-    function transition( $container, $loc, $direction ) {
-        var $unit;
-
-        if ( $direction && $loc !== 0 ) {
-            $unit = ( $direction === 'next' ) ? '-=' : '+=';
-        }
-
-        $container.animate({
-            'margin-left': $unit ? ($unit + $loc) : $loc
-
-        });
-    }
-
-})(jQuery);
 $(document).ready(function() {
+    //slider
+    (function($) {
+        var $sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
+            $imgs = $sliderUL.find('img'),
+            $imgWidth = $imgs[0].width,
+            $imgsLen = $imgs.length,
+            $current = 1,
+            $totalImgsWidth = $imgsLen * $imgWidth;
+
+        $('#slider-nav').show().find('a').on('click', function(e) {
+            e.preventDefault();
+            var $direction = $(this).data('dir'),
+                $loc = $imgWidth;
+
+
+            ( $direction === 'next' ) ? ++$current : --$current;
+
+            if ( $current === 0 ) {
+                $current = $imgsLen;
+                $loc = $totalImgsWidth - $imgWidth;
+                $direction = 'next';
+            } else if ( $current - 1 === $imgsLen ) {
+                $current = 1;
+                $loc = 0;
+            }
+
+            transition($sliderUL, $loc, $direction);
+        });
+
+        function transition( $container, $loc, $direction ) {
+            var $unit;
+
+            if ( $direction && $loc !== 0 ) {
+                $unit = ( $direction === 'next' ) ? '-=' : '+=';
+            }
+
+            $container.animate({
+                'margin-left': $unit ? ($unit + $loc) : $loc
+
+            });
+        }
+
+    })(jQuery);
     var $bannerImg = $('.banner__img'),
         $banner = $('.banner'),
         $bannerTitle = $('.banner__title'),
@@ -136,26 +137,31 @@ $(document).ready(function() {
         //console.log(colors.right);
     }
     // loading xml
+    
     function loadData() {
         var xhr = new XMLHttpRequest();
 
-        xhr.open('GET', 'data.xml', false);
+        xhr.open('GET', 'data.xml', true);
         xhr.send();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState != 4) return;
 
-        if (xhr.status != 200) {
-            //error
-            alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
-        } else {
-            // result
-            var a = xhr.responseText;
-            var regPrice = /\<\!\[cdata\[.*\]\]\>/gmi;
-            var b = a.match(regPrice);
-            var Price = b[0].substring(9, b[0].length-3);
-            var More = b[1].substring(9, b[1].length-10);
-            $('.banner__price-text').text(Price);
-            $('.banner__btn').text(More);
+            if (xhr.status != 200) {
+                //error
+                alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+            } else {
+                // result
+                var a = xhr.responseText;
+                var regPrice = /\<\!\[cdata\[.*\]\]\>/gmi;
+                var b = a.match(regPrice);
+                var Price = b[0].substring(9, b[0].length - 3);
+                var More = b[1].substring(9, b[1].length - 10);
+                $('.banner__price-text').text(Price);
+                $('.banner__btn').text(More);
+            }
         }
     }
+
     loadData();
 
 });
