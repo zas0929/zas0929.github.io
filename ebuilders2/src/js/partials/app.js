@@ -137,7 +137,7 @@ $(document).ready(function() {
         //console.log(colors.right);
     }
     // loading xml
-    
+
     function loadData() {
         var xhr = new XMLHttpRequest();
 
