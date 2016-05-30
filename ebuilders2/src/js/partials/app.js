@@ -1,31 +1,6 @@
 
 $(document).ready(function() {
-    // loading xml
 
-    function loadData() {
-        var xhr = new XMLHttpRequest();
-
-        xhr.open('GET', 'data.xml', true);
-        xhr.send();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState != 4) return;
-
-            if (xhr.status != 200) {
-                //error
-                alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
-            } else {
-                // result
-                var a = xhr.responseText;
-                var regPrice = /\<\!\[cdata\[.*\]\]\>/gmi;
-                var b = a.match(regPrice);
-                var Price = b[0].substring(9, b[0].length - 3);
-                var More = b[1].substring(9, b[1].length - 10);
-                $('.banner__price-text').text(Price);
-                $('.banner__btn').text(More);
-            }
-        }
-    }
-    loadData();
     var $bannerImg = $('.banner__img'),
         $banner = $('.banner'),
         $bannerTitle = $('.banner__title'),
@@ -119,11 +94,36 @@ $(document).ready(function() {
         }
         //console.log(colors.right);
     }
+    // loading xml
 
+    function loadData() {
+        var xhr = new XMLHttpRequest();
 
+        xhr.open('GET', 'data.xml', true);
+        xhr.send();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState != 4) return;
 
+            if (xhr.status != 200) {
+                //error
+                alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+            } else {
+                // result
+                var a = xhr.responseText;
+                var regPrice = /\<\!\[cdata\[.*\]\]\>/gmi;
+                var b = a.match(regPrice);
+                var Price = b[0].substring(9, b[0].length - 3);
+                var More = b[1].substring(9, b[1].length - 10);
+                $('.banner__price-text').text(Price);
+                $('.banner__btn').text(More);
+            }
+        }
+    }
+
+    loadData();
 
 });
+
 //slider
 (function($) {
     var $sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
@@ -167,7 +167,6 @@ $(document).ready(function() {
     }
 
 })(jQuery);
-
 
 
 
