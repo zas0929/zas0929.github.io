@@ -10,7 +10,6 @@ $(document).ready(function() {
         $bannerPriceText = $('.banner__price-text'),
         $btn = $('.banner__btn'),
         $bannerBg = $('.banner__bg'),
-        $bannerImg = $('.banner__img'),
         $bannerSlider = $('.slider'),
         $sliderNav = $('#slider-nav');
 
@@ -122,6 +121,7 @@ $(document).ready(function() {
     }
 
     loadData();
+
     (function($) {
         var $sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
             $imgs = $sliderUL.find('img'),
