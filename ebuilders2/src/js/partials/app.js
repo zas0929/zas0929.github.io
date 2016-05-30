@@ -1,4 +1,4 @@
-//slider
+
 
 $(document).ready(function() {
 
@@ -121,7 +121,7 @@ $(document).ready(function() {
     }
 
     loadData();
-
+//slider
     (function($) {
         var $sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
             $imgs = $sliderUL.find('img'),
@@ -132,16 +132,16 @@ $(document).ready(function() {
 
         $('#slider-nav').show().find('button').on('click', function(e) {
             e.preventDefault();
-            var $direction = $(this).data('dir'),
+            var $direction = $(this).hasClass('next'),
                 $loc = $imgWidth;
 
 
-            ( $direction === 'next' ) ? ++$current : --$current;
+            ( $direction === true ) ? ++$current : --$current;
 
             if ( $current === 0 ) {
                 $current = $imgsLen;
                 $loc = $totalImgsWidth - $imgWidth;
-                $direction = 'next';
+                $direction = true;
             } else if ( $current - 1 === $imgsLen ) {
                 $current = 1;
                 $loc = 0;
@@ -154,7 +154,7 @@ $(document).ready(function() {
             var $unit;
 
             if ( $direction && $loc !== 0 ) {
-                $unit = ( $direction === 'next' ) ? '-=' : '+=';
+                $unit = ( $direction === true ) ? '-=' : '+=';
             }
 
             $container.animate({
