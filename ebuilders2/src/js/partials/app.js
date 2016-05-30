@@ -132,16 +132,16 @@ $(document).ready(function() {
 
         $('#slider-nav').show().find('button').on('click', function(e) {
             e.preventDefault();
-            var $direction = $(this).hasClass('next'),
+            var $direction = $(this).attr('data-dir'),
                 $loc = $imgWidth;
 
 
-            ( $direction === true ) ? ++$current : --$current;
+            ( $direction === 'next' ) ? ++$current : --$current;
 
             if ( $current === 0 ) {
                 $current = $imgsLen;
                 $loc = $totalImgsWidth - $imgWidth;
-                $direction = true;
+                $direction = 'next';
             } else if ( $current - 1 === $imgsLen ) {
                 $current = 1;
                 $loc = 0;
@@ -154,7 +154,7 @@ $(document).ready(function() {
             var $unit;
 
             if ( $direction && $loc !== 0 ) {
-                $unit = ( $direction === true ) ? '-=' : '+=';
+                $unit = ( $direction === 'next' ) ? '-=' : '+=';
             }
 
             $container.animate({
