@@ -74,7 +74,6 @@ $(document).ready(function() {
 //var tween = TweenMax.to("#box", 1, {backgroundImage: "linear-gradient(to top,#CC0000,#F3F30B)", paused:true});
 
     $banner.hover(over, out);
-    $sliderNav.hover (over, out);
 
     function over() {
         tween.play();
