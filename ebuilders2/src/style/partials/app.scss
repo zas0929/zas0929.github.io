@@ -144,9 +144,10 @@ $arial:  'Arial', sans-serif;
   background: none;
   box-shadow: none;
   outline: none;
-  margin: -327px 0 0 205px;
-  display: block;
   transition: 0.2s;
+  left: 193px;
+  top: -171px;
+  position: relative;
 
 
 }
@@ -167,9 +168,10 @@ $arial:  'Arial', sans-serif;
   background: none;
   box-shadow: none;
   outline: none;
-  margin: -30px 0 0 402px;
-  display: block;
   transition: 0.2s;
+  top: -171px;
+  left: 360px;
+  position: relative;
 }
 .next:hover {
   transform: scale(1.1);
