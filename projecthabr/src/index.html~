@@ -7,19 +7,18 @@
     <title>Я собираю проекты как рок звезда</title>
 </head>
 <body>
-    <section class="header">
-        Header
-    </section>
+   //= template/header.html
+
     <section class="content">
         Content
     </section>
-    <section class="footer">
-        Footer
-    </section>
+    
+    //= template/footer.html
 <div class="wrapp" title="Нажмите">
 <label for="in" class='lab'>
   <span>Открыть</span>
   <input type="file" id="in" />
+  <span class="cont">Файл не выбран</span>
 </label>
 </div>
 </body>

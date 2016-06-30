@@ -13,25 +13,7 @@ body {
  
  
 }
-/*
-.wrapp:after {
-  content: 'Открыть';
-  display: block;
-  background: #cc0000;
-  display: inline-block;
-  width: 100px;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 6;
-  text-align: center;
-  border-radius: 10px;
-  height: 31px;
-  box-sizing: border-box;
-  padding-top:4px;
-}
-*/
+
 input {
   opacity: 0;
   display: block;
@@ -46,20 +28,7 @@ input {
   height: 31px;
 
 }
-/*
-input:after {
-    content: 'Открыть';
-    width: 135px;
-    height: 21px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    text-align: center;
-    padding-top: 3px;
-    background: #0000cc;
-}
-*/
+
 .lab span {
    position: relative;
    top: 31px;
@@ -77,10 +46,12 @@ input:after {
 
 }
 .lab .cont {
-  width: auto;
-  display: inline-block;
-  float: none;
-  padding: 3px 15px;
-  
+    display: inline-block;
+    float: none;
+    left: 103px;
+    padding: 5px 15px;
+    position: relative;
+    top: 0;
+    width: auto;
 }
 
