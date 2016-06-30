@@ -4,6 +4,83 @@ body {
 .header {
   color: #0000cc;
   background: #ccc;
-  font-size: 22px;
-  border: solid 2px #00cc00;
+  font-size: 20px;
+  border: solid 2px #0000cc;
 }
+.wrapp {
+  position: relative;
+  z-index: 4;
+ 
+ 
+}
+/*
+.wrapp:after {
+  content: 'Открыть';
+  display: block;
+  background: #cc0000;
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  text-align: center;
+  border-radius: 10px;
+  height: 31px;
+  box-sizing: border-box;
+  padding-top:4px;
+}
+*/
+input {
+  opacity: 0;
+  display: block;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  background: #0000cc;
+  border-radius: 10px;
+  position: relative;
+  z-index: 5;
+  height: 31px;
+
+}
+/*
+input:after {
+    content: 'Открыть';
+    width: 135px;
+    height: 21px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    padding-top: 3px;
+    background: #0000cc;
+}
+*/
+.lab span {
+   position: relative;
+   top: 31px;
+   z-index: 10;
+   background: #0000cc;
+   height: 30px;
+   width: 7.4%;
+   display: block;
+   border-radius: 10px;
+   text-align: center;
+   box-sizing: border-box;
+   padding-top: 3px;
+   cursor: pointer;
+   float: left;
+
+}
+.lab .cont {
+  width: auto;
+  display: inline-block;
+  float: none;
+  padding: 3px 15px;
+  
+}
+
