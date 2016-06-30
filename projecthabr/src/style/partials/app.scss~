@@ -40,7 +40,7 @@ input {
    border-radius: 10px;
    text-align: center;
    box-sizing: border-box;
-   padding-top: 3px;
+   padding-top: 5px;
    cursor: pointer;
    float: left;
 
@@ -53,5 +53,9 @@ input {
     position: relative;
     top: 0;
     width: auto;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 

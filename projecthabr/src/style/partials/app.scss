@@ -53,5 +53,9 @@ input {
     position: relative;
     top: 0;
     width: auto;
+    max-width: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
