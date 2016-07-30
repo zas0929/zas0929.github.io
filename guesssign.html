@@ -9,7 +9,10 @@ Game
 </body>
 <script>
   function guessSign() {
-    var number = 20;
+    var num = Math.random() * 100 + 1;
+    var numb = Math.floor(num) - 50;
+    var number = Math.abs(numb);
+    alert(number);
     var i = 1;
     do {
       var guess = prompt ("Угадай число, (от 1 до 100)","");
@@ -29,8 +32,11 @@ Game
       alert ("ПОБЕДА за " + i + " шагов");
 
     }
+    else if (i > 10) {
+      alert("Вы проиграли!");
     }
-    while (( guess > number ) || ( guess < number ));
+    }
+    while (( guess > number ) || ( guess < number ) || (i < 10));
 
 
   }
