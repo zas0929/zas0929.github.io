@@ -1,7 +1,0 @@
-h2 {
-  background: #ccc;
-  color: #00cc00;
-  border: solid 2px #cc0000; }
-
-span {
-  color: #cc0000; }
