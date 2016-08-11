@@ -3,13 +3,13 @@ body {
   background: #fff;
 }
 .header {
-  color: #0000cc;
+  color: #000000;
   background: #ccc;
   font-size: 20px;
   border: solid 2px #00cc00;
 }
 .content {
-  color00cc00;
+  color: #00cc00;
 }
 .test {
   background: #cc0000;
@@ -18,3 +18,4 @@ body {
   background: #000;
   color: #666;
 }
+

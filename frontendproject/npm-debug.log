@@ -1,0 +1,2029 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'gulp',
+1 verbose cli   'browserify',
+1 verbose cli   'babel',
+1 verbose cli   'jade',
+1 verbose cli   'stylus',
+1 verbose cli   'http-server' ]
+2 info using npm@2.14.9
+3 info using node@v0.12.10
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'gulp', null ]
+7 verbose cache add spec gulp
+8 silly cache add args [ 'browserify', null ]
+9 verbose cache add spec browserify
+10 silly cache add args [ 'babel', null ]
+11 verbose cache add spec babel
+12 silly cache add args [ 'jade', null ]
+13 verbose cache add spec jade
+14 silly cache add args [ 'stylus', null ]
+15 verbose cache add spec stylus
+16 silly cache add args [ 'http-server', null ]
+17 verbose cache add spec http-server
+18 silly cache add parsed spec { raw: 'gulp',
+18 silly cache add   scope: null,
+18 silly cache add   name: 'gulp',
+18 silly cache add   rawSpec: '',
+18 silly cache add   spec: '*',
+18 silly cache add   type: 'range' }
+19 silly addNamed gulp@*
+20 verbose addNamed "*" is a valid semver range for gulp
+21 silly addNameRange { name: 'gulp', range: '*', hasData: false }
+22 silly mapToRegistry name gulp
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/gulp
+26 verbose addNameRange registry:https://registry.npmjs.org/gulp not in flight; fetching
+27 silly cache add parsed spec { raw: 'browserify',
+27 silly cache add   scope: null,
+27 silly cache add   name: 'browserify',
+27 silly cache add   rawSpec: '',
+27 silly cache add   spec: '*',
+27 silly cache add   type: 'range' }
+28 silly addNamed browserify@*
+29 verbose addNamed "*" is a valid semver range for browserify
+30 silly addNameRange { name: 'browserify', range: '*', hasData: false }
+31 silly mapToRegistry name browserify
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry uri https://registry.npmjs.org/browserify
+35 verbose addNameRange registry:https://registry.npmjs.org/browserify not in flight; fetching
+36 silly cache add parsed spec { raw: 'babel',
+36 silly cache add   scope: null,
+36 silly cache add   name: 'babel',
+36 silly cache add   rawSpec: '',
+36 silly cache add   spec: '*',
+36 silly cache add   type: 'range' }
+37 silly addNamed babel@*
+38 verbose addNamed "*" is a valid semver range for babel
+39 silly addNameRange { name: 'babel', range: '*', hasData: false }
+40 silly mapToRegistry name babel
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/babel
+44 verbose addNameRange registry:https://registry.npmjs.org/babel not in flight; fetching
+45 silly cache add parsed spec { raw: 'jade',
+45 silly cache add   scope: null,
+45 silly cache add   name: 'jade',
+45 silly cache add   rawSpec: '',
+45 silly cache add   spec: '*',
+45 silly cache add   type: 'range' }
+46 silly addNamed jade@*
+47 verbose addNamed "*" is a valid semver range for jade
+48 silly addNameRange { name: 'jade', range: '*', hasData: false }
+49 silly mapToRegistry name jade
+50 silly mapToRegistry using default registry
+51 silly mapToRegistry registry https://registry.npmjs.org/
+52 silly mapToRegistry uri https://registry.npmjs.org/jade
+53 verbose addNameRange registry:https://registry.npmjs.org/jade not in flight; fetching
+54 silly cache add parsed spec { raw: 'stylus',
+54 silly cache add   scope: null,
+54 silly cache add   name: 'stylus',
+54 silly cache add   rawSpec: '',
+54 silly cache add   spec: '*',
+54 silly cache add   type: 'range' }
+55 silly addNamed stylus@*
+56 verbose addNamed "*" is a valid semver range for stylus
+57 silly addNameRange { name: 'stylus', range: '*', hasData: false }
+58 silly mapToRegistry name stylus
+59 silly mapToRegistry using default registry
+60 silly mapToRegistry registry https://registry.npmjs.org/
+61 silly mapToRegistry uri https://registry.npmjs.org/stylus
+62 verbose addNameRange registry:https://registry.npmjs.org/stylus not in flight; fetching
+63 silly cache add parsed spec { raw: 'http-server',
+63 silly cache add   scope: null,
+63 silly cache add   name: 'http-server',
+63 silly cache add   rawSpec: '',
+63 silly cache add   spec: '*',
+63 silly cache add   type: 'range' }
+64 silly addNamed http-server@*
+65 verbose addNamed "*" is a valid semver range for http-server
+66 silly addNameRange { name: 'http-server', range: '*', hasData: false }
+67 silly mapToRegistry name http-server
+68 silly mapToRegistry using default registry
+69 silly mapToRegistry registry https://registry.npmjs.org/
+70 silly mapToRegistry uri https://registry.npmjs.org/http-server
+71 verbose addNameRange registry:https://registry.npmjs.org/http-server not in flight; fetching
+72 verbose request uri https://registry.npmjs.org/babel
+73 verbose request no auth needed
+74 info attempt registry request try #1 at 13:33:40
+75 verbose request id c2be7c45a0c93a0c
+76 http request GET https://registry.npmjs.org/babel
+77 verbose request uri https://registry.npmjs.org/jade
+78 verbose request no auth needed
+79 info attempt registry request try #1 at 13:33:40
+80 http request GET https://registry.npmjs.org/jade
+81 verbose request uri https://registry.npmjs.org/http-server
+82 verbose request no auth needed
+83 info attempt registry request try #1 at 13:33:40
+84 http request GET https://registry.npmjs.org/http-server
+85 verbose request uri https://registry.npmjs.org/stylus
+86 verbose request no auth needed
+87 info attempt registry request try #1 at 13:33:40
+88 http request GET https://registry.npmjs.org/stylus
+89 verbose request uri https://registry.npmjs.org/gulp
+90 verbose request no auth needed
+91 info attempt registry request try #1 at 13:33:40
+92 verbose etag "9PBNUOUEPM7C7MRLB9FX3DO73"
+93 http request GET https://registry.npmjs.org/gulp
+94 verbose request uri https://registry.npmjs.org/browserify
+95 verbose request no auth needed
+96 info attempt registry request try #1 at 13:33:40
+97 verbose etag "AEBPABSJLKSYMDZ9E74EENJK1"
+98 http request GET https://registry.npmjs.org/browserify
+99 http 200 https://registry.npmjs.org/http-server
+100 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+100 verbose headers   etag: '"DGMTUC30IVDI8K18QXLNDHHLF"',
+100 verbose headers   'content-type': 'application/json',
+100 verbose headers   'content-encoding': 'gzip',
+100 verbose headers   'cache-control': 'max-age=300',
+100 verbose headers   'content-length': '8759',
+100 verbose headers   'accept-ranges': 'bytes',
+100 verbose headers   date: 'Wed, 03 Aug 2016 10:33:40 GMT',
+100 verbose headers   via: '1.1 varnish',
+100 verbose headers   age: '115',
+100 verbose headers   connection: 'keep-alive',
+100 verbose headers   'x-served-by': 'cache-fra1243-FRA',
+100 verbose headers   'x-cache': 'HIT',
+100 verbose headers   'x-cache-hits': '1',
+100 verbose headers   'x-timer': 'S1470220420.932504,VS0,VE0',
+100 verbose headers   vary: 'Accept-Encoding' }
+101 silly get cb [ 200,
+101 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+101 silly get     etag: '"DGMTUC30IVDI8K18QXLNDHHLF"',
+101 silly get     'content-type': 'application/json',
+101 silly get     'content-encoding': 'gzip',
+101 silly get     'cache-control': 'max-age=300',
+101 silly get     'content-length': '8759',
+101 silly get     'accept-ranges': 'bytes',
+101 silly get     date: 'Wed, 03 Aug 2016 10:33:40 GMT',
+101 silly get     via: '1.1 varnish',
+101 silly get     age: '115',
+101 silly get     connection: 'keep-alive',
+101 silly get     'x-served-by': 'cache-fra1243-FRA',
+101 silly get     'x-cache': 'HIT',
+101 silly get     'x-cache-hits': '1',
+101 silly get     'x-timer': 'S1470220420.932504,VS0,VE0',
+101 silly get     vary: 'Accept-Encoding' } ]
+102 verbose get saving http-server to /home/prog41/.npm/registry.npmjs.org/http-server/.cache.json
+103 http 200 https://registry.npmjs.org/jade
+104 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+104 verbose headers   etag: '"5H7446RKPLFYNLWTQPANGHI7W"',
+104 verbose headers   'content-type': 'application/json',
+104 verbose headers   'content-encoding': 'gzip',
+104 verbose headers   'cache-control': 'max-age=300',
+104 verbose headers   'content-length': '19496',
+104 verbose headers   'accept-ranges': 'bytes',
+104 verbose headers   date: 'Wed, 03 Aug 2016 10:33:40 GMT',
+104 verbose headers   via: '1.1 varnish',
+104 verbose headers   age: '65',
+104 verbose headers   connection: 'keep-alive',
+104 verbose headers   'x-served-by': 'cache-fra1240-FRA',
+104 verbose headers   'x-cache': 'HIT',
+104 verbose headers   'x-cache-hits': '1',
+104 verbose headers   'x-timer': 'S1470220420.927355,VS0,VE0',
+104 verbose headers   vary: 'Accept-Encoding' }
+105 silly get cb [ 200,
+105 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+105 silly get     etag: '"5H7446RKPLFYNLWTQPANGHI7W"',
+105 silly get     'content-type': 'application/json',
+105 silly get     'content-encoding': 'gzip',
+105 silly get     'cache-control': 'max-age=300',
+105 silly get     'content-length': '19496',
+105 silly get     'accept-ranges': 'bytes',
+105 silly get     date: 'Wed, 03 Aug 2016 10:33:40 GMT',
+105 silly get     via: '1.1 varnish',
+105 silly get     age: '65',
+105 silly get     connection: 'keep-alive',
+105 silly get     'x-served-by': 'cache-fra1240-FRA',
+105 silly get     'x-cache': 'HIT',
+105 silly get     'x-cache-hits': '1',
+105 silly get     'x-timer': 'S1470220420.927355,VS0,VE0',
+105 silly get     vary: 'Accept-Encoding' } ]
+106 verbose get saving jade to /home/prog41/.npm/registry.npmjs.org/jade/.cache.json
+107 http 200 https://registry.npmjs.org/babel
+108 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+108 verbose headers   etag: '"EEEEJ413B0KUH0A4JCZAKOS39"',
+108 verbose headers   'content-type': 'application/json',
+108 verbose headers   'content-encoding': 'gzip',
+108 verbose headers   'cache-control': 'max-age=300',
+108 verbose headers   'content-length': '21834',
+108 verbose headers   'accept-ranges': 'bytes',
+108 verbose headers   date: 'Wed, 03 Aug 2016 10:33:40 GMT',
+108 verbose headers   via: '1.1 varnish',
+108 verbose headers   age: '293',
+108 verbose headers   connection: 'keep-alive',
+108 verbose headers   'x-served-by': 'cache-fra1226-FRA',
+108 verbose headers   'x-cache': 'HIT',
+108 verbose headers   'x-cache-hits': '1',
+108 verbose headers   'x-timer': 'S1470220420.933753,VS0,VE0',
+108 verbose headers   vary: 'Accept-Encoding' }
+109 silly get cb [ 200,
+109 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+109 silly get     etag: '"EEEEJ413B0KUH0A4JCZAKOS39"',
+109 silly get     'content-type': 'application/json',
+109 silly get     'content-encoding': 'gzip',
+109 silly get     'cache-control': 'max-age=300',
+109 silly get     'content-length': '21834',
+109 silly get     'accept-ranges': 'bytes',
+109 silly get     date: 'Wed, 03 Aug 2016 10:33:40 GMT',
+109 silly get     via: '1.1 varnish',
+109 silly get     age: '293',
+109 silly get     connection: 'keep-alive',
+109 silly get     'x-served-by': 'cache-fra1226-FRA',
+109 silly get     'x-cache': 'HIT',
+109 silly get     'x-cache-hits': '1',
+109 silly get     'x-timer': 'S1470220420.933753,VS0,VE0',
+109 silly get     vary: 'Accept-Encoding' } ]
+110 verbose get saving babel to /home/prog41/.npm/registry.npmjs.org/babel/.cache.json
+111 silly addNameRange number 2 { name: 'http-server', range: '*', hasData: true }
+112 silly addNameRange versions [ 'http-server',
+112 silly addNameRange   [ '0.1.0',
+112 silly addNameRange     '0.1.1',
+112 silly addNameRange     '0.1.3',
+112 silly addNameRange     '0.2.1',
+112 silly addNameRange     '0.2.2',
+112 silly addNameRange     '0.2.3',
+112 silly addNameRange     '0.2.4',
+112 silly addNameRange     '0.2.5',
+112 silly addNameRange     '0.2.6',
+112 silly addNameRange     '0.2.9',
+112 silly addNameRange     '0.3.0',
+112 silly addNameRange     '0.4.0',
+112 silly addNameRange     '0.4.1',
+112 silly addNameRange     '0.5.0',
+112 silly addNameRange     '0.5.1',
+112 silly addNameRange     '0.5.2',
+112 silly addNameRange     '0.5.3',
+112 silly addNameRange     '0.5.5',
+112 silly addNameRange     '0.6.0',
+112 silly addNameRange     '0.6.1',
+112 silly addNameRange     '0.7.0',
+112 silly addNameRange     '0.7.1',
+112 silly addNameRange     '0.7.2',
+112 silly addNameRange     '0.7.3',
+112 silly addNameRange     '0.7.4',
+112 silly addNameRange     '0.7.5',
+112 silly addNameRange     '0.8.0',
+112 silly addNameRange     '0.8.1',
+112 silly addNameRange     '0.8.2',
+112 silly addNameRange     '0.8.3',
+112 silly addNameRange     '0.8.4',
+112 silly addNameRange     '0.8.5',
+112 silly addNameRange     '0.9.0' ] ]
+113 silly addNamed http-server@0.9.0
+114 verbose addNamed "0.9.0" is a plain semver version for http-server
+115 silly addNameRange number 2 { name: 'babel', range: '*', hasData: true }
+116 silly addNameRange versions [ 'babel',
+116 silly addNameRange   [ '0.0.1',
+116 silly addNameRange     '4.0.1',
+116 silly addNameRange     '4.0.2',
+116 silly addNameRange     '4.1.1',
+116 silly addNameRange     '4.2.0',
+116 silly addNameRange     '4.2.1',
+116 silly addNameRange     '4.3.0',
+116 silly addNameRange     '4.4.1',
+116 silly addNameRange     '4.4.2',
+116 silly addNameRange     '4.4.3',
+116 silly addNameRange     '4.4.4',
+116 silly addNameRange     '4.4.5',
+116 silly addNameRange     '4.4.6',
+116 silly addNameRange     '4.5.0',
+116 silly addNameRange     '4.5.1',
+116 silly addNameRange     '4.5.2',
+116 silly addNameRange     '4.5.3',
+116 silly addNameRange     '4.5.4',
+116 silly addNameRange     '4.5.5',
+116 silly addNameRange     '4.6.0',
+116 silly addNameRange     '4.6.1',
+116 silly addNameRange     '4.6.3',
+116 silly addNameRange     '4.6.4',
+116 silly addNameRange     '4.6.5',
+116 silly addNameRange     '4.6.6',
+116 silly addNameRange     '4.7.0',
+116 silly addNameRange     '4.7.1',
+116 silly addNameRange     '4.7.2',
+116 silly addNameRange     '4.7.3',
+116 silly addNameRange     '4.7.4',
+116 silly addNameRange     '4.7.5',
+116 silly addNameRange     '4.7.6',
+116 silly addNameRange     '4.7.7',
+116 silly addNameRange     '4.7.8',
+116 silly addNameRange     '4.7.9',
+116 silly addNameRange     '4.7.10',
+116 silly addNameRange     '4.7.11',
+116 silly addNameRange     '4.7.12',
+116 silly addNameRange     '4.7.13',
+116 silly addNameRange     '4.7.14',
+116 silly addNameRange     '4.7.15',
+116 silly addNameRange     '4.7.16',
+116 silly addNameRange     '5.0.0-beta2',
+116 silly addNameRange     '5.0.0-beta3',
+116 silly addNameRange     '5.0.0-beta4',
+116 silly addNameRange     '5.0.0',
+116 silly addNameRange     '5.0.1',
+116 silly addNameRange     '5.0.2',
+116 silly addNameRange     '5.0.3',
+116 silly addNameRange     '5.0.4',
+116 silly addNameRange     '5.0.5',
+116 silly addNameRange     '5.0.6',
+116 silly addNameRange     '5.0.7',
+116 silly addNameRange     '5.0.8',
+116 silly addNameRange     '5.0.9',
+116 silly addNameRange     '5.0.10',
+116 silly addNameRange     '5.0.11',
+116 silly addNameRange     '5.0.12',
+116 silly addNameRange     '5.0.13',
+116 silly addNameRange     '5.1.0',
+116 silly addNameRange     '5.1.1',
+116 silly addNameRange     '5.1.2',
+116 silly addNameRange     '5.1.3',
+116 silly addNameRange     '5.1.4',
+116 silly addNameRange     '5.1.5',
+116 silly addNameRange     '5.1.6',
+116 silly addNameRange     '5.1.7',
+116 silly addNameRange     '5.1.8',
+116 silly addNameRange     '5.1.9',
+116 silly addNameRange     '5.1.10',
+116 silly addNameRange     '5.1.11',
+116 silly addNameRange     '5.1.12',
+116 silly addNameRange     '5.1.13',
+116 silly addNameRange     '5.2.0',
+116 silly addNameRange     '5.2.1',
+116 silly addNameRange     '5.2.2',
+116 silly addNameRange     '5.2.3',
+116 silly addNameRange     '5.2.4',
+116 silly addNameRange     '5.2.5',
+116 silly addNameRange     '5.2.6',
+116 silly addNameRange     '5.2.7',
+116 silly addNameRange     '5.2.9',
+116 silly addNameRange     '5.2.10',
+116 silly addNameRange     '5.2.11',
+116 silly addNameRange     '5.2.12',
+116 silly addNameRange     '5.2.13',
+116 silly addNameRange     '5.2.14',
+116 silly addNameRange     '5.2.15',
+116 silly addNameRange     '5.2.16',
+116 silly addNameRange     '5.2.17',
+116 silly addNameRange     '5.3.0',
+116 silly addNameRange     '5.3.1',
+116 silly addNameRange     '5.3.2',
+116 silly addNameRange     '5.3.3',
+116 silly addNameRange     '5.4.0',
+116 silly addNameRange     '5.4.1',
+116 silly addNameRange     '5.4.2',
+116 silly addNameRange     '5.4.3',
+116 silly addNameRange     '5.4.4',
+116 silly addNameRange     '5.4.5',
+116 silly addNameRange     '5.4.6',
+116 silly addNameRange     '5.4.7',
+116 silly addNameRange     '5.5.0',
+116 silly addNameRange     '5.5.1',
+116 silly addNameRange     '5.5.2',
+116 silly addNameRange     '5.5.3',
+116 silly addNameRange     '5.5.4',
+116 silly addNameRange     '5.5.5',
+116 silly addNameRange     '5.5.6',
+116 silly addNameRange     '5.5.7',
+116 silly addNameRange     '5.5.8',
+116 silly addNameRange     '5.6.1',
+116 silly addNameRange     '5.6.2',
+116 silly addNameRange     '5.6.3',
+116 silly addNameRange     '5.6.4',
+116 silly addNameRange     '5.6.5',
+116 silly addNameRange     '5.6.6',
+116 silly addNameRange     '5.6.7',
+116 silly addNameRange     '5.6.10',
+116 silly addNameRange     '5.6.11',
+116 silly addNameRange     '5.6.12',
+116 silly addNameRange     '5.6.14',
+116 silly addNameRange     '5.6.23',
+116 silly addNameRange     '5.8.2',
+116 silly addNameRange     '5.8.3',
+116 silly addNameRange     '5.8.5',
+116 silly addNameRange     '5.8.6',
+116 silly addNameRange     '5.8.8',
+116 silly addNameRange     '5.8.9',
+116 silly addNameRange     '5.8.12',
+116 silly addNameRange     '5.8.19',
+116 silly addNameRange     '5.8.20',
+116 silly addNameRange     '5.8.21',
+116 silly addNameRange     '5.8.23',
+116 silly addNameRange     '5.8.29',
+116 silly addNameRange     '6.0.0',
+116 silly addNameRange     '6.0.2',
+116 silly addNameRange     '6.0.12',
+116 silly addNameRange     '6.0.14',
+116 silly addNameRange     '6.0.15',
+116 silly addNameRange     '5.8.34',
+116 silly addNameRange     '6.1.5',
+116 silly addNameRange     '6.1.6',
+116 silly addNameRange     '6.1.7',
+116 silly addNameRange     '6.1.8',
+116 silly addNameRange     '6.1.9',
+116 silly addNameRange     '6.1.10',
+116 silly addNameRange     '6.1.11',
+116 silly addNameRange     '6.1.12',
+116 silly addNameRange     '6.1.13',
+116 silly addNameRange     '6.1.14',
+116 silly addNameRange     '6.1.15',
+116 silly addNameRange     '6.1.16',
+116 silly addNameRange     '6.1.17',
+116 silly addNameRange     '6.1.18',
+116 silly addNameRange     '6.2.4',
+116 silly addNameRange     '6.3.13',
+116 silly addNameRange     '6.3.26',
+116 silly addNameRange     '5.8.35',
+116 silly addNameRange     '6.5.0',
+116 silly addNameRange     '6.5.0-1',
+116 silly addNameRange     '6.5.1',
+116 silly addNameRange     '6.5.2',
+116 silly addNameRange     '5.8.38' ] ]
+117 silly addNamed babel@6.5.2
+118 verbose addNamed "6.5.2" is a plain semver version for babel
+119 warn deprecated babel@6.5.2: Babel's CLI commands have been moved from the babel package to the babel-cli package
+120 silly addNameRange number 2 { name: 'jade', range: '*', hasData: true }
+121 silly addNameRange versions [ 'jade',
+121 silly addNameRange   [ '0.0.1',
+121 silly addNameRange     '0.0.2',
+121 silly addNameRange     '0.1.0',
+121 silly addNameRange     '0.2.0',
+121 silly addNameRange     '0.2.1',
+121 silly addNameRange     '0.2.2',
+121 silly addNameRange     '0.2.3',
+121 silly addNameRange     '0.2.4',
+121 silly addNameRange     '0.3.0',
+121 silly addNameRange     '0.4.0',
+121 silly addNameRange     '0.4.1',
+121 silly addNameRange     '0.5.0',
+121 silly addNameRange     '0.5.1',
+121 silly addNameRange     '0.5.2',
+121 silly addNameRange     '0.5.3',
+121 silly addNameRange     '0.5.4',
+121 silly addNameRange     '0.5.5',
+121 silly addNameRange     '0.5.6',
+121 silly addNameRange     '0.5.7',
+121 silly addNameRange     '0.6.0',
+121 silly addNameRange     '0.6.1',
+121 silly addNameRange     '0.6.3',
+121 silly addNameRange     '0.7.0',
+121 silly addNameRange     '0.7.1',
+121 silly addNameRange     '0.8.0',
+121 silly addNameRange     '0.8.1',
+121 silly addNameRange     '0.8.2',
+121 silly addNameRange     '0.8.3',
+121 silly addNameRange     '0.8.4',
+121 silly addNameRange     '0.8.5',
+121 silly addNameRange     '0.8.6',
+121 silly addNameRange     '0.8.7',
+121 silly addNameRange     '0.8.8',
+121 silly addNameRange     '0.8.9',
+121 silly addNameRange     '0.9.0',
+121 silly addNameRange     '0.9.1',
+121 silly addNameRange     '0.9.2',
+121 silly addNameRange     '0.9.3',
+121 silly addNameRange     '0.10.0',
+121 silly addNameRange     '0.10.1',
+121 silly addNameRange     '0.10.2',
+121 silly addNameRange     '0.10.3',
+121 silly addNameRange     '0.10.4',
+121 silly addNameRange     '0.10.5',
+121 silly addNameRange     '0.10.6',
+121 silly addNameRange     '0.10.7',
+121 silly addNameRange     '0.11.0',
+121 silly addNameRange     '0.11.1',
+121 silly addNameRange     '0.12.0',
+121 silly addNameRange     '0.12.1',
+121 silly addNameRange     '0.12.2',
+121 silly addNameRange     '0.12.3',
+121 silly addNameRange     '0.12.4',
+121 silly addNameRange     '0.13.0',
+121 silly addNameRange     '0.14.0',
+121 silly addNameRange     '0.14.1',
+121 silly addNameRange     '0.14.2',
+121 silly addNameRange     '0.15.0',
+121 silly addNameRange     '0.15.1',
+121 silly addNameRange     '0.15.2',
+121 silly addNameRange     '0.15.3',
+121 silly addNameRange     '0.15.4',
+121 silly addNameRange     '0.16.0',
+121 silly addNameRange     '0.16.1',
+121 silly addNameRange     '0.16.2',
+121 silly addNameRange     '0.16.3',
+121 silly addNameRange     '0.16.4',
+121 silly addNameRange     '0.17.0',
+121 silly addNameRange     '0.18.0',
+121 silly addNameRange     '0.19.0',
+121 silly addNameRange     '0.20.0',
+121 silly addNameRange     '0.20.1',
+121 silly addNameRange     '0.20.2',
+121 silly addNameRange     '0.20.3',
+121 silly addNameRange     '0.21.0',
+121 silly addNameRange     '0.22.0',
+121 silly addNameRange     '0.22.1',
+121 silly addNameRange     '0.23.0',
+121 silly addNameRange     '0.24.0',
+121 silly addNameRange     '0.25.0',
+121 silly addNameRange     '0.26.0',
+121 silly addNameRange     '0.26.1',
+121 silly addNameRange     '0.26.2',
+121 silly addNameRange     '0.26.3',
+121 silly addNameRange     '0.27.0',
+121 silly addNameRange     '0.27.1',
+121 silly addNameRange     '0.27.2',
+121 silly addNameRange     '0.27.3',
+121 silly addNameRange     '0.27.4',
+121 silly addNameRange     '0.27.5',
+121 silly addNameRange     '0.27.6',
+121 silly addNameRange     '0.27.7',
+121 silly addNameRange     '0.28.0',
+121 silly addNameRange     '0.28.1',
+121 silly addNameRange     '0.28.2',
+121 silly addNameRange     '0.29.0',
+121 silly addNameRange     '0.30.0',
+121 silly addNameRange     '0.31.0',
+121 silly addNameRange     '0.31.1',
+121 silly addNameRange     '0.31.2',
+121 silly addNameRange     '0.32.0',
+121 silly addNameRange     '0.33.0',
+121 silly addNameRange     '0.34.0',
+121 silly addNameRange     '0.34.1',
+121 silly addNameRange     '0.35.0',
+121 silly addNameRange     '1.0.0',
+121 silly addNameRange     '1.0.1',
+121 silly addNameRange     '1.0.2',
+121 silly addNameRange     '1.1.0',
+121 silly addNameRange     '1.1.1',
+121 silly addNameRange     '1.1.2',
+121 silly addNameRange     '1.1.3',
+121 silly addNameRange     '1.1.4',
+121 silly addNameRange     '1.1.5',
+121 silly addNameRange     '1.2.0',
+121 silly addNameRange     '1.3.0',
+121 silly addNameRange     '1.3.1',
+121 silly addNameRange     '1.4.0',
+121 silly addNameRange     '1.4.1',
+121 silly addNameRange     '1.4.2',
+121 silly addNameRange     '1.5.0',
+121 silly addNameRange     '1.6.0',
+121 silly addNameRange     '1.7.0',
+121 silly addNameRange     '1.8.0',
+121 silly addNameRange     '1.8.1',
+121 silly addNameRange     '1.8.2',
+121 silly addNameRange     '1.9.0',
+121 silly addNameRange     '1.9.1',
+121 silly addNameRange     '1.9.2',
+121 silly addNameRange     '1.10.0',
+121 silly addNameRange     '1.11.0' ] ]
+122 silly addNamed jade@1.11.0
+123 verbose addNamed "1.11.0" is a plain semver version for jade
+124 warn deprecated jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
+125 silly mapToRegistry name http-server
+126 silly mapToRegistry using default registry
+127 silly mapToRegistry registry https://registry.npmjs.org/
+128 silly mapToRegistry uri https://registry.npmjs.org/http-server
+129 verbose addRemoteTarball https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz not in flight; adding
+130 verbose addRemoteTarball [ 'https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz',
+130 verbose addRemoteTarball   '8f1b06bdc733618d4dc42831c7ba1aff4e06001a' ]
+131 info retry fetch attempt 1 at 13:33:41
+132 info attempt registry request try #1 at 13:33:41
+133 http fetch GET https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz
+134 http 200 https://registry.npmjs.org/stylus
+135 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+135 verbose headers   etag: '"ANWBQ1ZRDRS0UC2N7E06YKIYW"',
+135 verbose headers   'content-type': 'application/json',
+135 verbose headers   'content-encoding': 'gzip',
+135 verbose headers   'cache-control': 'max-age=300',
+135 verbose headers   'content-length': '21275',
+135 verbose headers   'accept-ranges': 'bytes',
+135 verbose headers   date: 'Wed, 03 Aug 2016 10:33:40 GMT',
+135 verbose headers   via: '1.1 varnish',
+135 verbose headers   age: '158',
+135 verbose headers   connection: 'keep-alive',
+135 verbose headers   'x-served-by': 'cache-fra1226-FRA',
+135 verbose headers   'x-cache': 'HIT',
+135 verbose headers   'x-cache-hits': '1',
+135 verbose headers   'x-timer': 'S1470220420.934238,VS0,VE0',
+135 verbose headers   vary: 'Accept-Encoding' }
+136 silly get cb [ 200,
+136 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+136 silly get     etag: '"ANWBQ1ZRDRS0UC2N7E06YKIYW"',
+136 silly get     'content-type': 'application/json',
+136 silly get     'content-encoding': 'gzip',
+136 silly get     'cache-control': 'max-age=300',
+136 silly get     'content-length': '21275',
+136 silly get     'accept-ranges': 'bytes',
+136 silly get     date: 'Wed, 03 Aug 2016 10:33:40 GMT',
+136 silly get     via: '1.1 varnish',
+136 silly get     age: '158',
+136 silly get     connection: 'keep-alive',
+136 silly get     'x-served-by': 'cache-fra1226-FRA',
+136 silly get     'x-cache': 'HIT',
+136 silly get     'x-cache-hits': '1',
+136 silly get     'x-timer': 'S1470220420.934238,VS0,VE0',
+136 silly get     vary: 'Accept-Encoding' } ]
+137 verbose get saving stylus to /home/prog41/.npm/registry.npmjs.org/stylus/.cache.json
+138 silly addNameRange number 2 { name: 'stylus', range: '*', hasData: true }
+139 silly addNameRange versions [ 'stylus',
+139 silly addNameRange   [ '0.0.1',
+139 silly addNameRange     '0.0.2',
+139 silly addNameRange     '0.1.0',
+139 silly addNameRange     '0.2.0',
+139 silly addNameRange     '0.2.1',
+139 silly addNameRange     '0.3.0',
+139 silly addNameRange     '0.3.1',
+139 silly addNameRange     '0.4.0',
+139 silly addNameRange     '0.4.1',
+139 silly addNameRange     '0.5.0',
+139 silly addNameRange     '0.5.1',
+139 silly addNameRange     '0.5.2',
+139 silly addNameRange     '0.5.3',
+139 silly addNameRange     '0.6.0',
+139 silly addNameRange     '0.6.2',
+139 silly addNameRange     '0.6.3',
+139 silly addNameRange     '0.6.4',
+139 silly addNameRange     '0.6.5',
+139 silly addNameRange     '0.6.6',
+139 silly addNameRange     '0.6.7',
+139 silly addNameRange     '0.7.0',
+139 silly addNameRange     '0.7.1',
+139 silly addNameRange     '0.7.2',
+139 silly addNameRange     '0.7.3',
+139 silly addNameRange     '0.7.4',
+139 silly addNameRange     '0.8.0',
+139 silly addNameRange     '0.9.0',
+139 silly addNameRange     '0.9.1',
+139 silly addNameRange     '0.9.2',
+139 silly addNameRange     '0.10.0',
+139 silly addNameRange     '0.11.0',
+139 silly addNameRange     '0.11.1',
+139 silly addNameRange     '0.11.2',
+139 silly addNameRange     '0.11.3',
+139 silly addNameRange     '0.11.4',
+139 silly addNameRange     '0.11.5',
+139 silly addNameRange     '0.11.6',
+139 silly addNameRange     '0.11.7',
+139 silly addNameRange     '0.11.8',
+139 silly addNameRange     '0.11.9',
+139 silly addNameRange     '0.11.10',
+139 silly addNameRange     '0.11.11',
+139 silly addNameRange     '0.11.12',
+139 silly addNameRange     '0.12.0',
+139 silly addNameRange     '0.12.1',
+139 silly addNameRange     '0.12.2',
+139 silly addNameRange     '0.12.3',
+139 silly addNameRange     '0.12.4',
+139 silly addNameRange     '0.13.0',
+139 silly addNameRange     '0.13.1',
+139 silly addNameRange     '0.13.2',
+139 silly addNameRange     '0.13.3',
+139 silly addNameRange     '0.13.4',
+139 silly addNameRange     '0.13.5',
+139 silly addNameRange     '0.13.6',
+139 silly addNameRange     '0.13.7',
+139 silly addNameRange     '0.13.8',
+139 silly addNameRange     '0.13.9',
+139 silly addNameRange     '0.14.0',
+139 silly addNameRange     '0.15.0',
+139 silly addNameRange     '0.15.1',
+139 silly addNameRange     '0.15.2',
+139 silly addNameRange     '0.15.3',
+139 silly addNameRange     '0.15.4',
+139 silly addNameRange     '0.16.0',
+139 silly addNameRange     '0.17.0',
+139 silly addNameRange     '0.18.0',
+139 silly addNameRange     '0.19.0',
+139 silly addNameRange     '0.19.1',
+139 silly addNameRange     '0.19.2',
+139 silly addNameRange     '0.19.3',
+139 silly addNameRange     '0.19.4',
+139 silly addNameRange     '0.19.5',
+139 silly addNameRange     '0.19.6',
+139 silly addNameRange     '0.19.7',
+139 silly addNameRange     '0.19.8',
+139 silly addNameRange     '0.20.0',
+139 silly addNameRange     '0.20.1',
+139 silly addNameRange     '0.21.0',
+139 silly addNameRange     '0.21.1',
+139 silly addNameRange     '0.21.2',
+139 silly addNameRange     '0.22.0',
+139 silly addNameRange     '0.22.1',
+139 silly addNameRange     '0.22.2',
+139 silly addNameRange     '0.22.3',
+139 silly addNameRange     '0.22.4',
+139 silly addNameRange     '0.22.5',
+139 silly addNameRange     '0.22.6',
+139 silly addNameRange     '0.23.0',
+139 silly addNameRange     '0.24.0',
+139 silly addNameRange     '0.25.0',
+139 silly addNameRange     '0.26.0',
+139 silly addNameRange     '0.26.1',
+139 silly addNameRange     '0.27.0',
+139 silly addNameRange     '0.27.1',
+139 silly addNameRange     '0.27.2',
+139 silly addNameRange     '0.28.0',
+139 silly addNameRange     '0.28.1',
+139 silly addNameRange     '0.28.2',
+139 silly addNameRange     '0.29.0',
+139 silly addNameRange     '0.30.0',
+139 silly addNameRange     '0.30.1',
+139 silly addNameRange     '0.31.0',
+139 silly addNameRange     '0.32.0',
+139 silly addNameRange     '0.32.1',
+139 silly addNameRange     '0.33.0',
+139 silly addNameRange     '0.33.1',
+139 silly addNameRange     '0.34.0',
+139 silly addNameRange     '0.34.1',
+139 silly addNameRange     '0.35.0',
+139 silly addNameRange     '0.35.1',
+139 silly addNameRange     '0.36.0',
+139 silly addNameRange     '0.36.1',
+139 silly addNameRange     '0.37.0',
+139 silly addNameRange     '0.38.0',
+139 silly addNameRange     '0.39.0',
+139 silly addNameRange     '0.39.1',
+139 silly addNameRange     '0.39.2',
+139 silly addNameRange     '0.39.3',
+139 silly addNameRange     '0.39.4',
+139 silly addNameRange     '0.40.0',
+139 silly addNameRange     '0.40.1',
+139 silly addNameRange     '0.40.2',
+139 silly addNameRange     '0.40.3',
+139 silly addNameRange     '0.41.0',
+139 silly addNameRange     '0.41.1',
+139 silly addNameRange     '0.41.2',
+139 silly addNameRange     '0.41.3',
+139 silly addNameRange     '0.42.0',
+139 silly addNameRange     '0.42.1',
+139 silly addNameRange     '0.42.2',
+139 silly addNameRange     '0.42.3',
+139 silly addNameRange     '0.43.0',
+139 silly addNameRange     '0.44.0-beta',
+139 silly addNameRange     '0.43.1',
+139 silly addNameRange     '0.44.0-beta2',
+139 silly addNameRange     '0.44.0-beta3',
+139 silly addNameRange     '0.44.0',
+139 silly addNameRange     '0.45.0',
+139 silly addNameRange     '0.45.1',
+139 silly addNameRange     '0.46.0',
+139 silly addNameRange     '0.46.1',
+139 silly addNameRange     '0.46.2',
+139 silly addNameRange     '0.46.3',
+139 silly addNameRange     '0.47.0',
+139 silly addNameRange     '0.47.1',
+139 silly addNameRange     '0.47.2',
+139 silly addNameRange     '0.47.3',
+139 silly addNameRange     '0.48.0',
+139 silly addNameRange     '0.48.1',
+139 silly addNameRange     '0.49.0',
+139 silly addNameRange     '0.49.1',
+139 silly addNameRange     '0.49.2',
+139 silly addNameRange     '0.49.3',
+139 silly addNameRange     '0.50.0',
+139 silly addNameRange     '0.51.0',
+139 silly addNameRange     '0.51.1',
+139 silly addNameRange     '0.52.0-alpha',
+139 silly addNameRange     '0.52.0',
+139 silly addNameRange     '0.52.1',
+139 silly addNameRange     '0.52.2',
+139 silly addNameRange     '0.52.3',
+139 silly addNameRange     '0.52.4',
+139 silly addNameRange     '0.53.0',
+139 silly addNameRange     '0.54.0',
+139 silly addNameRange     '0.54.2',
+139 silly addNameRange     '0.54.3',
+139 silly addNameRange     '0.54.4',
+139 silly addNameRange     '0.54.5' ] ]
+140 silly addNamed stylus@0.54.5
+141 verbose addNamed "0.54.5" is a plain semver version for stylus
+142 silly mapToRegistry name babel
+143 silly mapToRegistry using default registry
+144 silly mapToRegistry registry https://registry.npmjs.org/
+145 silly mapToRegistry uri https://registry.npmjs.org/babel
+146 verbose addRemoteTarball https://registry.npmjs.org/babel/-/babel-6.5.2.tgz not in flight; adding
+147 verbose addRemoteTarball [ 'https://registry.npmjs.org/babel/-/babel-6.5.2.tgz',
+147 verbose addRemoteTarball   '59140607438270920047ff56f02b2d8630c2d129' ]
+148 info retry fetch attempt 1 at 13:33:41
+149 info attempt registry request try #1 at 13:33:41
+150 http fetch GET https://registry.npmjs.org/babel/-/babel-6.5.2.tgz
+151 silly mapToRegistry name jade
+152 silly mapToRegistry using default registry
+153 silly mapToRegistry registry https://registry.npmjs.org/
+154 silly mapToRegistry uri https://registry.npmjs.org/jade
+155 verbose addRemoteTarball https://registry.npmjs.org/jade/-/jade-1.11.0.tgz not in flight; adding
+156 verbose addRemoteTarball [ 'https://registry.npmjs.org/jade/-/jade-1.11.0.tgz',
+156 verbose addRemoteTarball   '9c80e538c12d3fb95c8d9bb9559fa0cc040405fd' ]
+157 silly mapToRegistry name stylus
+158 silly mapToRegistry using default registry
+159 silly mapToRegistry registry https://registry.npmjs.org/
+160 silly mapToRegistry uri https://registry.npmjs.org/stylus
+161 verbose addRemoteTarball https://registry.npmjs.org/stylus/-/stylus-0.54.5.tgz not in flight; adding
+162 verbose addRemoteTarball [ 'https://registry.npmjs.org/stylus/-/stylus-0.54.5.tgz',
+162 verbose addRemoteTarball   '42b9560931ca7090ce8515a798ba9e6aa3d6dc79' ]
+163 info retry fetch attempt 1 at 13:33:41
+164 info attempt registry request try #1 at 13:33:41
+165 http fetch GET https://registry.npmjs.org/stylus/-/stylus-0.54.5.tgz
+166 info retry fetch attempt 1 at 13:33:41
+167 info attempt registry request try #1 at 13:33:41
+168 http fetch GET https://registry.npmjs.org/jade/-/jade-1.11.0.tgz
+169 http 200 https://registry.npmjs.org/gulp
+170 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+170 verbose headers   etag: '"C1VB7Z5JFBE2PGR2SPI191GGL"',
+170 verbose headers   'content-type': 'application/json',
+170 verbose headers   'content-encoding': 'gzip',
+170 verbose headers   'cache-control': 'max-age=300',
+170 verbose headers   'content-length': '18633',
+170 verbose headers   'accept-ranges': 'bytes',
+170 verbose headers   date: 'Wed, 03 Aug 2016 10:33:41 GMT',
+170 verbose headers   via: '1.1 varnish',
+170 verbose headers   age: '196',
+170 verbose headers   connection: 'keep-alive',
+170 verbose headers   'x-served-by': 'cache-fra1222-FRA',
+170 verbose headers   'x-cache': 'HIT',
+170 verbose headers   'x-cache-hits': '7',
+170 verbose headers   'x-timer': 'S1470220421.155333,VS0,VE0',
+170 verbose headers   vary: 'Accept-Encoding' }
+171 silly get cb [ 200,
+171 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+171 silly get     etag: '"C1VB7Z5JFBE2PGR2SPI191GGL"',
+171 silly get     'content-type': 'application/json',
+171 silly get     'content-encoding': 'gzip',
+171 silly get     'cache-control': 'max-age=300',
+171 silly get     'content-length': '18633',
+171 silly get     'accept-ranges': 'bytes',
+171 silly get     date: 'Wed, 03 Aug 2016 10:33:41 GMT',
+171 silly get     via: '1.1 varnish',
+171 silly get     age: '196',
+171 silly get     connection: 'keep-alive',
+171 silly get     'x-served-by': 'cache-fra1222-FRA',
+171 silly get     'x-cache': 'HIT',
+171 silly get     'x-cache-hits': '7',
+171 silly get     'x-timer': 'S1470220421.155333,VS0,VE0',
+171 silly get     vary: 'Accept-Encoding' } ]
+172 verbose get saving gulp to /home/prog41/.npm/registry.npmjs.org/gulp/.cache.json
+173 silly addNameRange number 2 { name: 'gulp', range: '*', hasData: true }
+174 silly addNameRange versions [ 'gulp',
+174 silly addNameRange   [ '0.0.1',
+174 silly addNameRange     '0.0.2',
+174 silly addNameRange     '0.0.3',
+174 silly addNameRange     '0.0.4',
+174 silly addNameRange     '0.0.5',
+174 silly addNameRange     '0.0.7',
+174 silly addNameRange     '0.0.8',
+174 silly addNameRange     '0.0.9',
+174 silly addNameRange     '0.1.0',
+174 silly addNameRange     '0.2.0',
+174 silly addNameRange     '1.0.0',
+174 silly addNameRange     '1.1.0',
+174 silly addNameRange     '1.2.0',
+174 silly addNameRange     '1.2.1',
+174 silly addNameRange     '2.0.0',
+174 silly addNameRange     '2.0.1',
+174 silly addNameRange     '2.1.0',
+174 silly addNameRange     '2.2.0',
+174 silly addNameRange     '2.3.0',
+174 silly addNameRange     '2.4.0',
+174 silly addNameRange     '2.4.1',
+174 silly addNameRange     '2.6.0',
+174 silly addNameRange     '2.6.1',
+174 silly addNameRange     '2.7.0',
+174 silly addNameRange     '3.0.0',
+174 silly addNameRange     '3.1.1',
+174 silly addNameRange     '3.1.2',
+174 silly addNameRange     '3.1.3',
+174 silly addNameRange     '3.1.4',
+174 silly addNameRange     '3.2.0',
+174 silly addNameRange     '3.2.1',
+174 silly addNameRange     '3.2.2',
+174 silly addNameRange     '3.2.3',
+174 silly addNameRange     '3.2.4',
+174 silly addNameRange     '3.2.5',
+174 silly addNameRange     '3.3.0',
+174 silly addNameRange     '3.3.1',
+174 silly addNameRange     '3.3.2',
+174 silly addNameRange     '3.3.4',
+174 silly addNameRange     '3.4.0',
+174 silly addNameRange     '3.5.0',
+174 silly addNameRange     '3.5.1',
+174 silly addNameRange     '3.5.2',
+174 silly addNameRange     '3.5.5',
+174 silly addNameRange     '3.5.6',
+174 silly addNameRange     '3.6.0',
+174 silly addNameRange     '3.6.1',
+174 silly addNameRange     '3.6.2',
+174 silly addNameRange     '3.7.0',
+174 silly addNameRange     '3.8.0',
+174 silly addNameRange     '3.8.1',
+174 silly addNameRange     '3.8.2',
+174 silly addNameRange     '3.8.3',
+174 silly addNameRange     '3.8.4',
+174 silly addNameRange     '3.8.5',
+174 silly addNameRange     '3.8.6',
+174 silly addNameRange     '3.8.7',
+174 silly addNameRange     '3.8.8',
+174 silly addNameRange     '3.8.9',
+174 silly addNameRange     '3.8.10',
+174 silly addNameRange     '3.8.11',
+174 silly addNameRange     '3.9.0',
+174 silly addNameRange     '3.9.1' ] ]
+175 silly addNamed gulp@3.9.1
+176 verbose addNamed "3.9.1" is a plain semver version for gulp
+177 silly cache afterAdd gulp@3.9.1
+178 verbose afterAdd /home/prog41/.npm/gulp/3.9.1/package/package.json not in flight; writing
+179 verbose afterAdd /home/prog41/.npm/gulp/3.9.1/package/package.json written
+180 http 200 https://registry.npmjs.org/browserify
+181 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+181 verbose headers   etag: '"7UMCW2UC1HS2SFEM4GIAR83MR"',
+181 verbose headers   'content-type': 'application/json',
+181 verbose headers   'content-encoding': 'gzip',
+181 verbose headers   'cache-control': 'max-age=300',
+181 verbose headers   'content-length': '75219',
+181 verbose headers   'accept-ranges': 'bytes',
+181 verbose headers   date: 'Wed, 03 Aug 2016 10:33:41 GMT',
+181 verbose headers   via: '1.1 varnish',
+181 verbose headers   age: '148',
+181 verbose headers   connection: 'keep-alive',
+181 verbose headers   'x-served-by': 'cache-fra1240-FRA',
+181 verbose headers   'x-cache': 'HIT',
+181 verbose headers   'x-cache-hits': '2',
+181 verbose headers   'x-timer': 'S1470220421.293492,VS0,VE0',
+181 verbose headers   vary: 'Accept-Encoding' }
+182 silly get cb [ 200,
+182 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+182 silly get     etag: '"7UMCW2UC1HS2SFEM4GIAR83MR"',
+182 silly get     'content-type': 'application/json',
+182 silly get     'content-encoding': 'gzip',
+182 silly get     'cache-control': 'max-age=300',
+182 silly get     'content-length': '75219',
+182 silly get     'accept-ranges': 'bytes',
+182 silly get     date: 'Wed, 03 Aug 2016 10:33:41 GMT',
+182 silly get     via: '1.1 varnish',
+182 silly get     age: '148',
+182 silly get     connection: 'keep-alive',
+182 silly get     'x-served-by': 'cache-fra1240-FRA',
+182 silly get     'x-cache': 'HIT',
+182 silly get     'x-cache-hits': '2',
+182 silly get     'x-timer': 'S1470220421.293492,VS0,VE0',
+182 silly get     vary: 'Accept-Encoding' } ]
+183 verbose get saving browserify to /home/prog41/.npm/registry.npmjs.org/browserify/.cache.json
+184 http fetch 200 https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz
+185 http fetch 200 https://registry.npmjs.org/babel/-/babel-6.5.2.tgz
+186 http fetch 200 https://registry.npmjs.org/stylus/-/stylus-0.54.5.tgz
+187 http fetch 200 https://registry.npmjs.org/jade/-/jade-1.11.0.tgz
+188 silly fetchAndShaCheck shasum 59140607438270920047ff56f02b2d8630c2d129
+189 verbose addTmpTarball /tmp/npm-8405-069b414a/registry.npmjs.org/babel/-/babel-6.5.2.tgz not in flight; adding
+190 verbose addTmpTarball already have metadata; skipping unpack for babel@6.5.2
+191 silly cache afterAdd babel@6.5.2
+192 verbose afterAdd /home/prog41/.npm/babel/6.5.2/package/package.json not in flight; writing
+193 verbose afterAdd /home/prog41/.npm/babel/6.5.2/package/package.json written
+194 silly addNameRange number 2 { name: 'browserify', range: '*', hasData: true }
+195 silly addNameRange versions [ 'browserify',
+195 silly addNameRange   [ '0.0.1',
+195 silly addNameRange     '0.0.2',
+195 silly addNameRange     '0.0.3',
+195 silly addNameRange     '0.0.4',
+195 silly addNameRange     '0.0.5',
+195 silly addNameRange     '0.1.0',
+195 silly addNameRange     '0.1.1',
+195 silly addNameRange     '0.1.2',
+195 silly addNameRange     '0.1.3',
+195 silly addNameRange     '0.1.4',
+195 silly addNameRange     '0.1.5',
+195 silly addNameRange     '0.2.0',
+195 silly addNameRange     '0.2.1',
+195 silly addNameRange     '0.2.2',
+195 silly addNameRange     '0.2.3',
+195 silly addNameRange     '0.2.4',
+195 silly addNameRange     '0.2.5',
+195 silly addNameRange     '0.2.6',
+195 silly addNameRange     '0.2.7',
+195 silly addNameRange     '0.2.8',
+195 silly addNameRange     '0.2.9',
+195 silly addNameRange     '0.2.10',
+195 silly addNameRange     '0.2.11',
+195 silly addNameRange     '0.3.0',
+195 silly addNameRange     '0.3.1',
+195 silly addNameRange     '0.3.2',
+195 silly addNameRange     '0.3.3',
+195 silly addNameRange     '0.3.4',
+195 silly addNameRange     '0.3.5',
+195 silly addNameRange     '0.3.6',
+195 silly addNameRange     '0.3.7',
+195 silly addNameRange     '0.4.0',
+195 silly addNameRange     '0.4.1',
+195 silly addNameRange     '0.4.2',
+195 silly addNameRange     '0.4.3',
+195 silly addNameRange     '0.4.4',
+195 silly addNameRange     '0.4.5',
+195 silly addNameRange     '0.4.6',
+195 silly addNameRange     '0.4.7',
+195 silly addNameRange     '0.4.8',
+195 silly addNameRange     '0.4.9',
+195 silly addNameRange     '0.4.10',
+195 silly addNameRange     '0.4.11',
+195 silly addNameRange     '0.4.12',
+195 silly addNameRange     '0.4.13',
+195 silly addNameRange     '0.4.14',
+195 silly addNameRange     '0.4.15',
+195 silly addNameRange     '0.5.0',
+195 silly addNameRange     '0.5.1',
+195 silly addNameRange     '0.5.2',
+195 silly addNameRange     '1.0.0',
+195 silly addNameRange     '1.1.0',
+195 silly addNameRange     '1.1.1',
+195 silly addNameRange     '1.1.2',
+195 silly addNameRange     '1.1.3',
+195 silly addNameRange     '1.1.4',
+195 silly addNameRange     '1.2.0',
+195 silly addNameRange     '1.2.1',
+195 silly addNameRange     '1.2.2',
+195 silly addNameRange     '1.2.3',
+195 silly addNameRange     '1.2.4',
+195 silly addNameRange     '1.2.5',
+195 silly addNameRange     '1.2.6',
+195 silly addNameRange     '1.2.7',
+195 silly addNameRange     '1.2.8',
+195 silly addNameRange     '1.2.9',
+195 silly addNameRange     '1.3.0',
+195 silly addNameRange     '1.4.0',
+195 silly addNameRange     '1.4.1',
+195 silly addNameRange     '1.4.2',
+195 silly addNameRange     '1.4.3',
+195 silly addNameRange     '1.4.4',
+195 silly addNameRange     '1.4.5',
+195 silly addNameRange     '1.4.6',
+195 silly addNameRange     '1.4.7',
+195 silly addNameRange     '1.4.8',
+195 silly addNameRange     '1.5.0',
+195 silly addNameRange     '1.6.0',
+195 silly addNameRange     '1.6.1',
+195 silly addNameRange     '1.7.0',
+195 silly addNameRange     '1.7.1',
+195 silly addNameRange     '1.7.2',
+195 silly addNameRange     '1.7.3',
+195 silly addNameRange     '1.7.4',
+195 silly addNameRange     '1.7.5',
+195 silly addNameRange     '1.7.6',
+195 silly addNameRange     '1.7.7',
+195 silly addNameRange     '1.8.0',
+195 silly addNameRange     '1.8.1',
+195 silly addNameRange     '1.8.2',
+195 silly addNameRange     '1.8.3',
+195 silly addNameRange     '1.9.0',
+195 silly addNameRange     '1.9.1',
+195 silly addNameRange     '1.9.2',
+195 silly addNameRange     '1.9.3',
+195 silly addNameRange     '1.9.4',
+195 silly addNameRange     '1.10.0',
+195 silly addNameRange     '1.10.1',
+195 silly addNameRange     '1.10.2',
+195 silly addNameRange     '1.10.3',
+195 silly addNameRange     '1.10.4',
+195 silly addNameRange     '1.10.5',
+195 silly addNameRange     '1.10.6',
+195 silly addNameRange     '1.10.7',
+195 silly addNameRange     '1.10.8',
+195 silly addNameRange     '1.10.9',
+195 silly addNameRange     '1.10.11',
+195 silly addNameRange     '1.10.12',
+195 silly addNameRange     '1.10.13',
+195 silly addNameRange     '1.10.14',
+195 silly addNameRange     '1.10.15',
+195 silly addNameRange     '1.10.16',
+195 silly addNameRange     '1.10.17',
+195 silly addNameRange     '1.11.0',
+195 silly addNameRange     '1.11.1',
+195 silly addNameRange     '1.12.0',
+195 silly addNameRange     '1.12.1',
+195 silly addNameRange     '1.12.2',
+195 silly addNameRange     '1.12.3',
+195 silly addNameRange     '1.13.0',
+195 silly addNameRange     '1.13.1',
+195 silly addNameRange     '1.13.2',
+195 silly addNameRange     '1.13.3',
+195 silly addNameRange     '1.13.4',
+195 silly addNameRange     '1.13.5',
+195 silly addNameRange     '1.13.6',
+195 silly addNameRange     '1.13.8',
+195 silly addNameRange     '1.13.9',
+195 silly addNameRange     '1.13.10',
+195 silly addNameRange     '1.14.0',
+195 silly addNameRange     '1.14.1',
+195 silly addNameRange     '1.14.2',
+195 silly addNameRange     '1.14.3',
+195 silly addNameRange     '1.14.4',
+195 silly addNameRange     '1.14.5',
+195 silly addNameRange     '1.15.0',
+195 silly addNameRange     '1.15.1',
+195 silly addNameRange     '1.15.2',
+195 silly addNameRange     '1.15.3',
+195 silly addNameRange     '1.15.4',
+195 silly addNameRange     '1.15.5',
+195 silly addNameRange     '1.15.6',
+195 silly addNameRange     '1.16.0',
+195 silly addNameRange     '1.16.1',
+195 silly addNameRange     '1.16.2',
+195 silly addNameRange     '1.16.3',
+195 silly addNameRange     '1.16.4',
+195 silly addNameRange     '1.16.5',
+195 silly addNameRange     '1.16.6',
+195 silly addNameRange     '1.16.7',
+195 silly addNameRange     '1.16.8',
+195 silly addNameRange     '1.17.0',
+195 silly addNameRange     '1.17.1',
+195 silly addNameRange     '1.17.2',
+195 silly addNameRange     '1.17.3',
+195 silly addNameRange     '1.18.0',
+195 silly addNameRange     '2.0.0',
+195 silly addNameRange     '2.0.1',
+195 silly addNameRange     '2.1.0',
+195 silly addNameRange     '2.2.0',
+195 silly addNameRange     '2.2.1',
+195 silly addNameRange     '2.2.2',
+195 silly addNameRange     '2.2.3',
+195 silly addNameRange     '2.2.4',
+195 silly addNameRange     '2.2.5',
+195 silly addNameRange     '2.2.6',
+195 silly addNameRange     '2.3.0',
+195 silly addNameRange     '2.3.1',
+195 silly addNameRange     '2.4.0',
+195 silly addNameRange     '2.4.1',
+195 silly addNameRange     '2.4.2',
+195 silly addNameRange     '2.4.3',
+195 silly addNameRange     '2.5.0',
+195 silly addNameRange     '2.5.1',
+195 silly addNameRange     '2.6.0',
+195 silly addNameRange     '2.6.1',
+195 silly addNameRange     '2.7.0',
+195 silly addNameRange     '2.7.1',
+195 silly addNameRange     '2.7.2',
+195 silly addNameRange     '2.7.3',
+195 silly addNameRange     '2.7.4',
+195 silly addNameRange     '2.8.0',
+195 silly addNameRange     '2.8.1',
+195 silly addNameRange     '2.9.0',
+195 silly addNameRange     '2.10.0',
+195 silly addNameRange     '2.10.1',
+195 silly addNameRange     '2.10.2',
+195 silly addNameRange     '2.11.0',
+195 silly addNameRange     '2.12.0',
+195 silly addNameRange     '2.12.1',
+195 silly addNameRange     '2.12.2',
+195 silly addNameRange     '2.12.3',
+195 silly addNameRange     '2.12.4',
+195 silly addNameRange     '2.12.5',
+195 silly addNameRange     '2.13.0',
+195 silly addNameRange     '2.13.1',
+195 silly addNameRange     '2.13.2',
+195 silly addNameRange     '2.13.3',
+195 silly addNameRange     '2.14.0',
+195 silly addNameRange     '2.14.1',
+195 silly addNameRange     '2.14.2',
+195 silly addNameRange     '2.15.0',
+195 silly addNameRange     '2.16.0',
+195 silly addNameRange     '2.17.0',
+195 silly addNameRange     '2.17.1',
+195 silly addNameRange     '2.17.2',
+195 silly addNameRange     '2.17.3',
+195 silly addNameRange     '2.17.4',
+195 silly addNameRange     '2.18.0',
+195 silly addNameRange     '2.18.1',
+195 silly addNameRange     '2.19.0',
+195 silly addNameRange     '2.20.0',
+195 silly addNameRange     '2.20.1',
+195 silly addNameRange     '2.20.2',
+195 silly addNameRange     '2.21.0',
+195 silly addNameRange     '2.22.0',
+195 silly addNameRange     '2.23.0',
+195 silly addNameRange     '2.23.1',
+195 silly addNameRange     '2.24.0',
+195 silly addNameRange     '2.24.1',
+195 silly addNameRange     '2.24.2',
+195 silly addNameRange     '2.24.3',
+195 silly addNameRange     '2.25.0',
+195 silly addNameRange     '2.25.1',
+195 silly addNameRange     '2.26.0',
+195 silly addNameRange     '2.27.0',
+195 silly addNameRange     '2.27.1',
+195 silly addNameRange     '2.28.0',
+195 silly addNameRange     '2.29.0',
+195 silly addNameRange     '2.29.1',
+195 silly addNameRange     '2.30.0',
+195 silly addNameRange     '2.31.0',
+195 silly addNameRange     '2.32.0',
+195 silly addNameRange     '2.32.1',
+195 silly addNameRange     '2.32.2',
+195 silly addNameRange     '2.32.3',
+195 silly addNameRange     '2.32.4',
+195 silly addNameRange     '2.33.0',
+195 silly addNameRange     '2.33.1',
+195 silly addNameRange     '2.34.0',
+195 silly addNameRange     '2.34.1',
+195 silly addNameRange     '2.34.2',
+195 silly addNameRange     '2.34.3',
+195 silly addNameRange     '2.35.0',
+195 silly addNameRange     '2.35.1',
+195 silly addNameRange     '2.35.2',
+195 silly addNameRange     '2.35.3',
+195 silly addNameRange     '2.35.4',
+195 silly addNameRange     '2.36.0',
+195 silly addNameRange     '2.36.1',
+195 silly addNameRange     '3.0.0',
+195 silly addNameRange     '3.1.0',
+195 silly addNameRange     '3.1.1',
+195 silly addNameRange     '3.1.2',
+195 silly addNameRange     '3.1.3',
+195 silly addNameRange     '3.2.0',
+195 silly addNameRange     '3.2.1',
+195 silly addNameRange     '3.2.2',
+195 silly addNameRange     '3.3.0',
+195 silly addNameRange     '3.4.0',
+195 silly addNameRange     '3.4.1',
+195 silly addNameRange     '3.5.0',
+195 silly addNameRange     '3.6.0',
+195 silly addNameRange     '3.7.0',
+195 silly addNameRange     '3.8.0',
+195 silly addNameRange     '3.8.1',
+195 silly addNameRange     '3.9.0',
+195 silly addNameRange     '3.9.1',
+195 silly addNameRange     '3.10.0',
+195 silly addNameRange     '3.11.0',
+195 silly addNameRange     '3.11.1',
+195 silly addNameRange     '3.12.0',
+195 silly addNameRange     '3.13.0',
+195 silly addNameRange     '3.14.0',
+195 silly addNameRange     '3.14.1',
+195 silly addNameRange     '3.16.0',
+195 silly addNameRange     '3.16.1',
+195 silly addNameRange     '3.17.0',
+195 silly addNameRange     '3.18.0',
+195 silly addNameRange     '3.19.0',
+195 silly addNameRange     '3.19.1',
+195 silly addNameRange     '3.20.0',
+195 silly addNameRange     '3.20.1',
+195 silly addNameRange     '3.20.2',
+195 silly addNameRange     '3.21.0',
+195 silly addNameRange     '3.21.1',
+195 silly addNameRange     '3.22.0',
+195 silly addNameRange     '3.22.1',
+195 silly addNameRange     '3.23.0',
+195 silly addNameRange     '3.23.1',
+195 silly addNameRange     '3.24.0',
+195 silly addNameRange     '3.24.1',
+195 silly addNameRange     '3.24.2',
+195 silly addNameRange     '3.24.3',
+195 silly addNameRange     '3.24.4',
+195 silly addNameRange     '3.24.5',
+195 silly addNameRange     '3.24.6',
+195 silly addNameRange     '3.24.7',
+195 silly addNameRange     '3.24.8',
+195 silly addNameRange     '3.24.9',
+195 silly addNameRange     '3.24.10',
+195 silly addNameRange     '3.24.11',
+195 silly addNameRange     '3.24.13',
+195 silly addNameRange     '3.25.0',
+195 silly addNameRange     '3.25.1',
+195 silly addNameRange     '3.25.2',
+195 silly addNameRange     '3.26.0',
+195 silly addNameRange     '3.27.0',
+195 silly addNameRange     '3.27.1',
+195 silly addNameRange     '3.28.0',
+195 silly addNameRange     '3.28.1',
+195 silly addNameRange     '3.28.2',
+195 silly addNameRange     '3.29.0',
+195 silly addNameRange     '3.29.1',
+195 silly addNameRange     '3.30.0',
+195 silly addNameRange     '3.30.1',
+195 silly addNameRange     '3.30.2',
+195 silly addNameRange     '3.30.3',
+195 silly addNameRange     '3.30.4',
+195 silly addNameRange     '3.31.0',
+195 silly addNameRange     '3.31.1',
+195 silly addNameRange     '3.31.2',
+195 silly addNameRange     '3.32.0',
+195 silly addNameRange     '3.32.1',
+195 silly addNameRange     '3.33.0',
+195 silly addNameRange     '3.33.1',
+195 silly addNameRange     '3.34.0',
+195 silly addNameRange     '3.35.0',
+195 silly addNameRange     '3.36.0',
+195 silly addNameRange     '3.36.1',
+195 silly addNameRange     '3.37.0',
+195 silly addNameRange     '3.37.1',
+195 silly addNameRange     '3.37.2',
+195 silly addNameRange     '3.38.0',
+195 silly addNameRange     '3.38.1',
+195 silly addNameRange     '3.39.0',
+195 silly addNameRange     '3.40.0',
+195 silly addNameRange     '3.40.1',
+195 silly addNameRange     '3.40.2',
+195 silly addNameRange     '3.40.3',
+195 silly addNameRange     '3.40.4',
+195 silly addNameRange     '3.41.0',
+195 silly addNameRange     '3.42.0',
+195 silly addNameRange     '3.43.0',
+195 silly addNameRange     '3.44.0',
+195 silly addNameRange     '3.44.1',
+195 silly addNameRange     '3.44.2',
+195 silly addNameRange     '3.45.0',
+195 silly addNameRange     '3.46.0',
+195 silly addNameRange     '3.46.1',
+195 silly addNameRange     '4.0.0',
+195 silly addNameRange     '4.1.0',
+195 silly addNameRange     '4.1.1',
+195 silly addNameRange     '4.1.2',
+195 silly addNameRange     '4.1.3',
+195 silly addNameRange     '4.1.4',
+195 silly addNameRange     '4.1.5',
+195 silly addNameRange     '4.1.6',
+195 silly addNameRange     '4.1.7',
+195 silly addNameRange     '4.1.8',
+195 silly addNameRange     '4.1.9',
+195 silly addNameRange     '4.1.10',
+195 silly addNameRange     '4.1.11',
+195 silly addNameRange     '4.2.0',
+195 silly addNameRange     '4.2.1',
+195 silly addNameRange     '4.2.2',
+195 silly addNameRange     '4.2.3',
+195 silly addNameRange     '5.0.0',
+195 silly addNameRange     '5.0.1',
+195 silly addNameRange     '5.0.2',
+195 silly addNameRange     '5.0.3',
+195 silly addNameRange     '5.0.4',
+195 silly addNameRange     '5.0.5',
+195 silly addNameRange     '5.0.6',
+195 silly addNameRange     '5.0.7',
+195 silly addNameRange     '5.0.8',
+195 silly addNameRange     '5.1.0',
+195 silly addNameRange     '5.1.1',
+195 silly addNameRange     '5.2.0',
+195 silly addNameRange     '5.2.1',
+195 silly addNameRange     '5.3.0',
+195 silly addNameRange     '5.4.0',
+195 silly addNameRange     '5.4.1',
+195 silly addNameRange     '5.4.2',
+195 silly addNameRange     '5.5.0',
+195 silly addNameRange     '5.6.0',
+195 silly addNameRange     '5.6.1',
+195 silly addNameRange     '5.7.0',
+195 silly addNameRange     '5.8.0',
+195 silly addNameRange     '5.9.0',
+195 silly addNameRange     '5.9.1',
+195 silly addNameRange     '5.9.2',
+195 silly addNameRange     '5.9.3',
+195 silly addNameRange     '5.10.0',
+195 silly addNameRange     '5.10.1',
+195 silly addNameRange     '5.11.0',
+195 silly addNameRange     '5.11.1',
+195 silly addNameRange     '5.11.2',
+195 silly addNameRange     '5.12.0',
+195 silly addNameRange     '5.12.1',
+195 silly addNameRange     '5.12.2',
+195 silly addNameRange     '5.13.0',
+195 silly addNameRange     '5.13.1',
+195 silly addNameRange     '6.0.0',
+195 silly addNameRange     '6.0.1',
+195 silly addNameRange     '6.0.2',
+195 silly addNameRange     '6.0.3',
+195 silly addNameRange     '6.1.0',
+195 silly addNameRange     '6.1.1',
+195 silly addNameRange     '6.1.2',
+195 silly addNameRange     '6.2.0',
+195 silly addNameRange     '6.3.0',
+195 silly addNameRange     '6.3.1',
+195 silly addNameRange     '6.3.2',
+195 silly addNameRange     '6.3.3',
+195 silly addNameRange     '6.3.4',
+195 silly addNameRange     '7.0.0',
+195 silly addNameRange     '7.0.1',
+195 silly addNameRange     '7.0.2',
+195 silly addNameRange     '7.0.3',
+195 silly addNameRange     '7.1.0',
+195 silly addNameRange     '8.0.0',
+195 silly addNameRange     '8.0.1',
+195 silly addNameRange     '8.0.2',
+195 silly addNameRange     '8.0.3',
+195 silly addNameRange     '8.1.0',
+195 silly addNameRange     '8.1.1',
+195 silly addNameRange     '8.1.2',
+195 silly addNameRange     '8.1.3',
+195 silly addNameRange     '9.0.0',
+195 silly addNameRange     '9.0.1',
+195 silly addNameRange     '9.0.2',
+195 silly addNameRange     '9.0.3',
+195 silly addNameRange     '9.0.4',
+195 silly addNameRange     '9.0.5',
+195 silly addNameRange     '9.0.6',
+195 silly addNameRange     '9.0.7',
+195 silly addNameRange     '9.0.8',
+195 silly addNameRange     '10.0.0',
+195 silly addNameRange     '10.1.0',
+195 silly addNameRange     '10.1.1',
+195 silly addNameRange     '10.1.2',
+195 silly addNameRange     '10.1.3',
+195 silly addNameRange     '10.2.0',
+195 silly addNameRange     '10.2.1',
+195 silly addNameRange     '10.2.3',
+195 silly addNameRange     '10.2.4',
+195 silly addNameRange     '10.2.5',
+195 silly addNameRange     '10.2.6',
+195 silly addNameRange     '11.0.0',
+195 silly addNameRange     '11.0.1',
+195 silly addNameRange     '11.1.0',
+195 silly addNameRange     '11.2.0',
+195 silly addNameRange     '12.0.0',
+195 silly addNameRange     '12.0.1',
+195 silly addNameRange     '12.0.2',
+195 silly addNameRange     '13.0.0',
+195 silly addNameRange     '13.0.1',
+195 silly addNameRange     '13.1.0' ] ]
+196 silly addNamed browserify@13.1.0
+197 verbose addNamed "13.1.0" is a plain semver version for browserify
+198 silly mapToRegistry name browserify
+199 silly mapToRegistry using default registry
+200 silly mapToRegistry registry https://registry.npmjs.org/
+201 silly mapToRegistry uri https://registry.npmjs.org/browserify
+202 verbose addRemoteTarball https://registry.npmjs.org/browserify/-/browserify-13.1.0.tgz not in flight; adding
+203 verbose addRemoteTarball [ 'https://registry.npmjs.org/browserify/-/browserify-13.1.0.tgz',
+203 verbose addRemoteTarball   'd81a018e98dd7ca706ec04253d20f8a03b2af8ae' ]
+204 silly fetchAndShaCheck shasum 42b9560931ca7090ce8515a798ba9e6aa3d6dc79
+205 info retry fetch attempt 1 at 13:33:41
+206 info attempt registry request try #1 at 13:33:41
+207 http fetch GET https://registry.npmjs.org/browserify/-/browserify-13.1.0.tgz
+208 verbose addTmpTarball /tmp/npm-8405-069b414a/registry.npmjs.org/stylus/-/stylus-0.54.5.tgz not in flight; adding
+209 verbose addTmpTarball already have metadata; skipping unpack for stylus@0.54.5
+210 silly cache afterAdd stylus@0.54.5
+211 verbose afterAdd /home/prog41/.npm/stylus/0.54.5/package/package.json not in flight; writing
+212 verbose afterAdd /home/prog41/.npm/stylus/0.54.5/package/package.json written
+213 silly fetchAndShaCheck shasum 9c80e538c12d3fb95c8d9bb9559fa0cc040405fd
+214 verbose addTmpTarball /tmp/npm-8405-069b414a/registry.npmjs.org/jade/-/jade-1.11.0.tgz not in flight; adding
+215 verbose addTmpTarball already have metadata; skipping unpack for jade@1.11.0
+216 silly cache afterAdd jade@1.11.0
+217 verbose afterAdd /home/prog41/.npm/jade/1.11.0/package/package.json not in flight; writing
+218 verbose afterAdd /home/prog41/.npm/jade/1.11.0/package/package.json written
+219 silly fetchAndShaCheck shasum 8f1b06bdc733618d4dc42831c7ba1aff4e06001a
+220 verbose addTmpTarball /tmp/npm-8405-069b414a/registry.npmjs.org/http-server/-/http-server-0.9.0.tgz not in flight; adding
+221 verbose addTmpTarball already have metadata; skipping unpack for http-server@0.9.0
+222 silly cache afterAdd http-server@0.9.0
+223 verbose afterAdd /home/prog41/.npm/http-server/0.9.0/package/package.json not in flight; writing
+224 verbose afterAdd /home/prog41/.npm/http-server/0.9.0/package/package.json written
+225 http fetch 200 https://registry.npmjs.org/browserify/-/browserify-13.1.0.tgz
+226 silly fetchAndShaCheck shasum d81a018e98dd7ca706ec04253d20f8a03b2af8ae
+227 verbose addTmpTarball /tmp/npm-8405-069b414a/registry.npmjs.org/browserify/-/browserify-13.1.0.tgz not in flight; adding
+228 verbose addTmpTarball already have metadata; skipping unpack for browserify@13.1.0
+229 silly cache afterAdd browserify@13.1.0
+230 verbose afterAdd /home/prog41/.npm/browserify/13.1.0/package/package.json not in flight; writing
+231 verbose afterAdd /home/prog41/.npm/browserify/13.1.0/package/package.json written
+232 silly install resolved [ { name: 'gulp',
+232 silly install resolved     description: 'The streaming build system',
+232 silly install resolved     version: '3.9.1',
+232 silly install resolved     homepage: 'http://gulpjs.com',
+232 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/gulpjs/gulp.git' },
+232 silly install resolved     author:
+232 silly install resolved      { name: 'Fractal',
+232 silly install resolved        email: 'contact@wearefractal.com',
+232 silly install resolved        url: 'http://wearefractal.com/' },
+232 silly install resolved     tags: [ 'build', 'stream', 'system', 'make', 'tool', 'asset', 'pipeline' ],
+232 silly install resolved     files: [ 'index.js', 'lib', 'bin', 'completion', 'gulp.1' ],
+232 silly install resolved     bin: { gulp: './bin/gulp.js' },
+232 silly install resolved     man: [ 'gulp.1' ],
+232 silly install resolved     dependencies:
+232 silly install resolved      { archy: '^1.0.0',
+232 silly install resolved        chalk: '^1.0.0',
+232 silly install resolved        deprecated: '^0.0.1',
+232 silly install resolved        'gulp-util': '^3.0.0',
+232 silly install resolved        interpret: '^1.0.0',
+232 silly install resolved        liftoff: '^2.1.0',
+232 silly install resolved        minimist: '^1.1.0',
+232 silly install resolved        orchestrator: '^0.3.0',
+232 silly install resolved        'pretty-hrtime': '^1.0.0',
+232 silly install resolved        semver: '^4.1.0',
+232 silly install resolved        tildify: '^1.0.0',
+232 silly install resolved        v8flags: '^2.0.2',
+232 silly install resolved        'vinyl-fs': '^0.3.0' },
+232 silly install resolved     devDependencies:
+232 silly install resolved      { coveralls: '^2.7.0',
+232 silly install resolved        eslint: '^1.7.3',
+232 silly install resolved        'eslint-config-gulp': '^2.0.0',
+232 silly install resolved        'graceful-fs': '^3.0.0',
+232 silly install resolved        istanbul: '^0.3.0',
+232 silly install resolved        jscs: '^2.3.5',
+232 silly install resolved        'jscs-preset-gulp': '^1.0.0',
+232 silly install resolved        'marked-man': '^0.1.3',
+232 silly install resolved        mkdirp: '^0.5.0',
+232 silly install resolved        mocha: '^2.0.1',
+232 silly install resolved        'mocha-lcov-reporter': '^0.0.1',
+232 silly install resolved        q: '^1.0.0',
+232 silly install resolved        rimraf: '^2.2.5',
+232 silly install resolved        should: '^5.0.1' },
+232 silly install resolved     scripts:
+232 silly install resolved      { prepublish: 'marked-man --name gulp docs/CLI.md > gulp.1',
+232 silly install resolved        lint: 'eslint . && jscs *.js bin/ lib/ test/',
+232 silly install resolved        pretest: 'npm run lint',
+232 silly install resolved        test: 'mocha --reporter spec',
+232 silly install resolved        coveralls: 'istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage' },
+232 silly install resolved     engines: { node: '>= 0.9' },
+232 silly install resolved     license: 'MIT',
+232 silly install resolved     gitHead: '9c14e3a13a73a32e424f144d62566671b2fcdbed',
+232 silly install resolved     bugs: { url: 'https://github.com/gulpjs/gulp/issues' },
+232 silly install resolved     _id: 'gulp@3.9.1',
+232 silly install resolved     _shasum: '571ce45928dd40af6514fc4011866016c13845b4',
+232 silly install resolved     _from: 'gulp@*',
+232 silly install resolved     _npmVersion: '2.14.14',
+232 silly install resolved     _nodeVersion: '0.10.41',
+232 silly install resolved     _npmUser: { name: 'phated', email: 'blaine@iceddev.com' },
+232 silly install resolved     maintainers: [ [Object], [Object] ],
+232 silly install resolved     dist:
+232 silly install resolved      { shasum: '571ce45928dd40af6514fc4011866016c13845b4',
+232 silly install resolved        tarball: 'http://registry.npmjs.org/gulp/-/gulp-3.9.1.tgz' },
+232 silly install resolved     _npmOperationalInternal:
+232 silly install resolved      { host: 'packages-6-west.internal.npmjs.com',
+232 silly install resolved        tmp: 'tmp/gulp-3.9.1.tgz_1454957415500_0.15343931876122952' },
+232 silly install resolved     directories: {},
+232 silly install resolved     _resolved: 'https://registry.npmjs.org/gulp/-/gulp-3.9.1.tgz',
+232 silly install resolved     readme: 'ERROR: No README data found!' },
+232 silly install resolved   { name: 'babel',
+232 silly install resolved     version: '6.5.2',
+232 silly install resolved     description: 'Turn ES6 code into readable vanilla ES5 with source maps',
+232 silly install resolved     author: { name: 'Sebastian McKenzie', email: 'sebmck@gmail.com' },
+232 silly install resolved     homepage: 'https://babeljs.io/',
+232 silly install resolved     license: 'MIT',
+232 silly install resolved     repository:
+232 silly install resolved      { type: 'git',
+232 silly install resolved        url: 'https://github.com/babel/babel/tree/master/packages/babel' },
+232 silly install resolved     bin:
+232 silly install resolved      { babel: './cli.js',
+232 silly install resolved        'babel-node': './cli.js',
+232 silly install resolved        'babel-external-helpers': './cli.js' },
+232 silly install resolved     _id: 'babel@6.5.2',
+232 silly install resolved     scripts: {},
+232 silly install resolved     _shasum: '59140607438270920047ff56f02b2d8630c2d129',
+232 silly install resolved     _from: 'babel@*',
+232 silly install resolved     _npmVersion: '3.6.0',
+232 silly install resolved     _nodeVersion: '5.1.0',
+232 silly install resolved     _npmUser: { name: 'hzoo', email: 'hi@henryzoo.com' },
+232 silly install resolved     dist:
+232 silly install resolved      { shasum: '59140607438270920047ff56f02b2d8630c2d129',
+232 silly install resolved        tarball: 'https://registry.npmjs.org/babel/-/babel-6.5.2.tgz' },
+232 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+232 silly install resolved     _npmOperationalInternal:
+232 silly install resolved      { host: 'packages-5-east.internal.npmjs.com',
+232 silly install resolved        tmp: 'tmp/babel-6.5.2.tgz_1455294601370_0.7809299291111529' },
+232 silly install resolved     deprecated: 'Babel\'s CLI commands have been moved from the babel package to the babel-cli package',
+232 silly install resolved     directories: {},
+232 silly install resolved     _resolved: 'https://registry.npmjs.org/babel/-/babel-6.5.2.tgz' },
+232 silly install resolved   { name: 'stylus',
+232 silly install resolved     description: 'Robust, expressive, and feature-rich CSS superset',
+232 silly install resolved     version: '0.54.5',
+232 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+232 silly install resolved     keywords: [ 'css', 'parser', 'style', 'stylesheets', 'jade', 'language' ],
+232 silly install resolved     repository: { type: 'git', url: 'git://github.com/stylus/stylus.git' },
+232 silly install resolved     main: './index.js',
+232 silly install resolved     browserify: './lib/browserify.js',
+232 silly install resolved     engines: { node: '*' },
+232 silly install resolved     bin: { stylus: './bin/stylus' },
+232 silly install resolved     scripts:
+232 silly install resolved      { prepublish: 'npm prune',
+232 silly install resolved        test: 'mocha test/ test/middleware/ --require should --bail --check-leaks --reporter dot',
+232 silly install resolved        'test-cov': 'mocha test/ test/middleware/ --require should --bail --reporter html-cov > coverage.html' },
+232 silly install resolved     dependencies:
+232 silly install resolved      { 'css-parse': '1.7.x',
+232 silly install resolved        mkdirp: '0.5.x',
+232 silly install resolved        debug: '*',
+232 silly install resolved        sax: '0.5.x',
+232 silly install resolved        glob: '7.0.x',
+232 silly install resolved        'source-map': '0.1.x' },
+232 silly install resolved     devDependencies: { should: '8.x', mocha: '*', jscoverage: '0.3.8' },
+232 silly install resolved     bugs: { url: 'https://github.com/stylus/stylus/issues' },
+232 silly install resolved     homepage: 'https://github.com/stylus/stylus',
+232 silly install resolved     directories: { doc: 'docs', example: 'examples', test: 'test' },
+232 silly install resolved     license: 'MIT',
+232 silly install resolved     gitHead: '5aff5ed0e3f482ed48f30110e24fccad7f5559ab',
+232 silly install resolved     _id: 'stylus@0.54.5',
+232 silly install resolved     _shasum: '42b9560931ca7090ce8515a798ba9e6aa3d6dc79',
+232 silly install resolved     _from: 'stylus@*',
+232 silly install resolved     _npmVersion: '3.8.3',
+232 silly install resolved     _nodeVersion: '5.10.1',
+232 silly install resolved     _npmUser: { name: 'panya', email: 'panyakor@gmail.com' },
+232 silly install resolved     dist:
+232 silly install resolved      { shasum: '42b9560931ca7090ce8515a798ba9e6aa3d6dc79',
+232 silly install resolved        tarball: 'https://registry.npmjs.org/stylus/-/stylus-0.54.5.tgz' },
+232 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+232 silly install resolved     _npmOperationalInternal:
+232 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+232 silly install resolved        tmp: 'tmp/stylus-0.54.5.tgz_1461796984140_0.8051077802665532' },
+232 silly install resolved     _resolved: 'https://registry.npmjs.org/stylus/-/stylus-0.54.5.tgz' },
+232 silly install resolved   { name: 'jade',
+232 silly install resolved     description: 'A clean, whitespace-sensitive template language for writing HTML',
+232 silly install resolved     version: '1.11.0',
+232 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+232 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+232 silly install resolved     license: 'MIT',
+232 silly install resolved     repository: { type: 'git', url: 'git://github.com/jadejs/jade.git' },
+232 silly install resolved     main: 'lib',
+232 silly install resolved     bin: { jade: './bin/jade.js' },
+232 silly install resolved     dependencies:
+232 silly install resolved      { 'character-parser': '1.2.1',
+232 silly install resolved        'clean-css': '^3.1.9',
+232 silly install resolved        commander: '~2.6.0',
+232 silly install resolved        constantinople: '~3.0.1',
+232 silly install resolved        jstransformer: '0.0.2',
+232 silly install resolved        mkdirp: '~0.5.0',
+232 silly install resolved        transformers: '2.1.0',
+232 silly install resolved        'uglify-js': '^2.4.19',
+232 silly install resolved        'void-elements': '~2.0.1',
+232 silly install resolved        with: '~4.0.0' },
+232 silly install resolved     devDependencies:
+232 silly install resolved      { browserify: '*',
+232 silly install resolved        'browserify-middleware': '~4.1.0',
+232 silly install resolved        'code-mirror': '~3.22.0',
+232 silly install resolved        'coffee-script': '*',
+232 silly install resolved        coveralls: '^2.11.2',
+232 silly install resolved        express: '~4.10.4',
+232 silly install resolved        'github-basic': '^4.1.2',
+232 silly install resolved        handle: '~1.0.0',
+232 silly install resolved        'highlight-codemirror': '~4.1.0',
+232 silly install resolved        inconsolata: '0.0.2',
+232 silly install resolved        istanbul: '*',
+232 silly install resolved        'jade-code-mirror': '~1.0.5',
+232 silly install resolved        'jade-highlighter': '~1.0.5',
+232 silly install resolved        'jstransformer-cdata': '0.0.3',
+232 silly install resolved        'jstransformer-coffee-script': '0.0.2',
+232 silly install resolved        'jstransformer-less': '^1.0.0',
+232 silly install resolved        'jstransformer-marked': '0.0.1',
+232 silly install resolved        'jstransformer-stylus': '0.0.1',
+232 silly install resolved        'jstransformer-verbatim': '0.0.2',
+232 silly install resolved        less: '<2.0.0',
+232 silly install resolved        'less-file': '0.0.9',
+232 silly install resolved        linify: '*',
+232 silly install resolved        lsr: '^1.0.0',
+232 silly install resolved        marked: '~0.3.3',
+232 silly install resolved        mocha: '*',
+232 silly install resolved        opener: '^1.3.0',
+232 silly install resolved        'pull-request': '^3.0.0',
+232 silly install resolved        rimraf: '^2.2.8',
+232 silly install resolved        should: '*',
+232 silly install resolved        stop: '^3.0.0-rc1',
+232 silly install resolved        stylus: '*',
+232 silly install resolved        twbs: '0.0.6',
+232 silly install resolved        'uglify-js': '*' },
+232 silly install resolved     component: { scripts: [Object] },
+232 silly install resolved     scripts:
+232 silly install resolved      { test: 'mocha -R spec',
+232 silly install resolved        precoverage: 'rimraf coverage && rimraf cov-pt*',
+232 silly install resolved        coverage: 'istanbul cover --report none --dir cov-pt0 node_modules/mocha/bin/_mocha -- -R dot',
+232 silly install resolved        postcoverage: 'istanbul report --include cov-pt\\*/coverage.json && rimraf cov-pt*',
+232 silly install resolved        coveralls: 'npm run coverage && cat ./coverage/lcov.info | coveralls',
+232 silly install resolved        prepublish: 'npm prune && linify transform bin && npm run build',
+232 silly install resolved        build: 'npm run compile',
+232 silly install resolved        compile: 'npm run compile-full && npm run compile-runtime',
+232 silly install resolved        'compile-full': 'browserify ./lib/index.js --standalone jade -x ./node_modules/transformers > jade.js',
+232 silly install resolved        'compile-runtime': 'browserify ./lib/runtime.js --standalone jade > runtime.js' },
+232 silly install resolved     browser: { fs: false, './lib/filters.js': './lib/filters-client.js' },
+232 silly install resolved     homepage: 'http://jade-lang.com',
+232 silly install resolved     gitHead: '31966399f86b15159f2ff47dff99fbf4c92fadd5',
+232 silly install resolved     bugs: { url: 'https://github.com/jadejs/jade/issues' },
+232 silly install resolved     _id: 'jade@1.11.0',
+232 silly install resolved     _shasum: '9c80e538c12d3fb95c8d9bb9559fa0cc040405fd',
+232 silly install resolved     _from: 'jade@*',
+232 silly install resolved     _npmVersion: '2.11.0',
+232 silly install resolved     _nodeVersion: '2.2.1',
+232 silly install resolved     _npmUser: { name: 'alubbe', email: 'npm@lubbe.org' },
+232 silly install resolved     dist:
+232 silly install resolved      { shasum: '9c80e538c12d3fb95c8d9bb9559fa0cc040405fd',
+232 silly install resolved        tarball: 'https://registry.npmjs.org/jade/-/jade-1.11.0.tgz' },
+232 silly install resolved     deprecated: 'Jade has been renamed to pug, please install the latest version of pug instead of jade',
+232 silly install resolved     directories: {},
+232 silly install resolved     _resolved: 'https://registry.npmjs.org/jade/-/jade-1.11.0.tgz' },
+232 silly install resolved   { name: 'http-server',
+232 silly install resolved     version: '0.9.0',
+232 silly install resolved     description: 'A simple zero-configuration command-line http server',
+232 silly install resolved     main: './lib/http-server',
+232 silly install resolved     repository:
+232 silly install resolved      { type: 'git',
+232 silly install resolved        url: 'git://github.com/indexzero/http-server.git' },
+232 silly install resolved     keywords: [ 'cli', 'command' ],
+232 silly install resolved     scripts:
+232 silly install resolved      { start: 'node ./bin/http-server',
+232 silly install resolved        pretest: 'common bin/http-server lib/ test',
+232 silly install resolved        test: 'vows --spec --isolate' },
+232 silly install resolved     contributors:
+232 silly install resolved      [ [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object] ],
+232 silly install resolved     dependencies:
+232 silly install resolved      { colors: '1.0.3',
+232 silly install resolved        corser: '~2.0.0',
+232 silly install resolved        ecstatic: '^1.4.0',
+232 silly install resolved        'http-proxy': '^1.8.1',
+232 silly install resolved        opener: '~1.4.0',
+232 silly install resolved        optimist: '0.6.x',
+232 silly install resolved        portfinder: '0.4.x',
+232 silly install resolved        union: '~0.4.3' },
+232 silly install resolved     devDependencies: { 'common-style': '^3.0.0', request: '2.49.x', vows: '0.7.x' },
+232 silly install resolved     bugs: { url: 'https://github.com/nodeapps/http-server/issues' },
+232 silly install resolved     license: 'MIT',
+232 silly install resolved     preferGlobal: 'true',
+232 silly install resolved     bin: { 'http-server': './bin/http-server', hs: './bin/http-server' },
+232 silly install resolved     gitHead: '1a8552c5e028bd5500027ee940111133927a4e94',
+232 silly install resolved     homepage: 'https://github.com/indexzero/http-server#readme',
+232 silly install resolved     _id: 'http-server@0.9.0',
+232 silly install resolved     _shasum: '8f1b06bdc733618d4dc42831c7ba1aff4e06001a',
+232 silly install resolved     _from: 'http-server@*',
+232 silly install resolved     _npmVersion: '3.7.1',
+232 silly install resolved     _nodeVersion: '4.2.2',
+232 silly install resolved     _npmUser: { name: 'indexzero', email: 'charlie.robbins@gmail.com' },
+232 silly install resolved     maintainers: [ [Object] ],
+232 silly install resolved     dist:
+232 silly install resolved      { shasum: '8f1b06bdc733618d4dc42831c7ba1aff4e06001a',
+232 silly install resolved        tarball: 'https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz' },
+232 silly install resolved     _npmOperationalInternal:
+232 silly install resolved      { host: 'packages-6-west.internal.npmjs.com',
+232 silly install resolved        tmp: 'tmp/http-server-0.9.0.tgz_1455864708425_0.19514421350322664' },
+232 silly install resolved     directories: {},
+232 silly install resolved     _resolved: 'https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz' },
+232 silly install resolved   { name: 'browserify',
+232 silly install resolved     version: '13.1.0',
+232 silly install resolved     description: 'browser-side require() the node way',
+232 silly install resolved     main: 'index.js',
+232 silly install resolved     bin: { browserify: 'bin/cmd.js' },
+232 silly install resolved     repository:
+232 silly install resolved      { type: 'git',
+232 silly install resolved        url: 'git+ssh://git@github.com/substack/node-browserify.git' },
+232 silly install resolved     keywords:
+232 silly install resolved      [ 'browser',
+232 silly install resolved        'require',
+232 silly install resolved        'commonjs',
+232 silly install resolved        'commonj-esque',
+232 silly install resolved        'bundle',
+232 silly install resolved        'npm',
+232 silly install resolved        'javascript' ],
+232 silly install resolved     dependencies:
+232 silly install resolved      { JSONStream: '^1.0.3',
+232 silly install resolved        assert: '~1.3.0',
+232 silly install resolved        'browser-pack': '^6.0.1',
+232 silly install resolved        'browser-resolve': '^1.11.0',
+232 silly install resolved        'browserify-zlib': '~0.1.2',
+232 silly install resolved        buffer: '^4.1.0',
+232 silly install resolved        'concat-stream': '~1.5.1',
+232 silly install resolved        'console-browserify': '^1.1.0',
+232 silly install resolved        'constants-browserify': '~1.0.0',
+232 silly install resolved        'crypto-browserify': '^3.0.0',
+232 silly install resolved        defined: '^1.0.0',
+232 silly install resolved        'deps-sort': '^2.0.0',
+232 silly install resolved        'domain-browser': '~1.1.0',
+232 silly install resolved        duplexer2: '~0.1.2',
+232 silly install resolved        events: '~1.1.0',
+232 silly install resolved        glob: '^5.0.15',
+232 silly install resolved        has: '^1.0.0',
+232 silly install resolved        htmlescape: '^1.1.0',
+232 silly install resolved        'https-browserify': '~0.0.0',
+232 silly install resolved        inherits: '~2.0.1',
+232 silly install resolved        'insert-module-globals': '^7.0.0',
+232 silly install resolved        'labeled-stream-splicer': '^2.0.0',
+232 silly install resolved        'module-deps': '^4.0.2',
+232 silly install resolved        'os-browserify': '~0.1.1',
+232 silly install resolved        parents: '^1.0.1',
+232 silly install resolved        'path-browserify': '~0.0.0',
+232 silly install resolved        process: '~0.11.0',
+232 silly install resolved        punycode: '^1.3.2',
+232 silly install resolved        'querystring-es3': '~0.2.0',
+232 silly install resolved        'read-only-stream': '^2.0.0',
+232 silly install resolved        'readable-stream': '^2.0.2',
+232 silly install resolved        resolve: '^1.1.4',
+232 silly install resolved        shasum: '^1.0.0',
+232 silly install resolved        'shell-quote': '^1.4.3',
+232 silly install resolved        'stream-browserify': '^2.0.0',
+232 silly install resolved        'stream-http': '^2.0.0',
+232 silly install resolved        string_decoder: '~0.10.0',
+232 silly install resolved        subarg: '^1.0.0',
+232 silly install resolved        'syntax-error': '^1.1.1',
+232 silly install resolved        through2: '^2.0.0',
+232 silly install resolved        'timers-browserify': '^1.0.1',
+232 silly install resolved        'tty-browserify': '~0.0.0',
+232 silly install resolved        url: '~0.11.0',
+232 silly install resolved        util: '~0.10.1',
+232 silly install resolved        'vm-browserify': '~0.0.1',
+232 silly install resolved        xtend: '^4.0.0' },
+232 silly install resolved     devDependencies:
+232 silly install resolved      { backbone: '~0.9.2',
+232 silly install resolved        'browser-unpack': '^1.1.1',
+232 silly install resolved        'coffee-script': '~1.10.0',
+232 silly install resolved        coffeeify: '~1.1.0',
+232 silly install resolved        es6ify: '~0.4.8',
+232 silly install resolved        isstream: '^0.1.2',
+232 silly install resolved        seq: '0.3.5',
+232 silly install resolved        tap: '^2.2.0',
+232 silly install resolved        temp: '^0.8.1',
+232 silly install resolved        through: '^2.3.4' },
+232 silly install resolved     author:
+232 silly install resolved      { name: 'James Halliday',
+232 silly install resolved        email: 'mail@substack.net',
+232 silly install resolved        url: 'http://substack.net' },
+232 silly install resolved     scripts: { test: 'tap test/*.js' },
+232 silly install resolved     license: 'MIT',
+232 silly install resolved     gitHead: '8f5ebbf50544bdbdf34d4e0f336ac531152a5da4',
+232 silly install resolved     bugs: { url: 'https://github.com/substack/node-browserify/issues' },
+232 silly install resolved     homepage: 'https://github.com/substack/node-browserify#readme',
+232 silly install resolved     _id: 'browserify@13.1.0',
+232 silly install resolved     _shasum: 'd81a018e98dd7ca706ec04253d20f8a03b2af8ae',
+232 silly install resolved     _from: 'browserify@*',
+232 silly install resolved     _npmVersion: '3.10.6',
+232 silly install resolved     _nodeVersion: '5.5.0',
+232 silly install resolved     _npmUser: { name: 'substack', email: 'substack@gmail.com' },
+232 silly install resolved     dist:
+232 silly install resolved      { shasum: 'd81a018e98dd7ca706ec04253d20f8a03b2af8ae',
+232 silly install resolved        tarball: 'https://registry.npmjs.org/browserify/-/browserify-13.1.0.tgz' },
+232 silly install resolved     maintainers:
+232 silly install resolved      [ [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object],
+232 silly install resolved        [Object] ],
+232 silly install resolved     _npmOperationalInternal:
+232 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+232 silly install resolved        tmp: 'tmp/browserify-13.1.0.tgz_1469479638293_0.43394570983946323' },
+232 silly install resolved     directories: {},
+232 silly install resolved     _resolved: 'https://registry.npmjs.org/browserify/-/browserify-13.1.0.tgz' } ]
+233 info install gulp@3.9.1 into /usr/local/lib
+234 info install babel@6.5.2 into /usr/local/lib
+235 info install stylus@0.54.5 into /usr/local/lib
+236 info install jade@1.11.0 into /usr/local/lib
+237 info install http-server@0.9.0 into /usr/local/lib
+238 info install browserify@13.1.0 into /usr/local/lib
+239 info installOne gulp@3.9.1
+240 verbose installOne of gulp to /usr/local/lib not in flight; installing
+241 info installOne babel@6.5.2
+242 verbose installOne of babel to /usr/local/lib not in flight; installing
+243 info installOne stylus@0.54.5
+244 verbose installOne of stylus to /usr/local/lib not in flight; installing
+245 info installOne jade@1.11.0
+246 verbose installOne of jade to /usr/local/lib not in flight; installing
+247 info installOne http-server@0.9.0
+248 verbose installOne of http-server to /usr/local/lib not in flight; installing
+249 info installOne browserify@13.1.0
+250 verbose installOne of browserify to /usr/local/lib not in flight; installing
+251 verbose lock using /home/prog41/.npm/_locks/gulp-709d00e5d169ceb3.lock for /usr/local/lib/node_modules/gulp
+252 verbose lock using /home/prog41/.npm/_locks/babel-5417f13f3f034c23.lock for /usr/local/lib/node_modules/babel
+253 verbose lock using /home/prog41/.npm/_locks/stylus-c3eec871ff9af39a.lock for /usr/local/lib/node_modules/stylus
+254 silly install write writing babel 6.5.2 to /usr/local/lib/node_modules/babel
+255 silly install write writing stylus 0.54.5 to /usr/local/lib/node_modules/stylus
+256 verbose lock using /home/prog41/.npm/_locks/jade-a5bf0277675e407f.lock for /usr/local/lib/node_modules/jade
+257 verbose lock using /home/prog41/.npm/_locks/http-server-ae30c9ae1f4c5eaa.lock for /usr/local/lib/node_modules/http-server
+258 verbose lock using /home/prog41/.npm/_locks/browserify-361ec04d0c7090cb.lock for /usr/local/lib/node_modules/browserify
+259 silly install write writing jade 1.11.0 to /usr/local/lib/node_modules/jade
+260 silly install write writing http-server 0.9.0 to /usr/local/lib/node_modules/http-server
+261 silly install write writing browserify 13.1.0 to /usr/local/lib/node_modules/browserify
+262 verbose unbuild lib/node_modules/babel
+263 verbose unbuild lib/node_modules/stylus
+264 silly install write writing gulp 3.9.1 to /usr/local/lib/node_modules/gulp
+265 verbose unbuild lib/node_modules/jade
+266 verbose unbuild lib/node_modules/http-server
+267 verbose unbuild lib/node_modules/browserify
+268 silly gentlyRm /usr/local/lib/node_modules/babel is being purged from base /usr/local
+269 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/babel
+270 silly gentlyRm /usr/local/lib/node_modules/stylus is being purged from base /usr/local
+271 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/stylus
+272 verbose tar unpack /home/prog41/.npm/babel/6.5.2/package.tgz
+273 verbose tar unpacking to /usr/local/lib/node_modules/babel
+274 silly gentlyRm /usr/local/lib/node_modules/babel is being purged
+275 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/babel
+276 verbose tar unpack /home/prog41/.npm/stylus/0.54.5/package.tgz
+277 verbose tar unpacking to /usr/local/lib/node_modules/stylus
+278 silly gentlyRm /usr/local/lib/node_modules/stylus is being purged
+279 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/stylus
+280 silly gentlyRm /usr/local/lib/node_modules/jade is being purged from base /usr/local
+281 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jade
+282 silly gentlyRm /usr/local/lib/node_modules/http-server is being purged from base /usr/local
+283 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/http-server
+284 silly gentlyRm /usr/local/lib/node_modules/browserify is being purged from base /usr/local
+285 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/browserify
+286 silly gunzTarPerm modes [ '775', '664' ]
+287 silly gunzTarPerm modes [ '775', '664' ]
+288 verbose tar unpack /home/prog41/.npm/jade/1.11.0/package.tgz
+289 verbose tar unpacking to /usr/local/lib/node_modules/jade
+290 silly gentlyRm /usr/local/lib/node_modules/jade is being purged
+291 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jade
+292 verbose tar unpack /home/prog41/.npm/http-server/0.9.0/package.tgz
+293 verbose tar unpacking to /usr/local/lib/node_modules/http-server
+294 silly gentlyRm /usr/local/lib/node_modules/http-server is being purged
+295 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/http-server
+296 verbose tar unpack /home/prog41/.npm/browserify/13.1.0/package.tgz
+297 verbose tar unpacking to /usr/local/lib/node_modules/browserify
+298 silly gentlyRm /usr/local/lib/node_modules/browserify is being purged
+299 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/browserify
+300 silly gunzTarPerm modes [ '775', '664' ]
+301 silly gunzTarPerm modes [ '775', '664' ]
+302 silly gunzTarPerm modes [ '775', '664' ]
+303 verbose unbuild lib/node_modules/gulp
+304 error tar.unpack untar error /home/prog41/.npm/babel/6.5.2/package.tgz
+305 error tar.unpack untar error /home/prog41/.npm/stylus/0.54.5/package.tgz
+306 verbose unlock done using /home/prog41/.npm/_locks/babel-5417f13f3f034c23.lock for /usr/local/lib/node_modules/babel
+307 verbose unlock done using /home/prog41/.npm/_locks/stylus-c3eec871ff9af39a.lock for /usr/local/lib/node_modules/stylus
+308 error tar.unpack untar error /home/prog41/.npm/jade/1.11.0/package.tgz
+309 error tar.unpack untar error /home/prog41/.npm/http-server/0.9.0/package.tgz
+310 error tar.unpack untar error /home/prog41/.npm/browserify/13.1.0/package.tgz
+311 verbose unlock done using /home/prog41/.npm/_locks/jade-a5bf0277675e407f.lock for /usr/local/lib/node_modules/jade
+312 verbose unlock done using /home/prog41/.npm/_locks/http-server-ae30c9ae1f4c5eaa.lock for /usr/local/lib/node_modules/http-server
+313 verbose unlock done using /home/prog41/.npm/_locks/browserify-361ec04d0c7090cb.lock for /usr/local/lib/node_modules/browserify
+314 info preuninstall gulp@3.9.1
+315 info uninstall gulp@3.9.1
+316 verbose unbuild rmStuff gulp@3.9.1 from /usr/local/lib/node_modules
+317 silly gentlyRm /usr/local/bin/gulp is being gently removed
+318 silly gentlyRm verifying /usr/local is an npm working directory
+319 verbose rmMans man files are [ 'gulp.1' ] in /usr/local/share/man
+320 silly rmMan preparing to remove gulp.1
+321 silly gentlyRm /usr/local/share/man/man1/gulp.1.1 is being gently removed
+322 silly gentlyRm verifying /usr/local is an npm working directory
+323 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+324 silly gentlyRm deletion target /usr/local/bin/gulp is under /usr/local
+325 verbose gentlyRm vacuuming from /usr/local/bin/gulp up to /usr/local
+326 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+327 silly gentlyRm deletion target /usr/local/share/man/man1/gulp.1.1 is under /usr/local
+328 verbose gentlyRm vacuuming from /usr/local/share/man/man1/gulp.1.1 up to /usr/local
+329 silly vacuum-fs removing /usr/local/bin/gulp
+330 verbose unlock done using /home/prog41/.npm/_locks/gulp-709d00e5d169ceb3.lock for /usr/local/lib/node_modules/gulp
+331 verbose fstream_path /usr/local/lib/node_modules/babel
+332 verbose fstream_type Directory
+333 verbose fstream_class DirWriter
+334 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/babel'
+334 verbose stack     at Error (native)
+335 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+335 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+335 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+336 verbose cwd /home/prog41/github/zas0929.github.io/frontendproject
+337 error Linux 4.2.0-25-generic
+338 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "gulp" "browserify" "babel" "jade" "stylus" "http-server"
+339 error node v0.12.10
+340 error npm  v2.14.9
+341 error path /usr/local/lib/node_modules/babel
+342 error code EACCES
+343 error errno -13
+344 error Error: EACCES, mkdir '/usr/local/lib/node_modules/babel'
+344 error     at Error (native)
+344 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/babel']
+344 error   errno: -13,
+344 error   code: 'EACCES',
+344 error   path: '/usr/local/lib/node_modules/babel',
+344 error   fstream_type: 'Directory',
+344 error   fstream_path: '/usr/local/lib/node_modules/babel',
+344 error   fstream_class: 'DirWriter',
+344 error   fstream_stack:
+344 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+344 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+344 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+345 error Please try running this command again as root/Administrator.
+346 verbose exit [ -13, true ]
+347 verbose unbuild lib/node_modules/babel
+348 silly gentlyRm /usr/local/lib/node_modules/babel is being purged from base /usr/local
+349 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/babel
+350 verbose unbuild lib/node_modules/stylus
+351 silly gentlyRm /usr/local/lib/node_modules/stylus is being purged from base /usr/local
+352 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/stylus
+353 verbose unbuild lib/node_modules/jade
+354 silly gentlyRm /usr/local/lib/node_modules/jade is being purged from base /usr/local
+355 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jade
+356 verbose unbuild lib/node_modules/http-server
+357 silly gentlyRm /usr/local/lib/node_modules/http-server is being purged from base /usr/local
+358 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/http-server
+359 verbose unbuild lib/node_modules/browserify
+360 silly gentlyRm /usr/local/lib/node_modules/browserify is being purged from base /usr/local
+361 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/browserify
+362 verbose unbuild lib/node_modules/gulp
+363 info preuninstall gulp@3.9.1
+364 info uninstall gulp@3.9.1
+365 verbose unbuild rmStuff gulp@3.9.1 from /usr/local/lib/node_modules
+366 silly gentlyRm /usr/local/bin/gulp is being gently removed
+367 silly gentlyRm verifying /usr/local is an npm working directory
+368 verbose rmMans man files are [ 'gulp.1' ] in /usr/local/share/man
+369 silly rmMan preparing to remove gulp.1
+370 silly gentlyRm /usr/local/share/man/man1/gulp.1.1 is being gently removed
+371 silly gentlyRm verifying /usr/local is an npm working directory
+372 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+373 silly gentlyRm deletion target /usr/local/bin/gulp is under /usr/local
+374 verbose gentlyRm vacuuming from /usr/local/bin/gulp up to /usr/local
+375 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+376 silly gentlyRm deletion target /usr/local/share/man/man1/gulp.1.1 is under /usr/local
+377 verbose gentlyRm vacuuming from /usr/local/share/man/man1/gulp.1.1 up to /usr/local
+378 silly vacuum-fs removing /usr/local/bin/gulp
+379 error error rolling back Error: EACCES, unlink '/usr/local/bin/gulp'
+379 error error rolling back     at Error (native)
+379 error error rolling back  { [Error: EACCES, unlink '/usr/local/bin/gulp'] errno: -13, code: 'EACCES', path: '/usr/local/bin/gulp' }
