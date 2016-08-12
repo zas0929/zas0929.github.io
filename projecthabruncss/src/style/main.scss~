@@ -6,5 +6,5 @@
 /*
 * Custom
 */
-@import "partials/app.scss";
+@import "partials/app";
 

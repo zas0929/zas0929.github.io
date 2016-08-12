@@ -5,7 +5,7 @@ body {
 .header {
   color: #000000;
   background: #666;
-  font-size: 20px
+  font-size: 20px;
   border: solid 2px #00cc00;
 }
 .content {
