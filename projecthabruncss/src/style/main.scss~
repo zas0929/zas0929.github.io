@@ -6,13 +6,5 @@
 /*
 * Custom
 */
-@import "partials/app";
-body {
-  color: #ccc;
-}
-.header {
-  color: #0000cc;
-  background: #ccc;
-  font-size: 22px;
-  border: solid 2px #00cc00;
-}
+@import "partials/app.scss";
+

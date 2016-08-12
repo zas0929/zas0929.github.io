@@ -13,6 +13,7 @@ var gulp = require('gulp'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
     uncss = require('gulp-uncss'),
+    plumber = require('gulp-plumber'),
     reload = browserSync.reload;
 
 
@@ -81,6 +82,7 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
+	.pipe(plumber()) // plumber
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
 	.pipe(uncss({

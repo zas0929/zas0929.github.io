@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <link rel=stylesheet href="css/main.css">
     <script src="js/main.js"></script>
-    <title>Я собираю проекты как рок звезда</title>
+    <title>gulp</title>
 </head>
 <body>
-    <section class="header">
-        Header
-    </section>
+    //= template/header.html
     <section class="content">
         Content
     </section>
-    <section class="footer">
-        Footer
-    </section>
+    //= template/footer.html
+    
+<div title="Нажмите">
+<input type="file" size="1" />
+</div>
 </body>
 </html>
