@@ -23,6 +23,10 @@ if (ask1 == "1") {
         alert("Вы проиграли, ваш счет " + userCount);
       }
     }
+    else {
+      userCount -= 10;
+      alert("Вы проиграли, ваш счет " + userCount);
+    }
 
   }
   else {
