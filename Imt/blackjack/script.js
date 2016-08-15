@@ -70,6 +70,9 @@ document.write("<h2>У вас " + gamerCount + " очков </h3>");
 if (gamerCount > 21) {
   alert("Перебор! Вы проиграли")
 }
+else if (gamerCount == 21) {
+  alert("Победа! У вас Black Jack!")
+}
 else {
 
 //Играет диллер
