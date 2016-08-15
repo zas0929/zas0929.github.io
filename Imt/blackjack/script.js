@@ -64,12 +64,14 @@ for(var i = 0; i < gamerPoints.length; i++) {
     gamerCount = gamerCount + gamerPoints[i];
 
 }
-if (gamerCount > 21) {
-  alert("Перебор! Вы проиграли")
-}
 
 document.write("<h2>Карты, на ваших руках: " + gamerStack + "</h3>");
 document.write("<h2>У вас " + gamerCount + " очков </h3>");
+if (gamerCount > 21) {
+  alert("Перебор! Вы проиграли")
+}
+else {
+
 //Играет диллер
 function randCardDealer() {
   var rand1 = 0 + Math.random() * (3 + 1 - 0);
@@ -109,38 +111,26 @@ function randCardDealer() {
 }
 //даем карты пока не наберется минимум 17 очков
 var dealerCount = 0;
-// while (dealerCount < 17) {
-//     randCardDealer();
-//     dealerCount = dealerCount + dealerPoints[i];
-//     console.log(dealerCount);
-// }
-for(var i = 0; i < 5; i++) {
+for(var i = 0; dealerCount < 17; i++) {
   randCardDealer();
       dealerCount = dealerCount + dealerPoints[i];
-  console.log(dealerCount);
+
 }
 
-
-// var dealerCount = 0;
-// console.log(dealerCount);
-// while (dealerCount < 17) {
-//     randCardDealer();
-//     dealerCount = dealerCount + dealerPoints[i];
-//     console.log(dealerPoints[i]);
-//
-// }
 if (dealerCount > 21) {
   alert("Дилер перебрал, вы выиграли")
 }
 else if (gamerCount > dealerCount) {
   alert("Вы выиграли")
 }
+else if (gamerCount == dealerCount) {
+  alert("Ничья!")
+}
 else {
   alert("У диллера больше, вы проиграли")
 }
+
 //считаем очки
-
-
-
 document.write("<h2>Карты дилера: " + dealerStack + "</h3>");
 document.write("<h2>У дилера " + dealerCount + " очков </h3>");
+}
