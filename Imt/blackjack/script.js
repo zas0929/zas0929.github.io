@@ -64,6 +64,7 @@ while (giveCard && gamerStack.length < 10) {
 //считаем очки
 var gamerCount = 0;
 for(var i = 0; i < gamerPoints.length; i++) {
+  //если очков больше 11, тузы = 1
   if (gamerCount >= 11 && (gamerStack[i] == "Aheart" || gamerStack[i] == "Adiamond" || gamerStack[i] == "Aclub" || gamerStack[i] == "Aspade")) {
     gamerCount += 1
     console.log(gamerCount);
@@ -134,8 +135,6 @@ for(var i = 0; dealerCount < 17; i++) {
     dealerCount = dealerCount + dealerPoints[i];
     console.log(dealerCount);
   }
-
-      // dealerCount = dealerCount + dealerPoints[i];
 
 }
 
