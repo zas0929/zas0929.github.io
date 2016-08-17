@@ -65,7 +65,6 @@ while (giveCard && gamerStack.length < 10) {
 var gamerCount = 0;
 for(var i = 0; i < gamerPoints.length; i++) {
   if (gamerCount >= 11 && (gamerStack[i] == "Aheart" || gamerStack[i] == "Adiamond" || gamerStack[i] == "Aclub" || gamerStack[i] == "Aspade")) {
-    gamerPoints[i] = 1;
     gamerCount += 1
     console.log(gamerCount);
   }
@@ -75,11 +74,6 @@ for(var i = 0; i < gamerPoints.length; i++) {
   }
 
 }
-// if(gamerCount > 21) {
-//   for(var i = 0; i < gamerStack.length; i++) {
-//
-//   }
-// }
 
 document.write("<h2>Карты, на ваших руках: " + gamerStack + "</h3>");
 document.write("<h2>У вас " + gamerCount + " очков </h3>");
@@ -133,7 +127,6 @@ var dealerCount = 0;
 for(var i = 0; dealerCount < 17; i++) {
   randCardDealer();
   if (dealerCount >= 11 && (dealerStack[i] == "Aheart" || dealerStack[i] == "Adiamond" || dealerStack[i] == "Aclub" || dealerStack[i] == "Aspade")) {
-    dealerPoints[i] = 1;
     dealerCount += 1;
     console.log(dealerCount);
   }
