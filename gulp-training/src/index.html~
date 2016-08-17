@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <link rel=stylesheet href="css/main.css">
+    <script src="js/main.js"></script>
+    <title>gulp</title>
+</head>
+<body>
+    //= template/header.html
+    <section class="content">
+        Content
+    </section>
+    //= template/footer.html
+    
+<div title="Нажмите">
+<input type="file" size="1" />
+</div>
+</body>
+</html>

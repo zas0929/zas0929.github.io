@@ -6,7 +6,9 @@
 var cardStack = [['2heart', '3heart', '4heart', '5heart', '6heart', '7heart', '8heart', '9heart', '10heart', 'Jheart', 'Qheart', 'Kheart', 'Aheart'],
                  ['2diamond', '3diamond', '4diamond', '5diamond', '6diamond', '7diamond', '8diamond', '9diamond', '10diamond', 'Jdiamond', 'Qdiamond', 'Kdiamond', 'Adiamond'],
                  ['2club', '3club', '4club', '5club', '6club', '7club', '8club', '9club', '10club', 'Jclub', 'Qclub', 'Kclub', 'Aclub'],
-                 ['2spade', '3spade', '4spade', '5spade', '6spade', '7spade', '8spade', '9spade', '10spade', 'Jspade', 'Qspade', 'Kspade', 'Aspade']]
+                ['2spade', '3spade', '4spade',  'Aspade',  'Aspade',  'Aspade',  'Aspade',  'Aspade', 'Aspade',  'Aspade',  'Aspade',  'Aspade', 'Aspade']
+                //  ['2spade', '3spade', '4spade', '5spade', '6spade', '7spade', '8spade', '9spade', '10spade', 'Jspade', 'Qspade', 'Kspade', 'Aspade']
+               ]
 
 
 var gamerStack = [];
@@ -57,13 +59,27 @@ while (giveCard && gamerStack.length < 10) {
     alert("У вас " + gamerStack);
     var giveCard = confirm("Дать ещу одну карту?");
 
+
 }
 //считаем очки
 var gamerCount = 0;
 for(var i = 0; i < gamerPoints.length; i++) {
+  if (gamerCount >= 11 && (gamerStack[i] == "Aheart" || gamerStack[i] == "Adiamond" || gamerStack[i] == "Aclub" || gamerStack[i] == "Aspade")) {
+    gamerPoints[i] = 1;
+    gamerCount += 1
+    console.log(gamerCount);
+  }
+  else {
     gamerCount = gamerCount + gamerPoints[i];
+    console.log(gamerCount);
+  }
 
 }
+// if(gamerCount > 21) {
+//   for(var i = 0; i < gamerStack.length; i++) {
+//
+//   }
+// }
 
 document.write("<h2>Карты, на ваших руках: " + gamerStack + "</h3>");
 document.write("<h2>У вас " + gamerCount + " очков </h3>");
@@ -116,7 +132,17 @@ function randCardDealer() {
 var dealerCount = 0;
 for(var i = 0; dealerCount < 17; i++) {
   randCardDealer();
-      dealerCount = dealerCount + dealerPoints[i];
+  if (dealerCount >= 11 && (dealerStack[i] == "Aheart" || dealerStack[i] == "Adiamond" || dealerStack[i] == "Aclub" || dealerStack[i] == "Aspade")) {
+    dealerPoints[i] = 1;
+    dealerCount += 1;
+    console.log(dealerCount);
+  }
+  else {
+    dealerCount = dealerCount + dealerPoints[i];
+    console.log(dealerCount);
+  }
+
+      // dealerCount = dealerCount + dealerPoints[i];
 
 }
 
