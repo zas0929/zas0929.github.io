@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="css/main.css">
+    <script src="js/main.js"></script>
+    <title>gulp</title>
+</head>
+<body>
+    <section class="header">
+        Header
+    </section>
+    </div>
+    <div ng-controller='firstCtrl'>
+      <input type="text" ng-model='myFactory.hello' name="name" value="">
+
+    </div>
+    <div ng-controller='secondCtrl'>
+      <input type="text" ng-model="myFactory.hello" name="name" value="">
+    </div>
+    <section class="header">
+        Footer
+    </section>
+    <script src="js/main-bottom.js"></script>
+    <script type="text/javascript">
+  var app = angular.module('app', []);
+
+  app.controller('firstCtrl', function($scope, myFactory) {
+  console.log('firstCtrl');
+  $scope.myFactory = myFactory;
+  $scope.hello = 'hello world';
+});
+
+app.controller('secondCtrl', function($scope, myFactory) {
+console.log('secondCtrl');
+$scope.myFactory = myFactory;
+$scope.hello = 'hello world';
+});
+
+  app.factory('myFactory', function() {
+    return {
+      hello: 'hello world'
+    };
+  });
+    </script>
+</body>
+</html>

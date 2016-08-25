@@ -1,0 +1,22 @@
+{
+  "name": "projecthabr",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Roman <rolisovskiy@mail.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/zas0929/zas0929.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*",
+    "animate.css": "^3.5.2"
+  }
+}

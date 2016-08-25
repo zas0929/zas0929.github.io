@@ -9,14 +9,27 @@ while (finishRange < startRange || isNaN(startRange) || isNaN(finishRange)) {
     startRange = parseInt(prompt("ВВедите начало диапазона"));
     finishRange = parseInt(prompt("ВВедите конец диапазона"));
 }
-var mainRange = [];
-for (var i = startRange; i < finishRange; i++) {
-  for (var j = startRange; j < i; j++) {
-    if (i % j == 0) {
-      mainRange.push(i);
-    }
-  }
+if (startRange == 1) {
+  startRange = 2;
 }
+var mainRange = [];
+nextPrime:
+      for (var i = startRange; i < finishRange; i++) {
+        for (var j = startRange; j < i; j++) {
+          if (i % j == 0) {
+            continue nextPrime;
+          }
+        }
+        mainRange.push(i);
+
+      }
+// for (var i = startRange; i < finishRange; i++) {
+//   for (var j = startRange; j < i; j++) {
+//     if (i % j == 0) {
+//       mainRange.push(j);
+//     }
+//   }
+// }
     //  for (var i = 2; i < 10; i++) {
      //
     //    for (var j = 2; j < i; j++) {
