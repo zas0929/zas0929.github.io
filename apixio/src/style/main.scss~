@@ -1,0 +1,18 @@
+/*
+* Third Party
+*/
+@import "../../bower_components/normalize.css/normalize.css";
+
+/*
+* Custom
+*/
+@import "partials/app";
+body {
+  color: #ccc;
+}
+.header {
+  color: #0000cc;
+  background: #ccc;
+  font-size: 22px;
+  border: solid 2px #00cc00;
+}

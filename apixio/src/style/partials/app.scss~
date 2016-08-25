@@ -1,0 +1,61 @@
+body {
+  color: #ccc;
+}
+.header {
+  color: #0000cc;
+  background: #ccc;
+  font-size: 20px;
+  border: solid 2px #0000cc;
+}
+.wrapp {
+  position: relative;
+  z-index: 4;
+ 
+ 
+}
+
+input {
+  opacity: 0;
+  display: block;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  background: #0000cc;
+  border-radius: 10px;
+  position: relative;
+  z-index: 5;
+  height: 31px;
+
+}
+
+.lab span {
+   position: relative;
+   top: 31px;
+   z-index: 10;
+   background: #0000cc;
+   height: 30px;
+   width: 7.4%;
+   display: block;
+   border-radius: 10px;
+   text-align: center;
+   box-sizing: border-box;
+   padding-top: 5px;
+   cursor: pointer;
+   float: left;
+
+}
+.lab .cont {
+    display: inline-block;
+    float: none;
+    left: 103px;
+    padding: 5px 15px;
+    position: relative;
+    top: 0;
+    width: auto;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+

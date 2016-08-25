@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <link rel=stylesheet href="css/main.css">
+    <script src="js/main.js"></script>
+    <title>Я собираю проекты как рок звезда</title>
+</head>
+<body>
+   //= template/header.html
+
+    <section class="content">
+        Content
+    </section>
+    
+    //= template/footer.html
+<div class="wrapp" title="Нажмите">
+<label for="in" class='lab'>
+  <span>Открыть</span>
+  <input type="file" id="in" />
+  <span class="cont">Файл не выбран</span>
+</label>
+</div>
+</body>
+</html>
