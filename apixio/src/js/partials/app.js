@@ -6,4 +6,7 @@ $(document).ready(function() {
   });
   $('.word__slider').slick();
 
+  $('.main-menu').slicknav({
+    label: ''
+  });
 });

@@ -18,5 +18,8 @@
     "normalize.css": "*",
     "jquery": "2.*",
     "slick-carousel": "^1.6.0"
+  },
+  "devDependencies": {
+    "slicknav": "^1.0.7"
   }
 }

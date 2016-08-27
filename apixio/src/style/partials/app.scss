@@ -215,7 +215,7 @@ li.sub-menu-wrapper:hover {
 }
 .slick-next {
     right: 35px;
-    background: url(../img/sprite.png) -52px -58px no-repeat;
+    background: url(../img/sprite.png) -52px -52px no-repeat;
     width: 48px;
     height: 68px;
     display: block;
@@ -682,6 +682,9 @@ li.sub-menu-wrapper:hover {
 input::-moz-placeholder,
 input::-webkit-input-placeholder {
   color: #fff;
+}
+.slicknav_menu {
+  display: none;
 }
 /************** footer at bottom *************/
 html, body, .content {
