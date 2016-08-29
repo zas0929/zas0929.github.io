@@ -717,3 +717,31 @@ html, body, .content {
 	clear: both;
 	visibility: hidden;
 }
+
+
+.rotate-arrow {
+  -webkit-transform: rotate(90deg); /* Chrome y Safari */
+  -moz-transform: rotate(90deg); /* Firefox */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /* Internet Explorer */
+  -o-transform: rotate(90deg); /* Opera */
+  display: inline-block; padding-left: 8px; vertical-align: text-top; text-indent: 0px;
+  }
+.slicknav_nav .slicknav_arrow {
+    font-size: 14px;
+    height: 10px;
+    margin: 0;
+    width: 19px;
+}
+.slicknav_row > a,
+.slicknav_arrow {
+  display: inline-block;
+}
+.slicknav_row > a {
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+.header,
+.content,
+.footer {
+  min-width: 320px;
+}
