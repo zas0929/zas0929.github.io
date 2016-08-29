@@ -232,6 +232,9 @@
 
 }
 @media (max-width: 450px) {
+  .word__slider-right {
+    max-width: 345px;
+}
   .header__bottom-title {
     letter-spacing: 0;
     span {
