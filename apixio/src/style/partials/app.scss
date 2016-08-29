@@ -242,7 +242,7 @@ li.sub-menu-wrapper:hover {
   margin-top: 161px;
   li {
     display: inline-block;
-    button {
+    span {
       display: block;
       background: #1463a7;
       width: 13px;
@@ -256,7 +256,7 @@ li.sub-menu-wrapper:hover {
       border: solid 1px transparent;
     }
   }
-  .slick-active button {
+  .slick-active span {
     border: solid 1px #1463a7;
     background: #fff;
     height: 13px;;
