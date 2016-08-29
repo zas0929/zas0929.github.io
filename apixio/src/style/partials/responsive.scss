@@ -229,11 +229,13 @@
     margin-bottom: 37px;
     width: 300px;
 }
-
+.word__slider-right {
+  max-width: 340px;
+}
 }
 @media (max-width: 450px) {
   .word__slider-right {
-    max-width: 345px;
+    max-width: 306px;
 }
   .header__bottom-title {
     letter-spacing: 0;
