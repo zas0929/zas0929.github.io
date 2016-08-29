@@ -39,6 +39,12 @@
 }
 }
 @media (max-width: 1000px) {
+  .word-wrapper .slick-next {
+    right: 10px;
+  }
+  .word-wrapper .slick-prev {
+    left: 10px;
+  }
   .header .menu {
     display: none;
   }
@@ -114,13 +120,13 @@
 .word__slider-right {
     float: right;
     max-width: 355px;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 .word__slider-img {
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 22px;
-    max-width: 280px;
+    max-width: 265px;
 }
 }
 @media (max-width: 700px) {

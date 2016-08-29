@@ -17,7 +17,7 @@ $(document).ready(function() {
     $('.slicknav_arrow').toggleClass('rotate-arrow');
   });
 
-  //other dots
+  //replace button tags
   $('.slick-dots li button').replaceWith(function(index, oldHTML){
   return $("<span>").html(oldHTML);
 });

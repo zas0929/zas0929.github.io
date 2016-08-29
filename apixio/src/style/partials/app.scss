@@ -440,6 +440,7 @@ li.sub-menu-wrapper:hover {
   box-sizing: border-box;
   position: relative;
   margin: 0 10px;
+  margin-bottom: 22px;
   vertical-align: top;
 }
 .platform__circles-small {
@@ -481,7 +482,7 @@ li.sub-menu-wrapper:hover {
   border: solid 1px #fff;
   border-radius: 10px;
   box-sizing: border-box;
-  margin: 41px auto 24px;
+  margin: 19px auto 24px;
   background: rgba(72, 178, 15, 0.9);
   font: 27px $arialNarrow;
   padding: 13px 0 0 28px;
@@ -746,4 +747,7 @@ html, body, .content {
 .content,
 .footer {
   min-width: 320px;
+}
+.word-wrapper .slick-next {
+  background-position: -32px -118px;
 }
