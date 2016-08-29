@@ -126,13 +126,23 @@
     float: left;
     margin-left: 20px;
     margin-top: 22px;
-    max-width: 265px;
+    max-width: 256px;
+}
+.header__bottom-title {
+  letter-spacing: 5px;
+  span {
+    letter-spacing: 10px;
+  }
 }
 }
 @media (max-width: 700px) {
+
   .footer-middle__list {
     margin-left: 0;
     width: 100%;
+}
+.header__bottom-title {
+  letter-spacing: 3px;;
 }
 .header__bottom-title span {
   letter-spacing: 10px;

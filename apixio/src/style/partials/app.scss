@@ -200,7 +200,7 @@ li.sub-menu-wrapper:hover {
 }
 .slick-prev {
     left: 35px;
-    background: url(../img/sprite.png) 4px -52px no-repeat;
+    background: url(../img/sprite.png) 2px -53px no-repeat;
     width: 48px;
     height: 68px;
     display: block;
@@ -215,7 +215,7 @@ li.sub-menu-wrapper:hover {
 }
 .slick-next {
     right: 35px;
-    background: url(../img/sprite.png) -52px -52px no-repeat;
+    background: url(../img/sprite.png) -52px -53px no-repeat;
     width: 48px;
     height: 68px;
     display: block;
@@ -749,5 +749,5 @@ html, body, .content {
   min-width: 320px;
 }
 .word-wrapper .slick-next {
-  background-position: -32px -118px;
+  background-position: -32px -119px;
 }
