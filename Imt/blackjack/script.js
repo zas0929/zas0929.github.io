@@ -6,8 +6,8 @@
 var cardStack = [['2heart', '3heart', '4heart', '5heart', '6heart', '7heart', '8heart', '9heart', '10heart', 'Jheart', 'Qheart', 'Kheart', 'Aheart'],
                  ['2diamond', '3diamond', '4diamond', '5diamond', '6diamond', '7diamond', '8diamond', '9diamond', '10diamond', 'Jdiamond', 'Qdiamond', 'Kdiamond', 'Adiamond'],
                  ['2club', '3club', '4club', '5club', '6club', '7club', '8club', '9club', '10club', 'Jclub', 'Qclub', 'Kclub', 'Aclub'],
-                ['2spade', '3spade', '4spade',  'Aspade',  'Aspade',  'Aspade',  'Aspade',  'Aspade', 'Aspade',  'Aspade',  'Aspade',  'Aspade', 'Aspade']
-                //  ['2spade', '3spade', '4spade', '5spade', '6spade', '7spade', '8spade', '9spade', '10spade', 'Jspade', 'Qspade', 'Kspade', 'Aspade']
+                // ['2spade', '3spade', '4spade',  'Aspade',  'Aspade',  'Aspade',  'Aspade',  'Aspade', 'Aspade',  'Aspade',  'Aspade',  'Aspade', 'Aspade']
+                 ['2spade', '3spade', '4spade', '5spade', '6spade', '7spade', '8spade', '9spade', '10spade', 'Jspade', 'Qspade', 'Kspade', 'Aspade']
                ]
 
 
