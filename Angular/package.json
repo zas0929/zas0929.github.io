@@ -5,9 +5,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "imagemin-pngquant": "^4.2.2",
     "browser-sync": "^2.12.3",
+    "fabric": "^1.6.3",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.6",
     "gulp-imagemin": "^2.4.0",
@@ -15,7 +15,8 @@
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
-    "gulp-watch": "^4.3.5"
+    "gulp-watch": "^4.3.5",
+    "imagemin-pngquant": "^4.2.2"
   },
   "devDependencies": {
     "gulp-plumber": "^1.1.0",

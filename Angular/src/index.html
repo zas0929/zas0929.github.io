@@ -9,35 +9,60 @@
 </head>
 <body>
     //= template/header.html
-    <div ng-controller='firstCtrl'>
-      <input type="text" ng-model='myFactory.hello' name="name" value="">
 
-    </div>
-    <div ng-controller='secondCtrl'>
-      <input type="text" ng-model="myFactory.hello" name="name" value="">
-    </div>
-    //= template/footer.html
-    <script src="js/main-bottom.js"></script>
     <script type="text/javascript">
-  var app = angular.module('app', []);
+    var app = angular.module('app', []);
 
-  app.controller('firstCtrl', function($scope, myFactory) {
-  console.log('firstCtrl');
-  $scope.myFactory = myFactory;
-  $scope.hello = 'hello world';
-});
+    app.controller('mainCtrl', function($scope) {
+      this.myLesson = 'MainLesson';
 
-app.controller('secondCtrl', function($scope, myFactory) {
-console.log('secondCtrl');
-$scope.myFactory = myFactory;
-$scope.hello = 'hello world';
-});
+      this.addLesson = function () {
+        console.log('addLesson');
+      }
 
-  app.factory('myFactory', function() {
-    return {
-      hello: 'hello world'
-    };
-  });
+      $scope.mainCtrl = this;
+    });
+    app.controller('firstCtrl', function($scope) {
+      this.myLesson = 'FirstLesson';
+    });
+    app.controller('secondCtrl', function($scope) {
+        this.myLesson = 'SecondLesson';
+    });
     </script>
+    <div ng-controller='mainCtrl'>
+      <div ng-controller='firstCtrl as firstCtrl'>
+        <div ng-controller='secondCtrl as secondCtrl'>
+          {{mainCtrl.myLesson}}
+          {{firstCtrl.myLesson}}
+          {{secondCtrl.myLesson}}
+          <button ng-click='mainCtrl.addLesson()'>Add lesson</button>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- <canvas id="c" width="300" height="300"></canvas>
+    <script type="text/javascript">
+    var canvas = new fabric.Canvas('c');
+
+// создаём прямоугольник с углом в 45 градусов
+var rect = new fabric.Rect({
+  left: 100,
+  top: 100,
+  fill: 'red',
+  width: 50,
+  height: 50,
+  angle: 45
+});
+rect.set('fill', 'green');
+rect.set({ strokeWidth: 5, stroke: 'rgba(100,200,200,0.5)' });
+rect.set('angle', 15).set('flipY', true);
+
+canvas.add(rect);
+
+    </script> -->
+
 </body>
 </html>
