@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<style>
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		background: #3399FF;
+		color: #fff;
+		border-radius: 5px;
+		padding: 3px 20px;
+		display: inline-block;
+		margin: 5px;
+		font: 14px Arial, sans-serif;
+	}
+		.menu {
+			overflow: hidden;
+			list-style: none;
+		}
+		.menu > li {
+			float:left;
+			margin: 0 50px;
+
+		}
+		.menu > li > ul {
+			position: absolute;
+			padding-left: 0;
+
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li><a href="#">Главная</a></li>
+		<li><a href="#">Каталог</a>
+			<ul>
+				<li><a href="#">Верхняя одежда</a>
+					<ul>
+						<li><a href="#">Куртки</a></li>
+						<li><a href="#">Пальто</a></li>
+						<li><a href="#">Шубы</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Нижняя одежда</a>
+					<ul>
+						<li><a href="#">Брюки</a></li>
+						<li><a href="#">Джинсы</a></li>
+						<li><a href="#">Шорты</a></li>
+						<li><a href="#">Клеш</a></li>
+						<li><a href="#">Спортивные штаны</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Головные уборы</a>
+					<ul>
+						<li><a href="#">Кепки</a></li>
+						<li><a href="#">Шапки</a></li>
+						<li><a href="#">Шляпы</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#">О нас</a></li>
+		<li><a href="#">Контакты</a></li>
+	</ul>
+<script src="script.js"></script>
+</body>
+</html>

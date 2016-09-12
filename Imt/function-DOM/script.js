@@ -10,9 +10,3 @@ function createElem(tag, cont, tagText) {
 }
 
 createElem('div', document.getElementById('container'), 'some new text');
-// var contt = document.getElementById('container');
-// var createElem = document.createElement('span');
-// var textElem = document.createTextNode('Some text');
-//
-//
-// contt.appendChild(createElem).appendChild(textElem);
