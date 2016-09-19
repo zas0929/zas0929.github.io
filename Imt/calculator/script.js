@@ -29,8 +29,9 @@ $(".backspace").on("click", function(){
 $(".operation").on("click", function(){
     operation = $(this).text();
     secondNumber = currentNumber;
-    $("#history").text(currentNumber + operation)
+    $("#history").text(currentNumber + operation);
     currentNumber = 0;
+
 
 })
 $(".equals").on("click", function(){
@@ -59,18 +60,24 @@ $(".reset").on("click", function() {
   result = 0;
   secondNumber = 0;
   currentNumber = 0;
+  history = '';
   $("#result").text(result);
+  $("#history").text(history);
 });
-// $(".coma").on("click", function() {
-// // console.log(currentNumber.length);
-// for (var i = 0; i < currentNumber.length; i++) {
-//   console.log(currentNumber[i]);
-//   if (currentNumber[i] == '.') {
+$(".coma").on("click", function() {
+  currentNumber += ".";
+  $("#result").text(currentNumber);
+// var curNumArr = currentNumber.split('');
+// console.log(curNumArr);
+//
+// for (var i = 0; i < curNumArr.length; i++) {
+//   console.log(curNumArr[i]);
+//   if (curNumArr[i] == '.') {
 //     return;
 //   }
-//   else {
-//     currentNumber += ".";
-//   }
+//
+//   currentNumber += ".";
+//   $("#result").text(currentNumber);
 // }
-// })
+})
 })
