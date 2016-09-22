@@ -27,33 +27,55 @@ $(document).on("ready", function(){
 
 	});
 	$('#left').on('click', '.remove-ingredient', function(event) {
-		
+		var countIngredient = Number($(this).find('.count-ingredient').text());
 		var indexItem = $(this).parent('.ingredient').attr('data-pos');
-
-		$(this).parent('.ingredient').fadeOut(0, function() {
-
-		$(this).appendTo($('#right').children('div').eq(indexItem));
-
-		});
-		$(this).parent('.ingredient').fadeIn(0);
-
 		var priceItem = $(this).siblings('.price-ingredient').data('price');
 		var weightItem = $(this).siblings('.weight-ingredient').data('weight');
 
-		price -= priceItem;
-		weight -= weightItem;
+		
 
-		$('.price-result').text(price);
-		$('.weight-result').text(weight);
+		if ($('.count-ingredient').text() > 0) {
+			countIngredient--;
+			console.log(countIngredient);
+			$('.count-ingredient').text(countIngredient);
+			$(this).parent('.ingredient').fadeIn(0);
+				price -= priceItem;
+				weight -= weightItem;
+
+			$('.price-result').text(price);
+			$('.weight-result').text(weight);
+
+		}
+		else {
+			$(this).parent('.ingredient').fadeOut(0, function() {
+
+			$(this).appendTo($('#right').children('div').eq(indexItem));
+
+			});
+			$(this).parent('.ingredient').fadeIn(0);
+				price -= priceItem;
+				weight -= weightItem;
+
+			$('.price-result').text(price);
+			$('.weight-result').text(weight);
+		}
 
 
 	})
 	$('#left').on('click', '.ingredient', function(event) {
-		var countIngredient;
-		// var countIngredient = Number(countIngredient);
-		countIngredient = parseInt(countIngredient) + 1;
-		$(this).find('.count-ingredient').fadeIn(100).text(countIngredient);
-		console.log(countIngredient);
+		var countIngredient = Number($(this).find('.count-ingredient').text());
+			countIngredient++;
+
+			$(this).find('.count-ingredient').fadeIn(100).text(countIngredient);
+
+			var priceItem = $(this).find('.price-ingredient').data('price');
+			var weightItem = $(this).find('.weight-ingredient').data('weight');
+
+			price += priceItem;
+			weight += weightItem;
+
+			$('.price-result').text(price);
+			$('.weight-result').text(weight);
 	});
 
 
