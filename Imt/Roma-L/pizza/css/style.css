@@ -1,0 +1,235 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+.wrapper {
+  background: url(../img/top_bg.jpg) no-repeat, url(../img/repeat_bg.jpg);
+  -webkit-background-size: contain;
+  background-size: contain;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #231f20;
+
+}
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  min-height: 900px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+
+}
+.content-top {
+  overflow: hidden;
+}
+.pizza-img {
+  float:left;
+  width: 50%;
+  position: relative;
+  height: 480px;
+}
+.pizza-img img {
+  position: absolute;
+}
+.main-params {
+  float: right;
+  width: 45%;
+}
+.params-item {
+  overflow: hidden;
+  width: 100%;
+}
+.params-item > ul {
+  overflow: hidden;
+  padding: 0;
+
+}
+.params-item > ul > li {
+  float: left;
+  margin: 10px;
+}
+.params-item > p {
+  float: left;
+  margin-right: 20px;
+  color: #5e5e5e;
+}
+.pizza-size {
+  margin-left: 96px;
+}
+.pizza-size span {
+  display: block;
+  height: 65px;
+  width: 62px;
+}
+.pizza-size .big {
+  background: url(../img/pizza-size-large.png) no-repeat;
+}
+.pizza-size .middle {
+    background: rgba(0, 0, 0, 0) url("../img/pizza-size-mid.png") no-repeat scroll 0 6px;
+    height: 62px;
+    width: 53px;
+}
+
+.pizza-size .small {
+    background: rgba(0, 0, 0, 0) url("../img/pizza-size-small.png") no-repeat scroll 0 11px;
+    height: 58px;
+    width: 46px;
+}
+.souce-type {
+  margin-left: 96px;
+}
+.souce-type img {
+  width: 50px;
+}
+.main-params h2 {
+  font-size: 32px;
+  padding-top: 40px;
+}
+.content-bottom {
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  padding: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  min-height: 320px;
+}
+.content-bottom ul {
+  overflow: hidden;
+}
+.content-bottom ul li {
+  float: left;
+  margin: 10px;
+}
+.left-part {
+  float: left;
+  width: 49%;
+  border-right: solid 1px #ccc;
+  box-sizing: border-box;
+}
+.left-part > div {
+  overflow: hidden;
+}
+.left-part .ingredient {
+  float: left;
+}
+.right-part {
+  float: right;
+  width: 50%;
+  padding-left: 20px;
+  box-sizing: border-box;
+
+}
+.ingredient {
+  position: relative;
+  width: 90px;
+}
+.name-ingredient {
+  font-style: italic;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+.ingredient img {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+}
+.count-ingredient {
+  position: absolute;
+  top:0;
+  right:0;
+  border: solid 2px #fff;
+  color: #fff;
+  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  padding-top: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #e7061b;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+}
+.remove-ingredient {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  color: #e7061b;
+  border: solid 1px #e7061b;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  z-index: 10;
+  cursor: pointer;
+
+}
+.count-ingredient {
+  display: none;
+}
+.count-ingredient.active {
+  display: block;
+}
+.right-part .remove-ingredient {
+  display: none;
+}
+.left-part .weight-ingredient,
+.left-part .price-ingredient {
+  display: none;
+}
+.weight-ingredient {
+  font-size: 12px;
+  color: #333;
+}
+.price-ingredient {
+  color: #f37125;
+  font-size: 12px;
+}
+.tabs-title {
+  overflow: hidden;
+}
+ul.tabs-title li {
+  float: left;
+  display: block;
+  margin: 10px 25px;
+  background: url(../img/addit-types.png) no-repeat;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.tabs-title .fish-title {
+  background-position: -100px -40px;
+}
+.tabs-title .meet-title {
+  background-position: -49px -40px;
+}
+.tabs-title .vegetables-title {
+  background-position: -247px -40px;
+}
+.tabs-title .cheese-title {
+  background-position: -197px -40px;
+}
+.tabs-title .souce-title {
+  background-position: -345px -40px;
+}
+.result-block {
+  text-align: center;
+  font-size: 24px;
+}
+#right > div {
+  display: inline-block;
+}

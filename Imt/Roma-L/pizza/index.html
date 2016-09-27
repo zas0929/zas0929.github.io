@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <h1>Пицца-конструктор</h1>
+  <div class="content">
+    <section class="content-top">
+      <div class="pizza-img">
+        <img src="img/Custom_Pizza_3.jpg" alt="pizza">
+      </div>
+      <div class="main-params">
+        <h2>Пицца "Сделай сам"</h2>
+        <div class="params-block">
+          <div class="params-item">
+            <p>Тесто <br><strong>Итальяно</strong></p>
+            <ul class="dough-type">
+              <li><img src="img/item-italano.png" alt="italiano"></li>
+              <li><img src="img/item-americano.png" alt="americano"></li>
+              <li><img src="img/hotdog.png" alt="hotdog"></li>
+            </ul>
+          </div>
+          <div class="params-item">
+            <p>Размер <br><strong>35 см</strong></p>
+            <ul class="pizza-size">
+              <li><span class="big"></span></li>
+              <li><span class="middle"></span></li>
+              <li><span class="small"></span></li>
+            </ul>
+          </div>
+          <div class="params-item">
+            <p>Соус <br><strong>Ранч</strong></p>
+            <ul class="souce-type">
+              <li><img src="img/garlik.png" alt="souce"></li>
+              <li><img src="img/ranch.png" alt="souce"></li>
+              <li><img src="img/salsa.png" alt="souce"></li>
+              <li><img src="img/bbq.png" alt="souce"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content-bottom">
+      <div class="left-part">
+        <p>Ваша пицца состоит из</p>
+        <div id="left"></div>
+
+      </div>
+      <div class="right-part">
+        <p>Дополнительные начинки</p>
+        <ul class="tabs-title">
+          <li class="fish-title"></li>
+          <li class="meet-title"></li>
+          <li class="vegetables-title"></li>
+          <li class="cheese-title"></li>
+          <li class="souce-title"></li>
+        </ul>
+        <div class="tabs-content">
+          <div id="right">
+            <div>
+              <div class="ingredient">
+                <img src="img/mid.png" alt="cheese">
+                <p class="count-ingredient" data-count="1"></p>
+                <p class="name-ingredient">Мидии</p>
+                <span class="weight-ingredient" data-weight="60">60 гр.</span>
+                <span class="price-ingredient" data-price="30">30 грн</span>
+                <span class="remove-ingredient">-</span>
+              </div>
+            </div>
+            <div>
+              <div class="ingredient">
+                <img src="img/crev.png" alt="cheese">
+                <p class="count-ingredient" data-count="1"></p>
+                <p class="name-ingredient">Креветки</p>
+                <span class="weight-ingredient" data-weight="35">35 гр.</span>
+                <span class="price-ingredient" data-price="50">50 грн</span>
+                <span class="remove-ingredient">-</span>
+              </div>
+            </div>
+            <div>
+              <div class="ingredient">
+                <img src="img/semga.png" alt="cheese">
+                <p class="count-ingredient" data-count="1"></p>
+                <p class="name-ingredient">Семга</p>
+                <span class="weight-ingredient" data-weight="60">60 гр.</span>
+                <span class="price-ingredient" data-price="55">55 грн</span>
+                <span class="remove-ingredient">-</span>
+              </div>
+            </div>
+            <div>
+              <div class="ingredient">
+                <img src="img/door-blue.jpg" alt="cheese">
+                <p class="count-ingredient" data-count="1"></p>
+                <p class="name-ingredient">Дор Блю</p>
+                <span class="weight-ingredient" data-weight="40">40 гр.</span>
+                <span class="price-ingredient" data-price="4">4 грн</span>
+                <span class="remove-ingredient">-</span>
+              </div>
+            </div>
+            <div>
+              <div class="ingredient">
+                <img src="img/door-blue.jpg" alt="cheese">
+                <p class="count-ingredient" data-count="1"></p>
+                <p class="name-ingredient">Дор Блю</p>
+                <span class="weight-ingredient" data-weight="50">50 гр.</span>
+                <span class="price-ingredient" data-price="5">5 грн</span>
+                <span class="remove-ingredient">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="result-block">
+      <p>Цена: <span class="price-result">0</span>грн</p>
+      <p>Вес: <span class="weight-result">0</span>гр</p>
+    </section>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+#counter {
+	display:none;
+}
+button{	
+	display: inline-block;
+	padding: 2px;
+	margin: 2px;
+	height: 35px;
+	width: 35px;
+}
+#calc {
+	padding: 4px;
+}
+#result{
+	display: inline-block;
+
+	height: 40px;
+	width: 220px;
+	background: gray;
+}
+p{
+	display: inline-block;
+	height: 10px;
+	width: 220px;
+}
+button:hover{
+	background:gray;
+}
