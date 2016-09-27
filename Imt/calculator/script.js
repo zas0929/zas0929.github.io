@@ -30,7 +30,28 @@ $(".operation").on("click", function(){
     operation = $(this).text();
     secondNumber = currentNumber;
     $("#history").text(currentNumber + operation);
-    currentNumber = 0;
+      currentNumber = 0;
+    switch(operation){
+      case "+":
+        result = Number(currentNumber) + Number(secondNumber);
+        // $("#result").text(result);
+        console.log(result);
+          break;
+      case "-":
+        result = Number(secondNumber) - Number(currentNumber);
+        // $("#result").text(result);
+        console.log(result);
+          break;
+      case "*":
+        result = Number(currentNumber) * Number(secondNumber);
+        $("#result").text(result);
+          break;
+      case "/":
+        result = Number(secondNumber) / Number(currentNumber);
+        $("#result").text(result);
+          break;
+  }
+    // currentNumber = 0;
 
 
 })

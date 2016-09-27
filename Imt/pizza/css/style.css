@@ -35,6 +35,11 @@ h1 {
 .pizza-img {
   float:left;
   width: 50%;
+  position: relative;
+  height: 480px;
+}
+.pizza-img img {
+  position: absolute;
 }
 .main-params {
   float: right;

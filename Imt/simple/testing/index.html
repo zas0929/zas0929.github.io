@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Training</title>
+
+</head>
+<body>
+  <h1>One-click play+fullscreen via YouTube API</h1>
+  Suggested code from this <a href="http://stackoverflow.com/a/20289540/288906">StackOverflow answer</a>
+
+  <h2>Instructions</h2>
+  <ol>
+    <li>Click on [play fullscreen]</li>
+    <li>Click on the fullscreen button in youtube's player to exit fullscreen</li>
+  </ol>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <button>play fullscreen</button><br>
+  <div id="player"></div>
+
+  ## Safari 8
+
+  It works perfectly:
+
+  0. Enters fullscreen
+  0. Exits fullscreen
+
+  ## Firefox 35
+
+  Buggy, annoying but working:
+
+  0. Enters fullscreen (on Codepen.io)
+  0. Enters fullscreen (YouTube.com)
+  0. Third click: Exits fullscreen
+
+  ## Chrome 40
+
+  Buggy, broken:
+
+  0. Enters fullscreen (on Codepen.io)
+  0. Does nothing
+  0. Third click: Exits fullscreen but the video fills the iframe, effectively breaking the site. <a href="http://i.imgur.com/CHibfEN.png" target="_blank">Screenshot</a>
+
+
+  ## Mobile browsers
+
+  This is the default behavior on iPhone, but it cannot work anywhere else (Android, iPad) since
+
+  * to `play()` a video or to `requestFullScreen()` you need a user tap **in the same document** (read: not across the iframe)
+
+  This means that
+
+  * you can't call `requestFullScreen()` when the video emits the event `onplay`
+  * you can't trigger `play()` via YouTube API (it would cross the frame) **and** call `requestFullScreen()` in the same tap
+
+  So with one tap **either** you play the video **or** get it fullscreen; you'll always need two separate taps if you use YouTube.
+<script src="script.js"></script>
+</body>
+</html>
