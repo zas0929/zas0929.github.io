@@ -2,54 +2,137 @@
 
 $(document).on('ready', function() {
 
+
 $('#wrapper').find('form').find('input[type="password"], input[type="text"]').on('focus', function() {
 	if($(this).hasClass('error')) {
-		$(this).next().remove();	
+		$(this).next().remove();
 	}
 	else if ($('.check-length').hasClass('error')) {
 		$(this).removeClass('error');
-		$(this).next().remove();
+		// $(this).next().remove();
 	}
-	
-})
 
-$('#wrapper').find('form').find('input[type="password"], input[type="text"]').on('blur', function() {
+})
+//check all input text
+$('#wrapper').find('form').find('input[type="text"]').on('blur', function() {
 	if ($(this).val() == '') {
 		$(this).addClass('error');
-		$(this).after('<p>Заполните поле<p>');
+		$(this).after('<span>Заполните поле<span>');
+	}
+	else {
+		$(this).removeClass('error');
+		$(this).next('span').remove();
+	}
+});
+//check login length
+$('#wrapper').find('form').find('input[name="login"]').on('blur', function() {
+	if ($(this).val() == '') {
+		$(this).addClass('error');
+		$(this).after('<span>Заполните поле<span>');
 	}
 	else if ($('input[name="login"]').val().length < 6) {
 		$(this).addClass('error');
-		$(this).after('<p>Слишком короткое значение<p>');
+		$(this).after('<span>Слишком короткое значение<span>');
 	}
 	else if ($('input[name="login"]').val().length > 10) {
 		$(this).addClass('error');
-		$(this).after('<p>Слишком длинное значение<p>');
+		$(this).after('<span>Слишком длинное значение<span>');
 	}
 	else if ($('input[name="login"]').val().length >= 6) {
 		$(this).removeClass('error');
+	}
+	else {
+		$(this).removeClass('error');
+	}
+});
+//check length passwd
+$('#wrapper').find('form').find('input[name="passwd"]').on('blur', function() {
+	if ($(this).val() == '') {
+		$(this).addClass('error');
+		$(this).after('<span>Заполните поле<span>');
+	}
+	else if ($('input[name="passwd"]').val().length < 6) {
+		$(this).addClass('error');
+		$(this).after('<span>Слишком короткое значение<span>');
+	}
+	else if ($('input[name="passwd"]').val().length > 10) {
+		$(this).addClass('error');
+		$(this).after('<span>Слишком длинное значение<span>');
+	}
+	else if ($('input[name="passwd"]').val().length >= 6) {
+		$(this).removeClass('error');
 		// $(this).after('<p>Слишком короткое значение<p>');
 	}
-})
+	else {
+		$(this).removeClass('error');
+	}
+});
 
+
+//check passwds identity
+$('#wrapper').find('form').find('input[name="passwd2"]').on('blur', function() {
+	if ($(this).val() !== $('input[name="passwd"]').val()) {
+		$(this).addClass('error');
+		$(this).after('<span>Пароли должны совпадать!<span>');
+	}
+	else {
+		$(this).removeClass('error');
+	}
+
+});
+
+//validation on submit
 $('#wrapper').find('form').on('submit', function(event) {
 	$('input').each(function() {
 		if($(this).val() == '') {
 			$(this).addClass('error');
-			$(this).after('<p>Заполните поле<p>');
+			$(this).after('<span>Заполните поле<span>');
 			event.preventDefault();
 		}
-		// else if ($(this).val().length < 6) {
-		// 	$(this).css('border', 'solid 1px #c00');
-		// 	$(this).after('<p>Слишком короткое значение</p>')
-		// 	event.preventDefault();
-		// }
-		
 	})
-	
-	// alert('submit');
+  if ($('input[name="login"]').val().length < 6) {
+		$('input[name="login"]').addClass('error');
+		$('input[name="login"]').after('<span>Слишком короткое значение<span>');
+		event.preventDefault();
+	}
+	else if ($('input[name="login"]').val().length > 10) {
+		$('input[name="login"]').addClass('error');
+		$('input[name="login"]').after('<span>Слишком длинное значение<span>');
+		event.preventDefault();
+	}
+	else {
+		$('input[name="login"]').removeClass('error');
+		$('input[name="login"]').next('span').remove();
+	}
+	//passwd check
+	if ($('input[name="passwd"]').val().length < 6) {
+		$('input[name="passwd"]').addClass('error');
+		$('input[name="passwd"]').after('<span>Слишком короткое значение<span>');
+		event.preventDefault();
+	}
+	else if ($('input[name="passwd"]').val().length > 10) {
+		$('input[name="passwd"]').addClass('error');
+		$('input[name="passwd"]').after('<span>Слишком длинное значение<span>');
+		event.preventDefault();
+	}
+	else {
+		$('input[name="passwd"]').removeClass('error');
+		$('input[name="passwd"]').next('span').remove();
+	}
+
+	//passwdы check identity
+	if ($('input[name="passwd"]').val() != $('input[name="passwd2"]').val()) {
+		$('input[name="passwd2"]').addClass('error');
+		$('input[name="passwd2"]').after('<span>Пароли должны совпадать!<span>');
+		event.preventDefault();
+	}
+	else {
+		$('input[name="passwd2"]').removeClass('error');
+		$('input[name="passwd2"]').next('span').remove();
+	}
+
 })
-	
+
 });
 
 
@@ -114,7 +197,7 @@ $('#wrapper').find('form').on('submit', function(event) {
 
 //   }
 //   return sumApple;
- 
+
 // }
 // console.log(Array.isArray(randArray[1]));
 
@@ -125,7 +208,7 @@ $('#wrapper').find('form').on('submit', function(event) {
 // 	}
 // 	var elem = document.createElement('tagName');
 // 	var textElem = document.createTextNode('tagText');
-	
+
 
 // 	elemTo.appendChild(elem).appendChild(textElem);
 // }
@@ -247,8 +330,8 @@ $('#wrapper').find('form').on('submit', function(event) {
 // 			document.write(arr[i] + '<br/>');
 // 			console.dir(arr[i] + '<br/>')
 // 		}
-		
-		
+
+
 // 	}
 
 
@@ -260,7 +343,7 @@ $('#wrapper').find('form').on('submit', function(event) {
 // 	arr[1] = "789";
 // 	console.dir(arr);
 // 	console.log(arr);
-	
+
 // for (var i = 0; i < arr.length; i++) {
 // 	arr[i];
 // 	console.log(arr[i]);
@@ -287,7 +370,7 @@ $('#wrapper').find('form').on('submit', function(event) {
 // var i = 0;
 
 // while(++i < 6){
-// 	console.log(i);	
+// 	console.log(i);
 // }
 
 // var i = 0;
@@ -297,9 +380,6 @@ $('#wrapper').find('form').on('submit', function(event) {
 // }
 // do {
 // 	var foo = Number(prompt("Введите цифру"));
-	
+
 // }
 // while (isNaN(foo) || foo == "");
-
-
-
