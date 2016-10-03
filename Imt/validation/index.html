@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8"></meta>
+	<title>Ajax</title>
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<style type="text/css">
+	input {
+		border: solid 1px #ccc;
+	}
+	input.error {
+		border: solid 1px #c00;
+	}
+</style>
+	<div id="wrapper">
+		<div>
+			<h3>registration<sup>*</sup></h3>
+			<form  id="formregistr">
+				<input type="text" name="login" class="check-length" placeholder="Login"><p></p>
+				<input type="password" name="passwd" class="check-length" placeholder="Password"><p></p>
+				<input type="password" name="passwd2" class="check-length" placeholder="Repeat Password"><p></p>
+				<input type="text" name="uName" placeholder="Name"><p></p>
+				<input type="text" name="email" placeholder="e-mail"><p></p>
+				<input type="text" name="tel" placeholder="Phone"><p></p>
+				<input type="submit" name="reg" value="Register oneself">
+			</form>
+			<p class="note"><sup>*</sup>- for successful registration, please fill in all fields</p>
+		</div>
+	</div>
+
+</body>
+</html>

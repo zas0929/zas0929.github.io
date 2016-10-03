@@ -15,14 +15,9 @@ $('#wrapper').find('form').find('input[type="password"], input[type="text"]').on
 })
 //check all input text
 $('#wrapper').find('form').find('input[type="text"]').on('blur', function() {
-	var checkText = $(this).val();
-	var validateText = checkText.match(/[\w{2,32}]/)
 	if ($(this).val() == '') {
 		$(this).addClass('error');
 		$(this).after('<span>Заполните поле<span>');
-	}
-	else if (validateText == null) {
-		alert('Поле содержит недопустимые символы!')
 	}
 	else {
 		$(this).removeClass('error');
@@ -31,85 +26,46 @@ $('#wrapper').find('form').find('input[type="text"]').on('blur', function() {
 });
 //check login length
 $('#wrapper').find('form').find('input[name="login"]').on('blur', function() {
-	var checkLogin = $(this).val();
-	var validateLogin = checkLogin.match(/[a-zA-Z0-9_]{5,32}/)
 	if ($(this).val() == '') {
 		$(this).addClass('error');
 		$(this).after('<span>Заполните поле<span>');
 	}
-	else if(validateLogin == null) {
-		alert('Логин должен содержать не менее 5 символов анг. алфавита и содержать допустимые знаки')
+	else if ($('input[name="login"]').val().length < 6) {
+		$(this).addClass('error');
+		$(this).after('<span>Слишком короткое значение<span>');
 	}
-	// else if ($('input[name="login"]').val().length < 6) {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Слишком короткое значение<span>');
-	// }
-	// else if ($('input[name="login"]').val().length > 10) {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Слишком длинное значение<span>');
-	// }
-	// else if ($('input[name="login"]').val().length >= 6) {
-	// 	$(this).removeClass('error');
-	// }
-	else {
+	else if ($('input[name="login"]').val().length > 10) {
+		$(this).addClass('error');
+		$(this).after('<span>Слишком длинное значение<span>');
+	}
+	else if ($('input[name="login"]').val().length >= 6) {
 		$(this).removeClass('error');
 	}
-});
-//check email
-$('#wrapper').find('form').find('input[name="email"]').on('blur', function() {
-	var checkEmail = $(this).val();
-	var validateEmail = checkEmail.match(/[a-z0-9_]+@[a-z]{2,10}\.[a-z]{1,6}/)
-  if(validateEmail == null) {
-		alert('E-mail введен некорректно!');
-		$(this).addClass('error');
-	}
-
-	else {
-		$(this).removeClass('error');
-	}
-});
-//check phone
-$('#wrapper').find('form').find('input[name="tel"]').on('blur', function() {
-	var phoneCheck = $(this).val();
-	var validatePhone = phoneCheck.match(/\+38\(?0[0-9]{2}\)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}/)
-	if(validatePhone == null) {
-		alert('неверно введен номер');
-		$(this).addClass('error');
-	}
-
 	else {
 		$(this).removeClass('error');
 	}
 });
 //check length passwd
 $('#wrapper').find('form').find('input[name="passwd"]').on('blur', function() {
-var passVal = $(this).val();
-
-var passValid = passVal.match(/^((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32})/);
-if(passValid == null) {
-alert('Слишком простой пароль (должен содержать минимум одну заглавную букву и содержать цифры и символы)')
-}
-
-
-	// if ($(this).val() == '') {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Заполните поле<span>');
-	// }
-	// else if ($('input[name="passwd"]').val().length < 6) {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Слишком короткое значение<span>');
-	// }
-	// else if ($('input[name="passwd"]').val().length > 10) {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Слишком длинное значение<span>');
-	// }
-	// else if ($('input[name="passwd"]').val().length >= 6) {
-	// 	$(this).removeClass('error');
-	// 	// $(this).after('<p>Слишком короткое значение<p>');
-	// }
-	// else {
-	// 	$(this).removeClass('error');
-	// }
+	if ($(this).val() == '') {
+		$(this).addClass('error');
+		$(this).after('<span>Заполните поле<span>');
+	}
+	else if ($('input[name="passwd"]').val().length < 6) {
+		$(this).addClass('error');
+		$(this).after('<span>Слишком короткое значение<span>');
+	}
+	else if ($('input[name="passwd"]').val().length > 10) {
+		$(this).addClass('error');
+		$(this).after('<span>Слишком длинное значение<span>');
+	}
+	else if ($('input[name="passwd"]').val().length >= 6) {
+		$(this).removeClass('error');
+		// $(this).after('<p>Слишком короткое значение<p>');
+	}
+	else {
+		$(this).removeClass('error');
+	}
 });
 
 
