@@ -1,118 +1,38 @@
 "use strict"
 
 $(document).on('ready', function() {
-
-
-$('#wrapper').find('form').find('input[type="password"], input[type="text"]').on('focus', function() {
-	if($(this).hasClass('error')) {
-		$(this).next().remove();
+	function validateField(elem, regExp, errorValidateText) {
+			var checkVal = elem.val()
+			var validateVal = checkVal.match(regExp);
+			if (checkVal == '') {
+				elem.addClass('error');
+				elem.after('<span>Заполните поле<span>');
+			}
+			else if(validateVal == null) {
+				elem.addClass('error');
+				elem.next('span').remove();
+				elem.after(errorValidateText);
+			}
+			else {
+				elem.removeClass('error')
+			}
 	}
-	else if ($('.check-length').hasClass('error')) {
-		$(this).removeClass('error');
-		// $(this).next().remove();
+	function onFocus(elem) {
+		elem.removeClass('error');
+		elem.next('span').remove();
 	}
-
+//focus inputs
+$('#wrapper').find('form').find('input').on('focus', function() {
+	onFocus($(this))
 })
-//check all input text
-$('#wrapper').find('form').find('input[type="text"]').on('blur', function() {
-	var checkText = $(this).val();
-	var validateText = checkText.match(/[\w{2,32}]/)
-	if ($(this).val() == '') {
-		$(this).addClass('error');
-		$(this).after('<span>Заполните поле<span>');
-	}
-	else if (validateText == null) {
-		alert('Поле содержит недопустимые символы!')
-	}
-	else {
-		$(this).removeClass('error');
-		$(this).next('span').remove();
-	}
-});
-//check login length
+//check login correct
 $('#wrapper').find('form').find('input[name="login"]').on('blur', function() {
-	var checkLogin = $(this).val();
-	var validateLogin = checkLogin.match(/[a-zA-Z0-9_]{5,32}/)
-	if ($(this).val() == '') {
-		$(this).addClass('error');
-		$(this).after('<span>Заполните поле<span>');
-	}
-	else if(validateLogin == null) {
-		alert('Логин должен содержать не менее 5 символов анг. алфавита и содержать допустимые знаки')
-	}
-	// else if ($('input[name="login"]').val().length < 6) {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Слишком короткое значение<span>');
-	// }
-	// else if ($('input[name="login"]').val().length > 10) {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Слишком длинное значение<span>');
-	// }
-	// else if ($('input[name="login"]').val().length >= 6) {
-	// 	$(this).removeClass('error');
-	// }
-	else {
-		$(this).removeClass('error');
-	}
+	validateField($(this), /^[a-zA-Z0-9_]{5,32}$/g, '<span>Логин должен содержать латинские символы или цифры и быть не короче 5 символов!</span>' )
 });
-//check email
-$('#wrapper').find('form').find('input[name="email"]').on('blur', function() {
-	var checkEmail = $(this).val();
-	var validateEmail = checkEmail.match(/[a-z0-9_]+@[a-z]{2,10}\.[a-z]{1,6}/)
-  if(validateEmail == null) {
-		alert('E-mail введен некорректно!');
-		$(this).addClass('error');
-	}
-
-	else {
-		$(this).removeClass('error');
-	}
-});
-//check phone
-$('#wrapper').find('form').find('input[name="tel"]').on('blur', function() {
-	var phoneCheck = $(this).val();
-	var validatePhone = phoneCheck.match(/\+38\(?0[0-9]{2}\)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}/)
-	if(validatePhone == null) {
-		alert('неверно введен номер');
-		$(this).addClass('error');
-	}
-
-	else {
-		$(this).removeClass('error');
-	}
-});
-//check length passwd
+//check passwd correct
 $('#wrapper').find('form').find('input[name="passwd"]').on('blur', function() {
-var passVal = $(this).val();
-
-var passValid = passVal.match(/^((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32})/);
-if(passValid == null) {
-alert('Слишком простой пароль (должен содержать минимум одну заглавную букву и содержать цифры и символы)')
-}
-
-
-	// if ($(this).val() == '') {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Заполните поле<span>');
-	// }
-	// else if ($('input[name="passwd"]').val().length < 6) {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Слишком короткое значение<span>');
-	// }
-	// else if ($('input[name="passwd"]').val().length > 10) {
-	// 	$(this).addClass('error');
-	// 	$(this).after('<span>Слишком длинное значение<span>');
-	// }
-	// else if ($('input[name="passwd"]').val().length >= 6) {
-	// 	$(this).removeClass('error');
-	// 	// $(this).after('<p>Слишком короткое значение<p>');
-	// }
-	// else {
-	// 	$(this).removeClass('error');
-	// }
+	validateField($(this), /^((?=.*\d)(?=.*[#$%@-])(?=.*[\S])(?=.*[a-z])(?=.*[A-Z]).{8,32})$/g, '<span>Слишком простой пароль (должен содержать минимум одну заглавную букву и содержать цифры и символы - #$%@-)</span>')
 });
-
-
 //check passwds identity
 $('#wrapper').find('form').find('input[name="passwd2"]').on('blur', function() {
 	if ($(this).val() !== $('input[name="passwd"]').val()) {
@@ -122,60 +42,95 @@ $('#wrapper').find('form').find('input[name="passwd2"]').on('blur', function() {
 	else {
 		$(this).removeClass('error');
 	}
-
+});
+//check name correct
+$('#wrapper').find('form').find('input[name="name"]').on('blur', function() {
+	validateField($(this), /^[\w]{2,64}$/g, '<span>Имя должно состоять из латинских букв или цифр, не короче 2 символов</span>')
+});
+//check email correct
+$('#wrapper').find('form').find('input[name="email"]').on('blur', function() {
+	validateField($(this), /[a-z0-9_]+@[a-z]{2,10}\.[a-z]{1,6}/, '<span>Некоррекнтный email</span>' )
+});
+//check phone
+$('#wrapper').find('form').find('input[name="tel"]').on('blur', function() {
+	validateField($(this), /\+38\(?0[0-9]{2}\)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}/, '<span>Неверно введен номер</span>' )
 });
 
 //validation on submit
 $('#wrapper').find('form').on('submit', function(event) {
-	$('input').each(function() {
-		if($(this).val() == '') {
-			$(this).addClass('error');
-			$(this).after('<span>Заполните поле<span>');
-			event.preventDefault();
-		}
-	})
-  if ($('input[name="login"]').val().length < 6) {
-		$('input[name="login"]').addClass('error');
-		$('input[name="login"]').after('<span>Слишком короткое значение<span>');
-		event.preventDefault();
-	}
-	else if ($('input[name="login"]').val().length > 10) {
-		$('input[name="login"]').addClass('error');
-		$('input[name="login"]').after('<span>Слишком длинное значение<span>');
-		event.preventDefault();
-	}
-	else {
-		$('input[name="login"]').removeClass('error');
-		$('input[name="login"]').next('span').remove();
-	}
-	//passwd check
-	if ($('input[name="passwd"]').val().length < 6) {
-		$('input[name="passwd"]').addClass('error');
-		$('input[name="passwd"]').after('<span>Слишком короткое значение<span>');
-		event.preventDefault();
-	}
-	else if ($('input[name="passwd"]').val().length > 10) {
-		$('input[name="passwd"]').addClass('error');
-		$('input[name="passwd"]').after('<span>Слишком длинное значение<span>');
-		event.preventDefault();
-	}
-	else {
-		$('input[name="passwd"]').removeClass('error');
-		$('input[name="passwd"]').next('span').remove();
-	}
+	validateField($('input[name=login]'), /^[a-zA-Z0-9_]{5,32}$/g, '<span>Логин должен содержать латинские символы или цифры и быть не короче 5 символов!</span>' )
+	validateField($('input[name=passwd]'), /^((?=.*\d)(?=.*[#$%@-])(?=.*[\S])(?=.*[a-z])(?=.*[A-Z]).{8,32})$/g, '<span>Слишком простой пароль (должен содержать минимум одну заглавную букву и содержать цифры и символы - #$%@-)</span>')
+	validateField($('input[name=name]'), /^[\w]{2,64}$/g, '<span>Имя должно состоять из латинских букв или цифр, не короче 2 символов</span>')
+	validateField($('input[name=email]'), /[a-z0-9_]+@[a-z]{2,10}\.[a-z]{1,6}/, '<span>Некоррекнтный email</span>');
+	validateField($('input[name="tel"]'), /\+38\(?0[0-9]{2}\)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}/, '<span>Неверно введен номер</span>' )
 
-	//passwdы check identity
-	if ($('input[name="passwd"]').val() != $('input[name="passwd2"]').val()) {
+	if($('input[name=login]').hasClass('error') ||
+		 $('input[name="passwd"]').hasClass('error') ||
+	 	 $('input[name=name]').hasClass('error') ||
+	 	 $('input[name=email]').hasClass('error') ||
+		 $('input[name=tel]').hasClass('error')) {
+		event.preventDefault();
+	}
+	if ($('input[name="passwd2"]').val() !== $('input[name="passwd"]').val()) {
 		$('input[name="passwd2"]').addClass('error');
 		$('input[name="passwd2"]').after('<span>Пароли должны совпадать!<span>');
 		event.preventDefault();
 	}
 	else {
 		$('input[name="passwd2"]').removeClass('error');
-		$('input[name="passwd2"]').next('span').remove();
 	}
 
-})
+
+});
+// 	$('input').each(function() {
+// 		if($(this).val() == '') {
+// 			$(this).addClass('error');
+// 			$(this).after('<span>Заполните поле<span>');
+// 			event.preventDefault();
+// 		}
+// 	})
+//   if ($('input[name="login"]').val().length < 6) {
+// 		$('input[name="login"]').addClass('error');
+// 		$('input[name="login"]').after('<span>Слишком короткое значение<span>');
+// 		event.preventDefault();
+// 	}
+// 	else if ($('input[name="login"]').val().length > 10) {
+// 		$('input[name="login"]').addClass('error');
+// 		$('input[name="login"]').after('<span>Слишком длинное значение<span>');
+// 		event.preventDefault();
+// 	}
+// 	else {
+// 		$('input[name="login"]').removeClass('error');
+// 		$('input[name="login"]').next('span').remove();
+// 	}
+// 	//passwd check
+// 	if ($('input[name="passwd"]').val().length < 6) {
+// 		$('input[name="passwd"]').addClass('error');
+// 		$('input[name="passwd"]').after('<span>Слишком короткое значение<span>');
+// 		event.preventDefault();
+// 	}
+// 	else if ($('input[name="passwd"]').val().length > 10) {
+// 		$('input[name="passwd"]').addClass('error');
+// 		$('input[name="passwd"]').after('<span>Слишком длинное значение<span>');
+// 		event.preventDefault();
+// 	}
+// 	else {
+// 		$('input[name="passwd"]').removeClass('error');
+// 		$('input[name="passwd"]').next('span').remove();
+// 	}
+//
+// 	//passwdы check identity
+// 	if ($('input[name="passwd"]').val() != $('input[name="passwd2"]').val()) {
+// 		$('input[name="passwd2"]').addClass('error');
+// 		$('input[name="passwd2"]').after('<span>Пароли должны совпадать!<span>');
+// 		event.preventDefault();
+// 	}
+// 	else {
+// 		$('input[name="passwd2"]').removeClass('error');
+// 		$('input[name="passwd2"]').next('span').remove();
+// 	}
+//
+// })
 
 });
 
