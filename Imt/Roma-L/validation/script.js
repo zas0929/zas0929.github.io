@@ -79,59 +79,7 @@ $('#wrapper').find('form').on('submit', function(event) {
 	else {
 		$('input[name="passwd2"]').removeClass('error');
 	}
-
-
 });
-// 	$('input').each(function() {
-// 		if($(this).val() == '') {
-// 			$(this).addClass('error');
-// 			$(this).after('<span>Заполните поле<span>');
-// 			event.preventDefault();
-// 		}
-// 	})
-//   if ($('input[name="login"]').val().length < 6) {
-// 		$('input[name="login"]').addClass('error');
-// 		$('input[name="login"]').after('<span>Слишком короткое значение<span>');
-// 		event.preventDefault();
-// 	}
-// 	else if ($('input[name="login"]').val().length > 10) {
-// 		$('input[name="login"]').addClass('error');
-// 		$('input[name="login"]').after('<span>Слишком длинное значение<span>');
-// 		event.preventDefault();
-// 	}
-// 	else {
-// 		$('input[name="login"]').removeClass('error');
-// 		$('input[name="login"]').next('span').remove();
-// 	}
-// 	//passwd check
-// 	if ($('input[name="passwd"]').val().length < 6) {
-// 		$('input[name="passwd"]').addClass('error');
-// 		$('input[name="passwd"]').after('<span>Слишком короткое значение<span>');
-// 		event.preventDefault();
-// 	}
-// 	else if ($('input[name="passwd"]').val().length > 10) {
-// 		$('input[name="passwd"]').addClass('error');
-// 		$('input[name="passwd"]').after('<span>Слишком длинное значение<span>');
-// 		event.preventDefault();
-// 	}
-// 	else {
-// 		$('input[name="passwd"]').removeClass('error');
-// 		$('input[name="passwd"]').next('span').remove();
-// 	}
-//
-// 	//passwdы check identity
-// 	if ($('input[name="passwd"]').val() != $('input[name="passwd2"]').val()) {
-// 		$('input[name="passwd2"]').addClass('error');
-// 		$('input[name="passwd2"]').after('<span>Пароли должны совпадать!<span>');
-// 		event.preventDefault();
-// 	}
-// 	else {
-// 		$('input[name="passwd2"]').removeClass('error');
-// 		$('input[name="passwd2"]').next('span').remove();
-// 	}
-//
-// })
-
 });
 
 
