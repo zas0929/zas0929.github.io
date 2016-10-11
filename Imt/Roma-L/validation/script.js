@@ -79,6 +79,10 @@ $('#wrapper').find('form').on('submit', function(event) {
 	else {
 		$('input[name="passwd2"]').removeClass('error');
 	}
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> c9db792bb18d725b2d3230e74ba7c65cd27e6d36
 });
 });
