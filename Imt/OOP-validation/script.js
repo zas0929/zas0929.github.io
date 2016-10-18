@@ -1,53 +1,41 @@
 'use strict'
-$(document).ready(function() {
     ;(function() {
-        function validateField(elem, regExp, errorValidateText) {
-            var checkVal = elem.val()
-            var validateVal = checkVal.match(regExp);
-            if (checkVal == '') {
-                elem.addClass('error');
-                elem.after('<span>Заполните поле<span>');
-            }
-            else if(validateVal == null) {
-                elem.addClass('error');
-                elem.next('span').remove();
-                elem.after(errorValidateText);
-            }
-            else {
-                elem.removeClass('error')
-            }
-        }
-        function onFocus(elem) {
-            elem.removeClass('error');
-            elem.next('span').remove();
-        }
-
+        
 
         function Validator(form) {
             this.form = $(form);
+        };
+
+        
+
+        Validator.prototype.init = function(data) {
+            var configure = data.configure,
+                classes = data.classes,
+                messages = data.messages;
+
+            for (var inputField in configure) {
+
+                console.log(inputField + ":" + configure[inputField]["rule"]);
+                switch(configure[inputField]["rule"]) {
+                    case "login" :
+                    this.checkLogin(inputField) 
+
+                    break;
+                    case "passwd":
+
+                    break;
+                    case "tel":
+
+                    break;
+                    case "text":
+                    break;
+                }
+            }
+            
         }
 
-        $('body').find('form').find('input').on('focus', function() {
-            onFocus($(this))
-        });
-
-        // Validator.prototype.init = function(configure, class, message) {
-        //     if (message === undefined) {
-        //         message = {};
-        //     }
-        // }
-
-        Validator.prototype.checkLogin = function(){
-            $('body').find('form').find('input[name="login"]').on('blur', function() {
-                validateField($(this), /^[a-zA-Z0-9_]{5,32}$/g, '<span>Логин должен содержать латинские символы или цифры и быть не короче 5 символов!</span>' )
-
-            });
-
-
-        }
-        Validator.prototype.checkPasswd = function(){
-
-        }
+        Validator.prototype.checkLogin = function(){}
+        Validator.prototype.checkPasswd = function(){}
         Validator.prototype.checkEmail = function(){}
         Validator.prototype.checkTel = function(){}
         Validator.prototype.checkText = function(){}
@@ -63,8 +51,23 @@ $(document).ready(function() {
 
     })();
 
-    _(".login").checkLogin();
-})
+
+
+    _("#form").init({
+        configure: {"[name=passwd]" : {rule: "passwd",
+                                        maxLength: 12,
+                                        minLength: 6},
+                    ".login": {rule: "login"}
+                },
+        classes: {"error" : "errValid",
+                  "success" : "sucValid"},
+        messages: {errEmpty: "Поле не заполнено",
+                    errLengthMax: "Слишком длинное значение",
+                    errLengthMin: "Слишком короткое значение"
+                }           
+         
+    });
+
 
 
 
