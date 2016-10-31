@@ -1,0 +1,198 @@
+/* Webfont: BrandonGrotesque-Regular */@font-face {
+    font-family: 'Brandon';
+    src: url('../fonts/BrandonGrotesque-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/BrandonGrotesque-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/BrandonGrotesque-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/BrandonGrotesque-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/BrandonGrotesque-Regular.svg#BrandonGrotesque-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: BrandonGrotesque-MediumItalic */@font-face {
+    font-family: 'Brandon';
+    src: url('../fonts/BrandonGrotesque-MediumItalic.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/BrandonGrotesque-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/BrandonGrotesque-MediumItalic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/BrandonGrotesque-MediumItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/BrandonGrotesque-MediumItalic.svg#BrandonGrotesque-MediumItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+/* Webfont: BrandonGrotesque-Medium */@font-face {
+    font-family: 'Brandon';
+    src: url('../fonts/BrandonGrotesque-Medium.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/BrandonGrotesque-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/BrandonGrotesque-Medium.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/BrandonGrotesque-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/BrandonGrotesque-Medium.svg#BrandonGrotesque-Medium') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+/* Webfont: BrandonGrotesque-BoldItalic */@font-face {
+    font-family: 'Brandon';
+    src: url('../fonts/BrandonGrotesque-BoldItalic.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/BrandonGrotesque-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/BrandonGrotesque-BoldItalic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/BrandonGrotesque-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/BrandonGrotesque-BoldItalic.svg#BrandonGrotesque-BoldItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+/* Webfont: BrandonGrotesque-Bold */@font-face {
+    font-family: 'Brandon';
+    src: url('../fonts/BrandonGrotesque-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/BrandonGrotesque-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/BrandonGrotesque-Bold.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/BrandonGrotesque-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/BrandonGrotesque-Bold.svg#BrandonGrotesque-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+
+
+body {
+    font:18px 'Brandon', sans-serif;
+    color: #093721;
+}
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+header {
+    background: url(../img/bg-header.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+header .container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    overflow: hidden;
+    padding-top: 30px;
+}
+.logo img {
+    float:left;
+    width: 70px;
+    opacity: 0.7;
+}
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size:66px
+}
+.main-block {
+    background: url(../img/bg.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+nav {
+    border-bottom:solid 3px #d2d003;
+    background: rgba(0, 0, 0, .6);
+}
+nav ul {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+nav ul a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 20px;
+}
+nav ul a:hover {
+    background:  #2cb501;
+}
+.info {
+    color: #fff;
+    padding: 30px 20px;
+    line-height: 20px;
+}
+.sign {
+    padding-top: 30px;
+}
+.sign a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 5px 10px;
+    background: #d2d003;
+}
+.sign .sign-up {
+    background: #2cb501;
+}
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+}
+.icons-list {
+    max-width: 500px;
+    margin: 0 auto;
+    list-style: none;
+}
+.icons-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size:28px;
+    text-align: center;
+}
+h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+}
+p {
+    color: #fff;
+}
+.start-game {
+    background: #36e37f none repeat scroll 0 0;
+   box-sizing: border-box;
+   min-height: 150px;
+   padding: 60px 20px;
+   text-align: center;
+}
+.start-game a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 28px;
+    margin: 0 20px;
+    border-radius: 30px;
+    border: solid 3px #fff;
+    padding: 5px 20px;
+}
+.start-game a:hover {
+    background: rgba(255, 255, 255, .2);
+}
+footer {
+    background: url(../img/bg-footer2.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    box-shadow: inset 0 15px 21px 26px rgba(0, 0, 0, 0.5);
+
+}
+footer img {
+    width: 70px;
+    opacity: 0.5;
+}
