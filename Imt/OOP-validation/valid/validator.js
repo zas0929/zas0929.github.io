@@ -24,6 +24,11 @@
                         console.log("Wrong length value of " + rule)
                     }
                     break;
+                case "email":
+                    if(confLength.email[0] < 0 || confLength.email[1] < 0 || confLength.email[0] > confLength.email[1] ||
+                        typeof confLength.email[0] == 'string' || typeof confLength.email[1] == 'string') {
+                        console.log("Wring length value of " + rule);
+                        }
                     // case "tel":
                     // 	(confLength.tel[0] < 0 || confLength.tel[1] < 0 ) ?
                     // 	console.log("Wrong length value of " + rule) :
@@ -126,6 +131,12 @@
                         break;
                     case "errLogin":
                         this.errLoginUser = messages.errLogin;
+                        break;
+                    case "errPasswd":
+                        this.errPasswdUser = messages.errPasswd;
+                        break;
+                    case "errEmail":
+                        this.errEmailUser = messages.errEmail;
                 }
 
             }
@@ -171,7 +182,12 @@
                 case "tel":
                     break;
                 case "email":
-
+                    $(this.configure.email).on("blur", function() {
+                        self.checkEmail($(this));
+                    });
+                    $(this.configure.email).on("focus", function() {
+                        self.removeErrors($(this));
+                    })
                     break;
                 case "text":
 
@@ -201,7 +217,9 @@
 
                         break;
                     case "email":
-
+                    if (!self.checkEmail($(self.configure.email))) {
+                        result = false;
+                    }
                         break;
                     case "text":
 
@@ -221,6 +239,7 @@
                 errorMinMessage,
                 errorMessage,
                 minLengthCheck,
+                errorMessageType,
                 maxLengthCheck;
             if (this.errClassUser) {
                 errorClassAdd = this.errClassUser;
@@ -251,6 +270,12 @@
                 maxLengthCheck = this.maxLoginLength;
             } else {
                 maxLengthCheck = this.max;
+            }
+            if(this.errLoginUser) {
+                errorMessageType = this.errLoginUser;
+            }
+            else {
+                errorMessageType = this.errLogin;
             }
 
             if (self.checkEmpty(elem)) {
@@ -289,6 +314,7 @@
             errorMinMessage,
             errorMessage,
             minLengthCheck,
+            errorMessageType,
             maxLengthCheck;
         if (this.errClassUser) {
             errorClassAdd = this.errClassUser;
@@ -320,9 +346,15 @@
         } else {
             maxLengthCheck = this.max;
         }
+        if(this.errPasswdUser) {
+            errorMessageType = this.errPasswdUser;
+        }
+        else {
+            errorMessageType = this.errPasswd;
+        }
 
         if (self.checkEmpty(elem)) {
-            if (elem.val().match(/^[a-zA-Z]+?$/g)) {
+            if (elem.val().match(/^((?=.*\d)(?=.*[#$%@-])(?=.*[\S])(?=.*[a-z])(?=.*[A-Z]).+?)$/g)) {
                 elem.removeClass(errorClassAdd);
 
             } else {
@@ -349,7 +381,80 @@
 
         return false;
     } // passwd
-    Validator.prototype.checkEmail = function() {} // email
+    Validator.prototype.checkEmail = function(elem) {
+        //check setting custom class
+        var errorClassAdd,
+            errorMaxMessage,
+            errorMinMessage,
+            errorMessage,
+            minLengthCheck,
+            errorMessageType,
+            maxLengthCheck;
+        if (this.errClassUser) {
+            errorClassAdd = this.errClassUser;
+        } else {
+            errorClassAdd = self.errorClass;
+        }
+        if (this.maxLengthErrorUser) {
+            errorMaxMessage = this.maxLengthErrorUser;
+        } else {
+            errorMaxMessage = this.errLengthMax;
+        }
+        if (this.minLengthErrorUser) {
+            errorMinMessage = this.minLengthErrorUser;
+        } else {
+            errorMinMessage = this.errLengthMin;
+        }
+        if (this.errEmailUser) {
+            errorMessage = this.errEmailUser;
+        } else {
+            errorMessage = this.errEmail;
+        }
+        if (this.minEmailLength) {
+            minLengthCheck = this.minEmailLength;
+        } else {
+            minLengthCheck = this.min;
+        }
+        if (this.maxEmailLength) {
+            maxLengthCheck = this.maxEmailLength;
+        } else {
+            maxLengthCheck = this.max;
+        }
+        if(this.errEmailUser) {
+            errorMessageType = this.errEmailUser;
+        }
+        else {
+            errorMessageType = this.errEmail;
+        }
+
+        if (self.checkEmpty(elem)) {
+            if (elem.val().match(/^[a-z0-9_]+@[a-z]{2,10}\.[a-z]+?$/g)) {
+                elem.removeClass(errorClassAdd);
+
+            } else {
+                elem.addClass(errorClassAdd);
+                alert(errorMessage);
+                return;
+
+            }
+            if (elem.val().length < minLengthCheck) {
+                elem.addClass(errorClassAdd);
+                alert(errorMinMessage);
+
+            }
+
+            if (elem.val().length > maxLengthCheck) {
+                elem.addClass(errorClassAdd);
+                alert(errorMaxMessage);
+
+            }
+
+            return true;
+
+        }
+
+        return false;
+    } // email
     Validator.prototype.checkTel = function() {} //tel
     Validator.prototype.checkText = function() {} // text
 

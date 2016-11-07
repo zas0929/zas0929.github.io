@@ -4,7 +4,9 @@ $(document).ready(function(){
 
 		configure:{
 					"login" : ".checkLog",
-					"passwd": "[name=passwd]"
+					"passwd": "[name=passwd]",
+					"tel": ".telephone",
+					"email": ".email"
 					},
 		confLength:{
 					"default" : [8, 12],
@@ -18,8 +20,8 @@ $(document).ready(function(){
 		messages:{errEmpty : "Поле не заполненоsdf",
 				  errLengthMax: "Длинна поля болsdfsьше максимальной",
 				  errLengthMin: "Длинна поля меньsdfше минимальной",
-				  errLogin : "Ошибка логина",
-				  errPasswd : "Ошибка пароля",
+				  errLogin : "Ошибка логиsdfна",
+				  errPasswd : "Ошибка паролfsdfя",
 				  errEmail : "Ошибка email",
 				  errTel : "Ошибка телефона",
 				  errText : "Ошибка текста",
