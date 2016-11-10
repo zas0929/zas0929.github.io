@@ -358,3 +358,59 @@ footer img {
     display: inline-block;
     margin-bottom: 20px;
 }
+.main-info {
+    text-align: center;
+    background: rgba(255, 255, 255, .4);
+    padding: 40px;
+    border-radius: 20px;
+
+}
+.main-info form {
+    margin: 0 auto;
+    max-width: 300px;
+    display: block;
+}
+.main-info img {
+    border-radius: 10px;
+    display: inline-block;
+}
+.main-info .upload-new {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px 3px;
+    background: #296402;
+    transition: 0.2s;
+    max-width: 200px;
+    margin: 10px auto 0;
+}
+.main-info .upload-new:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.main-info input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px 2px;
+    box-sizing: border-box;
+    font: 18px "Brandon",sans-serif
+}
+.main-info p {
+    text-align: left;
+    margin-bottom: 0;
+}
+.save-form {
+    background: #54b414;
+    cursor: pointer;
+    color: #fff;
+    max-width: 150px;
+    margin: 0 auto;
+    transition: 0.2s;
+    display: block;
+}
+.save-form:hover {
+    opacity: 0.9;
+    transition: 0.2s;
+}
