@@ -34,7 +34,7 @@ var user = new userModel({
 
 user.sayHello();
 
-//сохраняем user в базу
+// сохраняем user в базу
 // user.save(function(err, user) {
 // 	if (err) return console.error(err);
 // 	user.sayHello();
@@ -52,13 +52,13 @@ user.sayHello();
 // userModel.remove({"fname":"vasya"}, function(err) {
 // 	console.log("Vasya deleted");
 // });
-userModel.findOne({"fname":"ihor"}, function(err, users) {
-	users.login = "ihor666";
-	users.save(function(err) {
-		console.log("login updated");
-	});
-	console.log(users);
-})
+// userModel.findOne({"fname":"ihor"}, function(err, users) {
+// 	users.login = "ihor666";
+// 	users.save(function(err) {
+// 		console.log("login updated");
+// 	});
+// 	console.log(users);
+// })
 
 userModel.find(function(err, users) {
 	console.log(users);
