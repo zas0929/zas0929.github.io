@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?=title?></title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	
+		<?if(!data.length){?>
+			<h1>У вас нет тасков!</h1>
+		<?}else{
+			for(var i = 0; i < data.length; i++){?>
+				<div>
+					
+						<p
+						<?if(data[i].status){?>
+							class="doneTask"
+						<?}?>
+						>
+							<?=data[i].task?>
+						</p>
+					
+				</div>
+			<?}
+		}?>
+		
+	
+</body>
+</html>
