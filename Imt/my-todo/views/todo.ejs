@@ -1,0 +1,9 @@
+<?if(!data.length){?>
+    <h1>No tasks</h1>
+<?}else {
+    for(var i = 0; i < data.length; i++) {?>
+        <div>
+            <p><?=data[i].task?></p>
+        </div>
+    <?}
+}?>

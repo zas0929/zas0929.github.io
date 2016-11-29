@@ -15,20 +15,37 @@
     <textarea name="" id="" cols="30" rows="10"></textarea>
     <br>
     <br>
-    <input type="checkbox">
+    <input class="today-check" type="checkbox">
     <span>Today tasks</span>
     <br>
-    <input type="checkbox">
+    <input class="tomorrow-check" type="checkbox">
     <span>Tomorrow tasks</span>
     <br>
-    <input type="checkbox">
+    <input class="after-tomorrow-check" type="checkbox">
     <span>2 days tasks</span>
     <br>
-    <input type="checkbox">
+    <input class="next-day-check" type="checkbox">
     <span>3 days tasks</span>
+    <br>
+    <br>
+    <select class="" name="">
+        <option value="">done</option>
+        <option value="">not done</option>
+        <option value="">all</option>
+    </select>
 </form>
 <div class="tasks-list">
     <h2>Tasks</h2>
+    <?if(!data.length){?>
+        <h1>No tasks</h1>
+    <?}else {
+        for(var i = 0; i < data.length; i++) {?>
+            <div>
+                <p><?=data[i]?></p>
+                </p>
+            </div>
+        <?}
+    }?>
     <p> - Make some tea <span class="remove">remove</span><span class="edit"> edit</span></p>
     <p> - Make some coffe <span class="remove">remove</span><span class="edit"> edit</span></p>
     <p> - Eat <span class="remove">remove</span><span class="edit"> edit</span></p>
@@ -37,15 +54,7 @@
 </div>
 
 
-<?if(!data.length){?>
-    <h1>No tasks</h1>
-<?}else {
-    for(var i = 0; i < data.length; i++) {?>
-        <div>
-            <p><?=data[i]?></p>
-            </p>
-        </div>
-    <?}
-}?>
+
+
 </body>
 </html>
