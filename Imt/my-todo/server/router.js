@@ -7,11 +7,11 @@ function router(app, express, mongoose) {
     //получаем модель
     var todoModel = require("../schemas/todoList.js")(mongoose);
     var task = new todoModel({
-        task: "After Tomorrow Task 1",
-        time: 72,
+        task: "Today Task 1",
+        time: 24,
         status: false
     });
-    // task.save();
+    task.save();
     // todoModel.findOne({"_id":"58381d9dd40b67101448762e"}, function(err, tasks) {
     // 	tasks.task = "After Tomorrow Task 1";
     //     	tasks.save(function(err) {
@@ -37,8 +37,6 @@ function router(app, express, mongoose) {
         })
     })
     
-
-
     app.get('/tomorrow', function(req, res) {
         todoModel.find({"time": 48}, function(err, tomorrowTasks) {
             res.render('todo', {
