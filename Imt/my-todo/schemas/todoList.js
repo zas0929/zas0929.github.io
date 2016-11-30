@@ -7,7 +7,7 @@ function makeModelTodo(mongoose) {
 	});
 
 	return mongoose.model('todoModel', todoSchema);
-	
+
 }
 
 module.exports = makeModelTodo;

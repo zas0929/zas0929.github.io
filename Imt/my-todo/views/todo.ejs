@@ -1,9 +1,16 @@
+
 <?if(!data.length){?>
     <h1>No tasks</h1>
 <?}else {
     for(var i = 0; i < data.length; i++) {?>
         <div>
-            <p><?=data[i].task?></p>
+            <p data-id=<?=data[i]._id?>><?=data[i].task?>
+            <? if(data[i].status == false) {?>
+                    <span class="not-done">not done</span>
+            <?}else {?>
+                    <span class="done">done</span>
+            <?}?></p>
+            <span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span><span class="edit"> <i class="fa fa-pencil" aria-hidden="true"></i></span>
         </div>
     <?}
 }?>

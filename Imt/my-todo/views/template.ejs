@@ -4,57 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="/js/script.js"></script>
     <title>Todo list</title>
 </head>
 <body>
-<h1>Todo list</h1>
-<form action="">
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <br>
-    <br>
-    <input class="today-check" type="checkbox">
-    <span>Today tasks</span>
-    <br>
-    <input class="tomorrow-check" type="checkbox">
-    <span>Tomorrow tasks</span>
-    <br>
-    <input class="after-tomorrow-check" type="checkbox">
-    <span>2 days tasks</span>
-    <br>
-    <input class="next-day-check" type="checkbox">
-    <span>3 days tasks</span>
-    <br>
-    <br>
-    <select class="" name="">
-        <option value="">done</option>
-        <option value="">not done</option>
-        <option value="">all</option>
-    </select>
-</form>
-<div class="tasks-list">
-    <h2>Tasks</h2>
-    <?if(!data.length){?>
-        <h1>No tasks</h1>
-    <?}else {
-        for(var i = 0; i < data.length; i++) {?>
-            <div>
-                <p><?=data[i]?></p>
-                </p>
+    <div class="wrapper">
+        <h1>Todo list</h1>
+        <form action="" >
+            <input type="text" name="task" class="confirm-task" placeholder="task">
+            <br>
+            <br>
+            <input type="text" name="time" class="confirm-time" placeholder="time">
+            <br>
+            <br>
+            <button type="submit" name="button" class="add-task">Add task</button>
+            <br>
+            <br>
+            <input class="today-check" type="checkbox">
+            <span>Today tasks</span>
+            <br>
+            <input class="tomorrow-check" type="checkbox">
+            <span>Tomorrow tasks</span>
+            <br>
+            <input class="after-tomorrow-check" type="checkbox">
+            <span>2 days tasks</span>
+            <br>
+            <input class="next-day-check" type="checkbox">
+            <span>3 days tasks</span>
+            <br>
+            <br>
+            <select class="" name="">
+                <option value="">done</option>
+                <option value="">not done</option>
+                <option value="">all</option>
+            </select>
+        </form>
+        <h2>Tasks</h2>
+        <div class="tasks-list">
+            <div class="all-tasks">
+                <?if(!data.length){?>
+                    <h1>No tasks</h1>
+                <?}else {
+                    for(var i = 0; i < data.length; i++) {?>
+                        <div>
+                            <p data-id=<?=data[i]._id?>><?=data[i].task?>
+                                <? if(data[i].status == false) {?>
+                                        <span class="not-done">not done</span>
+                                <?}else {?>
+                                        <span class="done">done</span>
+                                <?}?>
+                                </p>
+                            <span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span><span class="edit"> <i class="fa fa-pencil" aria-hidden="true"></i></span>
+                        </div>
+                    <?}
+                }?>
             </div>
-        <?}
-    }?>
-    <p> - Make some tea <span class="remove">remove</span><span class="edit"> edit</span></p>
-    <p> - Make some coffe <span class="remove">remove</span><span class="edit"> edit</span></p>
-    <p> - Eat <span class="remove">remove</span><span class="edit"> edit</span></p>
-    <p> - Sleep <span class="remove">remove</span><span class="edit"> edit</span></p>
-    <p> - Drink <span class="remove">remove</span><span class="edit"> edit</span></p>
-</div>
 
-
-
-
+        </div>
+    </div>
 </body>
 </html>

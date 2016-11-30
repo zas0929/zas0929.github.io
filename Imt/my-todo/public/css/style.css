@@ -1,6 +1,37 @@
+.wrapper {
+    padding: 10px 50px;
+    font-family: Arial, sans-serif;
+}
+input, button {
+    border-radius: 10px;
+    padding: 3px 10px;
+    outline: none;
+}
 .tasks-list .remove {
     color: #c00;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 4px;
 }
 .tasks-list .edit {
     color: #0c0;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 4px;
+}
+.tasks-list div p {
+    display: inline-block;
+}
+.not-done,
+.done {
+    cursor: pointer;
+    color: #fff;
+    background: #c00;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: 12px;
+}
+.done {
+    background: #0c0;
 }
