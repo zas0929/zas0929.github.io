@@ -27,8 +27,3 @@ io.on('connection', function(socket){
     socket.broadcast.emit('get chat message', msg);
   });
 });
-
-
-
-
-
