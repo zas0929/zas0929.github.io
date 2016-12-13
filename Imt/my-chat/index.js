@@ -8,12 +8,15 @@ app.get('/', function(req, res) {
 });
 
 io.on('connection', function(socket) {
-    console.log('a user connected');
-
+    
+    console.log('a user connected: ' + socket.id);
     socket.on('nick name', function(nick) {
         for(key in nicks) {
             if (key == nick) {
                 socket.emit('not available', 'nickname is not available')
+            }
+            else {
+                console.log("user conected")
             }
         }
         nicks[nick] = socket.id;
@@ -23,7 +26,10 @@ io.on('connection', function(socket) {
     });
 
     socket.on('chat message', function(msg) {
-        io.emit('chat message', msg);
+         for(user in nicks) {
+             // console.log(user);
+        }
+        io.emit('chat message', user + ': ' +msg);
     });
 
     socket.on('disconnect', function() {
@@ -33,11 +39,9 @@ io.on('connection', function(socket) {
                 console.log(getOut + ' disconected');
                 io.emit('get out', getOut);
             }
-            
-            console.log(nicks);
         }
     });
-    console.log(nicks);
+    // console.log(nicks);
 });
 
 http.listen(3000, function() {
