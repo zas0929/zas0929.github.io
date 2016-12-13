@@ -25,7 +25,7 @@
         form input {
             border: 0;
             padding: 10px;
-            width: 85%;
+            width: 90%;
             margin-right: .5%;
         }
 
@@ -49,31 +49,36 @@
         #messages li:nth-child(odd) {
             background: #eee;
         }
-        .your-name {
+        .info-block {
             position: absolute;
-            left:0;
-            bottom:50px;
-            height: 30px;
-            padding: 3px 5px;
-            display: block;
+            top: 0;
+            right: 0;
         }
-        .confirm-name {
-            position: absolute;
-            left: 190px;
-            bottom: 50px;
-            padding: 5px 10px;
+        ul {
+            list-style: none;
         }
     </style>
 </head>
 
 <body>
     <ul id="messages"></ul>
-    <input type="text" class="your-name" placeholder="type your name">
-    <input type="button" class="confirm-name" value="ok">
+    <div class="info-block">
+        <h3>online:</h3>
+        <ul class="online">
+            <li>Vasya</li>
+        </ul>
+        <br>
+        <input type="text" class="user-name" placeholder="your-name">
+        <button class="ok">Ok</button>
+        <br>
+        <div class="info"></div>
+    </div>
+
     <form action="">
-        <input id="m" autocomplete="off" />
+        <input id="m" autocomplete="off" placeholder="message" />
         <button>Send</button>
     </form>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
@@ -83,23 +88,20 @@
             $('#m').val('');
             return false;
         });
-        $('.confirm-name').on('click', function() {
-            socket.emit('nickName', $('.your-name').val());
-            $('.your-name').val('');
+        $('.ok').on('click', function() {
+            socket.emit('nick name', $('.user-name').val());
+            $('.user-name').val('');
             return false;
-        })
-        socket.on('get chat message', function(msg) {
+        });
+        socket.on('not available', function(notAv) {
+            alert(notAv);
+        });
+        socket.on('get out', function(getOut) {
+            $('.info').append('<p>' + getOut + ' disconnected' + '</p>').fadeOut(5000);
+        });
+        socket.on('chat message', function(msg) {
             $('#messages').append($('<li>').text(msg));
         });
-        socket.on('new user', function(newuser) {
-            $('#messages').append($('<li>').text(newuser));
-        })
-        socket.on('user out', function(userout) {
-            $('#messages').append($('<li>').text(userout));
-        })
-        socket.on('nickName', function(nickuser) {
-            $('#messages').append($('<li>').text(nickuser))
-        })
     </script>
 </body>
 
